@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatChain</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-link"></i>
+                <h1>ChatChain</h1>
+            </div>
+            <button id="settingsBtn">
+                <i class="fas fa-cog"></i>
+            </button>
+        </header>
+
+        <div class="main">
+            <aside class="users-panel">
+                <h3><i class="fas fa-users"></i> Online Users</h3>
+                <ul id="userList"></ul>
+            </aside>
+
+            <section class="chat-panel">
+                <div id="chatWindow" class="chat-window">
+                    <div class="welcome-message">
+                        <i class="fas fa-comments"></i>
+                        <h2>Welcome to ChatChain</h2>
+                        <p>Start a conversation with someone from the user list!</p>
+                    </div>
+                </div>
+
+                <form id="chatForm" class="chat-input">
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Type your message..." 
+                        required 
+                        autocomplete="off"
+                    />
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send
+                    </button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h3>Settings</h3>
+            <p>Blockchain integration and advanced settings will be available in future updates.</p>
+            <button onclick="closeSettings()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>

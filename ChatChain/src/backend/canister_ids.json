@@ -1,0 +1,10 @@
+{
+    "ChatChain_backend": {
+      "local": "ryjl3-tyaaa-aaaaa-aaaba-cai",
+      "ic": "YOUR_ic_CANISTER_ID"
+    },
+    "ChatChain_frontend": {
+      "local": "rrkah-fqaaa-aaaaa-aaaaq-cai",
+      "ic": "YOUR_ic_FRONTEND_ID"
+    }
+  }

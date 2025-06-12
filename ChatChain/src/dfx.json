@@ -1,0 +1,22 @@
+{
+    "canisters": {
+      "ChatChain_backend": {
+        "main": "src/backend/main.mo",
+        "type": "motoko"
+      },
+      "ChatChain_frontend": {
+        "dependencies": ["ChatChain_backend"],
+        "frontend": {
+          "entrypoint": "src/frontend/index.html"
+        },
+        "source": ["src/frontend"],
+        "type": "assets"
+      }
+    },
+    "defaults": {
+      "build": {
+        "packtool": ""
+      }
+    },
+    "version": 1
+  }

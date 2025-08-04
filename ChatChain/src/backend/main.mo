@@ -1,4 +1,4 @@
-ister a user with a name
+th a name
   public shared(msg) func registerUser(name: Text) : async Bool {
     let caller = msg.caller;
     // Check if user already exists
@@ -45,6 +45,7 @@ ister a user with a name
   };
 
 };
+
 
 
 

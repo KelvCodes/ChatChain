@@ -1,4 +1,4 @@
-equal(principal, caller)) {
+
         return false; // User already registered
       }
     };
@@ -40,6 +40,7 @@ equal(principal, caller)) {
   };
 
 };
+
 
 
 

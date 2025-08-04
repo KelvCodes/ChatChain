@@ -1,6 +1,4 @@
-
-
-  // Stable storage for users
+for users
   stable var users: [(Principal, Text)] = [];
   let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
 
@@ -51,6 +49,7 @@
   };
 
 };
+
 
 
 

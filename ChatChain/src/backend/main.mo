@@ -1,5 +1,4 @@
-
-    let caller = msg.caller;
+g.caller;
     // Check if user already exists
     for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
@@ -44,6 +43,7 @@
   };
 
 };
+
 
 
 

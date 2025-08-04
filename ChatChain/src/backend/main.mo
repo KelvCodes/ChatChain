@@ -1,7 +1,4 @@
 
-  public query func getUsers() : async [(Principal, Text)] {
-    userBuffer.toArray()
-  };
 
   // Send a message
   public shared(msg) func sendMessage(content: Text) : async () {
@@ -31,6 +28,7 @@
   };
 
 };
+
 
 
 

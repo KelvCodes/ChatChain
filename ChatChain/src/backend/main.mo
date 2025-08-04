@@ -1,6 +1,5 @@
 
-
-import Text "mo:base/Text";
+o:base/Text";
 import Array "mo:base/Array";
 
 actor ChatChain {
@@ -66,6 +65,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

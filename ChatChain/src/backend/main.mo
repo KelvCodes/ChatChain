@@ -1,5 +1,5 @@
 
-cipal, _) in userBuffer.toArray().vals()) {
+uffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
         return false; // User already registered
       }
@@ -42,6 +42,7 @@ cipal, _) in userBuffer.toArray().vals()) {
   };
 
 };
+
 
 
 

@@ -1,7 +1,5 @@
 
-
-ype
-  type Message = {
+ssage = {
     sender: Principal;
     content: Text;
     timestamp: Time.Time;
@@ -62,6 +60,7 @@ ype
   };
 
 };
+
 
 
 

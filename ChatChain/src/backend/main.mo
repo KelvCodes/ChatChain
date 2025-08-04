@@ -1,9 +1,6 @@
 
 
-  // Send a message
-  public shared(msg) func sendMessage(content: Text) : async () {
-    let message: Message = {
-      sender = msg.caller;
+
       content = content;
       timestamp = Time.now();
     };
@@ -28,6 +25,7 @@
   };
 
 };
+
 
 
 

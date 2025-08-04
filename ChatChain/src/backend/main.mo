@@ -1,5 +1,4 @@
-
-uffer.toArray().vals()) {
+y().vals()) {
       if (Principal.equal(principal, caller)) {
         return false; // User already registered
       }
@@ -42,6 +41,7 @@ uffer.toArray().vals()) {
   };
 
 };
+
 
 
 

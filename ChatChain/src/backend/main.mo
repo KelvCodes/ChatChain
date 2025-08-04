@@ -1,5 +1,4 @@
-g.caller;
-    // Check if user already exists
+k if user already exists
     for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
         return false; // User already registered
@@ -43,6 +42,7 @@ g.caller;
   };
 
 };
+
 
 
 

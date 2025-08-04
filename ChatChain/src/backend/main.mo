@@ -1,5 +1,4 @@
-.toArray();
-    true
+e
   };
 
   // Get all registered users
@@ -35,6 +34,7 @@
   };
 
 };
+
 
 
 

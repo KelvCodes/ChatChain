@@ -1,6 +1,4 @@
-
-  // Stable storage for messages
-  stable var messages: [Message] = [];
+[];
   let messageBuffer = Buffer.Buffer<Message>(100);
 
   // Stable storage for users
@@ -54,6 +52,7 @@
   };
 
 };
+
 
 
 

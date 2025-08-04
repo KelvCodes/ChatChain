@@ -1,6 +1,6 @@
 
 
-actor ChatChain {
+
   // Define a message type
   type Message = {
     sender: Principal;
@@ -63,6 +63,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

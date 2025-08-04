@@ -1,5 +1,3 @@
-mp: Time.Time;
-  };
 
   // Stable storage for messages
   stable var messages: [Message] = [];
@@ -56,6 +54,7 @@ mp: Time.Time;
   };
 
 };
+
 
 
 

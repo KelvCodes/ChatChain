@@ -1,4 +1,4 @@
-r users: [(Principal, Text)] = [];
+ = [];
   let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
 
   // Register a user with a name
@@ -48,6 +48,7 @@ r users: [(Principal, Text)] = [];
   };
 
 };
+
 
 
 

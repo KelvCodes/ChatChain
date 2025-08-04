@@ -1,5 +1,4 @@
-nt: Text;
-    timestamp: Time.Time;
+mp: Time.Time;
   };
 
   // Stable storage for messages
@@ -57,6 +56,7 @@ nt: Text;
   };
 
 };
+
 
 
 

@@ -1,7 +1,6 @@
 
 
-
-  // Define a message type
+ype
   type Message = {
     sender: Principal;
     content: Text;
@@ -63,6 +62,7 @@
   };
 
 };
+
 
 
 

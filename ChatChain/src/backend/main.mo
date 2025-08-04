@@ -1,5 +1,4 @@
-th a name
-  public shared(msg) func registerUser(name: Text) : async Bool {
+shared(msg) func registerUser(name: Text) : async Bool {
     let caller = msg.caller;
     // Check if user already exists
     for ((principal, _) in userBuffer.toArray().vals()) {
@@ -45,6 +44,7 @@ th a name
   };
 
 };
+
 
 
 

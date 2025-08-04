@@ -1,5 +1,4 @@
-
-import Array "mo:base/Array";
+ay "mo:base/Array";
 
 actor ChatChain {
   // Define a message type
@@ -64,6 +63,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

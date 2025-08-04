@@ -1,6 +1,4 @@
-
-ssage = {
-    sender: Principal;
+cipal;
     content: Text;
     timestamp: Time.Time;
   };
@@ -60,6 +58,7 @@ ssage = {
   };
 
 };
+
 
 
 

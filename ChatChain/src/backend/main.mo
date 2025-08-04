@@ -1,13 +1,4 @@
 
-
-
-      content = content;
-      timestamp = Time.now();
-    };
-    messageBuffer.add(message);
-    messages := messageBuffer.toArray();
-  };
-
   // Get all messages
   public query func getMessages() : async [Message] {
     messages
@@ -25,6 +16,7 @@
   };
 
 };
+
 
 
 

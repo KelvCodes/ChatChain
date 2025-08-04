@@ -1,4 +1,4 @@
- registered users
+
   public query func getUsers() : async [(Principal, Text)] {
     userBuffer.toArray()
   };
@@ -31,6 +31,7 @@
   };
 
 };
+
 
 
 

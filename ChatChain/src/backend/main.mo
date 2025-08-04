@@ -1,6 +1,4 @@
-t)>(100);
-
-  // Register a user with a name
+ister a user with a name
   public shared(msg) func registerUser(name: Text) : async Bool {
     let caller = msg.caller;
     // Check if user already exists
@@ -47,6 +45,7 @@ t)>(100);
   };
 
 };
+
 
 
 

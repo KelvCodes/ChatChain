@@ -1,7 +1,4 @@
-e
-  };
-
-  // Get all registered users
+ registered users
   public query func getUsers() : async [(Principal, Text)] {
     userBuffer.toArray()
   };
@@ -34,6 +31,7 @@ e
   };
 
 };
+
 
 
 

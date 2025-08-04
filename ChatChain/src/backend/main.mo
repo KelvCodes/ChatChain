@@ -1,5 +1,4 @@
-
-      if (Principal.equal(principal, caller)) {
+equal(principal, caller)) {
         return false; // User already registered
       }
     };
@@ -41,6 +40,7 @@
   };
 
 };
+
 
 
 

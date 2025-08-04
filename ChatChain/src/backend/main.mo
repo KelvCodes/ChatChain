@@ -1,5 +1,4 @@
-cipal;
-    content: Text;
+nt: Text;
     timestamp: Time.Time;
   };
 
@@ -58,6 +57,7 @@ cipal;
   };
 
 };
+
 
 
 

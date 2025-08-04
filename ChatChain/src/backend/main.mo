@@ -1,5 +1,4 @@
-
-        return false; // User already registered
+ser already registered
       }
     };
     userBuffer.add((caller, name));
@@ -40,6 +39,7 @@
   };
 
 };
+
 
 
 

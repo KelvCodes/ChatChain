@@ -1,4 +1,4 @@
-= Buffer.Buffer<(Principal, Text)>(100);
+<(Principal, Text)>(100);
 
   // Register a user with a name
   public shared(msg) func registerUser(name: Text) : async Bool {
@@ -47,6 +47,7 @@
   };
 
 };
+
 
 
 

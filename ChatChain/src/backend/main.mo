@@ -1,5 +1,4 @@
-[];
-  let messageBuffer = Buffer.Buffer<Message>(100);
+ = Buffer.Buffer<Message>(100);
 
   // Stable storage for users
   stable var users: [(Principal, Text)] = [];
@@ -52,6 +51,7 @@
   };
 
 };
+
 
 
 

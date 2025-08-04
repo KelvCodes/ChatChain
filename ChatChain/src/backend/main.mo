@@ -1,4 +1,4 @@
-ext) : async Bool {
+
     let caller = msg.caller;
     // Check if user already exists
     for ((principal, _) in userBuffer.toArray().vals()) {
@@ -44,6 +44,7 @@ ext) : async Bool {
   };
 
 };
+
 
 
 

@@ -1,3 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatChain</title>
+
+    <!-- Font Awesome for icons (link, users, chat, settings, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom stylesheet for the app’s UI design -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <!-- Main application container -->
+    <div class="app-container">
+        
+        <!-- ================= HEADER SECTION ================= -->
+        <header>
+            <!-- App Logo + Title -->
+            <div class="logo">
+                <i class="fas fa-link"></i>
+                <h1>ChatChain</h1>
+            </div>
+
+            <!-- Settings Button (opens settings modal) -->
+            <button id="settingsBtn">
+                <i class="fas fa-cog"></i>
+            </button>
+        </header>
+        <!-- ================================================== -->
+
+        <!-- ================= MAIN SECTION ================= -->
+        <div class="main">
+            
+            <!-- LEFT SIDEBAR: Online Users Panel -->
+            <aside class="users-panel">
+                <h3><i class="fas fa-users"></i> Online Users</h3>
+                <!-- Dynamic list of online users will be injected here via JS -->
+                <ul id="userList"></ul>
+            </aside>
+
+            <!-- RIGHT PANEL: Chat Window -->
+            <section class="chat-panel">
+                <!-- Chat Messages Display Area -->
+                <div id="chatWindow" class="chat-window">
+                    
+                    <!-- Default welcome message before any chat begins -->
+                    <div class="welcome-message">
+                        <i class="fas fa-comments"></i>
+                        <h2>Welcome to ChatChain</h2>
+                        <p>Start a conversation with someone from the user list!</p>
+                    </div>
+                </div>
+
+                <!-- Chat Input Form -->
+                <form id="chatForm" class="chat-input">
+                    <!-- Text field for user messages -->
+                    <input 
+                        type="text" 
+                        id="messageInput" 
+                        placeholder="Type your message..." 
+                        required 
+                        autocomplete="off"
+                    />
+                    
+                    <!-- Send button with paper plane icon -->
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send
+                    </button>
+                </form>
+            </section>
+        </div>
+        <!-- ================================================== -->
+    </div>
+
+    <!-- ================= SETTINGS MODAL ================= -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h3>Settings</h3>
+            <p>Blockchain integration and advanced settings will be available in future updates.</p>
+
+            <!-- Close button for modal -->
+            <button 
+                onclick="closeSettings()" 
+                style="margin-top: 1rem; padding: 0.5rem 1rem; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Close
+            </button>
+        </div>
+    </div>
+    <!-- ================================================== -->
+
+    <!-- JavaScript file that handles app logic (chat, users, modal, etc.) -->
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
+
 
 
 

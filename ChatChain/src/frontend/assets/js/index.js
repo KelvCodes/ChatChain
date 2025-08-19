@@ -1,10 +1,6 @@
 ncipal, name] of users) {
     if (p
-
-// Initialize app
-function initializeApp() {
-  populateUserList();
-  setupEventListeners();
+eners();
   pollMessages();
   addWelcomeMessages();
 }
@@ -178,6 +174,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

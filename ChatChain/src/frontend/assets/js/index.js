@@ -1,8 +1,6 @@
 s="user-status" style="background: #10b981"></div>
     `;
-    li.addEventListener('click', () => startChatWith(name));
-    userList.appendChild(li);
-  });
+  
 }
 
 // Setup event listeners
@@ -158,6 +156,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

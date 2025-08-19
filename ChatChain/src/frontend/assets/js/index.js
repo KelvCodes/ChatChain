@@ -1,8 +1,4 @@
-
-function startChatWith(userName) {
-  if (!hasStartedChat) {
-    chatWindow.innerHTML = '';
-    hasStartedChat = true;
+ue;
   }
   addMessage('system', `Started conversation with ${userName}`, true);
 }
@@ -110,6 +106,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

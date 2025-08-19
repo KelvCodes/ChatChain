@@ -1,7 +1,6 @@
 
 
-  const agent = new HttpAgent({ host });
-  // For local development, fetch canister IDs
+  const ags
   if (host.includes('127.0.0.1')) {
     await agent.fetchRootKey();
   }
@@ -199,6 +198,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

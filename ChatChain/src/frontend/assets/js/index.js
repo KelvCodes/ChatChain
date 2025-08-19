@@ -1,6 +1,4 @@
 
-
-  // Create AuthClient for Internet Identity
   authClient = await AuthClient.create();
   
   // Check if user is authenticated
@@ -211,6 +209,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

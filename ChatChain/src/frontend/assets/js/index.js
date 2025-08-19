@@ -1,7 +1,4 @@
 
-
-// DOM Elements
-const chatWindow = document.getElementById('chatWindow');
 const chatForm = document.getElementById('chatForm');
 const messageInput = document.getElementById('messageInput');
 const userList = document.getElementById('userList');
@@ -230,6 +227,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

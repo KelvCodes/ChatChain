@@ -1,8 +1,4 @@
 
-  pollMessages();
-  addWelcomeMessages();
-}
-
 // Populate user list from canister
 async function populateUserList() {
   const users = await actor.getUsers();
@@ -172,6 +168,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

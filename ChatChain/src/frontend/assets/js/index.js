@@ -1,4 +1,4 @@
-pAgent } from '@dfinity/agent';
+om '@dfinity/agent';
 import { AuthClient } from '@dfinity/auth-client';
 import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjusted path
 
@@ -232,4 +232,5 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 

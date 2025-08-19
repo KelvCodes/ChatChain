@@ -1,8 +1,6 @@
 ch(([principal, name]) => {
     const li = document.createElement('li');
-    li.innerHTML = `
-      <div class="user-avatar">${name[0]}</div>
-      <span>${name}</span>
+pan>
       <div class="user-status" style="background: #10b981"></div>
     `;
     li.addEventListener('click', () => startChatWith(name));
@@ -163,6 +161,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

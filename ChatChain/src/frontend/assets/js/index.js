@@ -1,5 +1,4 @@
-);
-  for (const [principal, name] of users) {
+ncipal, name] of users) {
     if (p
     }
   }
@@ -182,6 +181,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

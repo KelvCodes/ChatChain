@@ -1,5 +1,5 @@
 
-import { Actor, HttpAgent } from '@dfinity/agent';
+ { Actor, HttpAgent } from '@dfinity/agent';
 import { AuthClient } from '@dfinity/auth-client';
 import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjusted path
 
@@ -231,4 +231,5 @@ messageInput.addEventListener('keypress', (e) => {
     e.preventDefault();
     chatForm.dispatchEvent(new Event('submit'));
   }
+
 });

@@ -1,5 +1,4 @@
-
-const settingsBtn = document.getElementById('settingsBtn');
+.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 
 // ICP Configuration
@@ -224,6 +223,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

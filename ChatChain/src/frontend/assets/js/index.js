@@ -1,8 +1,6 @@
 , handleMessageSend);
   settingsBtn.addEventListener('click', openSettings);
-  settingsModal.addEventListener('click', (e) => {
-    if (e.target === settingsModal) {
-      closeSettings();
+ ings();
     }
   });
 
@@ -149,6 +147,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

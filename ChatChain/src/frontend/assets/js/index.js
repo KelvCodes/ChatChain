@@ -1,5 +1,4 @@
 
-let hasStartedChat = false;
 
 // Initialize ICP connection
 async function initializeICP() {
@@ -214,6 +213,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

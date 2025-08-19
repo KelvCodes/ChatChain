@@ -2,8 +2,7 @@
 
   // Add login button to settings modal
   const modaith Internet Identity';
-  loginButton.style = 'margin-top: 1rem; padding: 0.5rem 1rem; background: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer;';
-  loginButton.addEventListener('click', handleLogin);
+  stener('click', handleLogin);
   modalContent.appendChild(loginButton);
 }
 
@@ -141,6 +140,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

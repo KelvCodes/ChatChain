@@ -1,4 +1,4 @@
-ient.getIdentity()).getPrincipal();
+
     await fetchUserName();
   } else {
     currentUserPrincipal = null; // Anonymous
@@ -204,6 +204,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

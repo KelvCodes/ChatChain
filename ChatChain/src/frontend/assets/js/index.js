@@ -1,15 +1,7 @@
 
  ps://identity.ic0.app',
     onSuccess: async () => {
-      currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
-      // Prompt for username
-      const name = prompt('Enter your username:');
-      if (name) {
-        const success = await actor.registerUser(name);
-        if (success) {
-          currentUserName = name;
-          await populateUserList();
-          closeSettings();
+     
         } else {
           alert('Username already taken or already registered.');
         }
@@ -130,6 +122,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

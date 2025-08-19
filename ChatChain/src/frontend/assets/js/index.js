@@ -1,7 +1,4 @@
-
-// Populate user list from canister
-= '';
-  users.forEach(([principal, name]) => {
+ch(([principal, name]) => {
     const li = document.createElement('li');
     li.innerHTML = `
       <div class="user-avatar">${name[0]}</div>
@@ -166,6 +163,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

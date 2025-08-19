@@ -1,8 +1,6 @@
 );
   for (const [principal, name] of users) {
-    if (principal.toString() === currentUserPrincipal.toString()) {
-      currentUserName = name;
-      break;
+    if (p
     }
   }
 }
@@ -184,6 +182,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

@@ -1,7 +1,3 @@
-;
-  }
-;
-}
 
 // Fetch current user's name
 async function fetchUserName() {
@@ -191,6 +187,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

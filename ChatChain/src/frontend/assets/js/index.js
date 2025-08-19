@@ -1,4 +1,4 @@
- } from '@dfinity/auth-client';
+ty/auth-client';
 import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjusted path
 
 // DOM Elements
@@ -231,6 +231,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

@@ -1,6 +1,4 @@
-ncipal, name] of users) {
-    if (p
-eners();
+
   pollMessages();
   addWelcomeMessages();
 }
@@ -174,6 +172,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

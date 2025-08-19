@@ -1,7 +1,5 @@
 
     await fetchUserName();
-  } else {
-    currentUserPrincipal = null; // Anonymous
   }
 
   // Initialize agent and actor
@@ -204,6 +202,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

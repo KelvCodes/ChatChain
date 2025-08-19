@@ -1,8 +1,4 @@
 
-
-  // Add login button to settings modal
-  const modaith Internet Identity';
-  stener('click', handleLogin);
   modalContent.appendChild(loginButton);
 }
 
@@ -140,6 +136,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

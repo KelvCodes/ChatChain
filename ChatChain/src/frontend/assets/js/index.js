@@ -1,5 +1,4 @@
 
-import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjusted path
 
 // DOM Elements
 const chatWindow = document.getElementById('chatWindow');
@@ -231,6 +230,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

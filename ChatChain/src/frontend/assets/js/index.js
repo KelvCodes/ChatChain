@@ -1,6 +1,4 @@
-ch(([principal, name]) => {
-
-      <div class="user-status" style="background: #10b981"></div>
+s="user-status" style="background: #10b981"></div>
     `;
     li.addEventListener('click', () => startChatWith(name));
     userList.appendChild(li);
@@ -160,6 +158,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

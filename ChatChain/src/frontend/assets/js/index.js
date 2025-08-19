@@ -1,9 +1,6 @@
 ;
   }
-  actor = Actor.createActor(idlFactory, { agent, canisterId });
-
-  // Initialize app
-  initializeApp();
+;
 }
 
 // Fetch current user's name
@@ -194,6 +191,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

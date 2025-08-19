@@ -1,8 +1,4 @@
-, handleMessageSend);
-  settingsBtn.addEventListener('click', openSettings);
- ings();
-    }
-  });
+
 
   // Add login button to settings modal
   const modalContent = settingsModal.querySelector('.modal-content');
@@ -147,6 +143,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

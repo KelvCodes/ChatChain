@@ -1,8 +1,4 @@
-
-
-  const ags
-  if (host.includes('127.0.0.1')) {
-    await age;
+;
   }
   actor = Actor.createActor(idlFactory, { agent, canisterId });
 
@@ -198,6 +194,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

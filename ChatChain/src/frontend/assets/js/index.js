@@ -1,7 +1,4 @@
-
-// Setup event listeners
-function setupEventListeners() {
-  chatForm.addEventListener('submit', handleMessageSend);
+, handleMessageSend);
   settingsBtn.addEventListener('click', openSettings);
   settingsModal.addEventListener('click', (e) => {
     if (e.target === settingsModal) {
@@ -152,6 +149,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

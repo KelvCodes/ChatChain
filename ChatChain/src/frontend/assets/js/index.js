@@ -1,5 +1,4 @@
 
-  if (await authClient.isAuthenticated()) {
     currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
     await fetchUserName();
   } else {
@@ -206,6 +205,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

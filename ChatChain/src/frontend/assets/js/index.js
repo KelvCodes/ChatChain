@@ -1,6 +1,5 @@
 
 
-  // Initialize agent and actor
   const agent = new HttpAgent({ host });
   // For local development, fetch canister IDs
   if (host.includes('127.0.0.1')) {
@@ -200,6 +199,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

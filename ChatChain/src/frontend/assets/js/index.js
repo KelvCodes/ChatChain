@@ -1,8 +1,5 @@
 ncipal, name] of users) {
     if (p
-    }
-  }
-}
 
 // Initialize app
 function initializeApp() {
@@ -181,6 +178,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

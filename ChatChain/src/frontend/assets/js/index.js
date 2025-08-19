@@ -1,7 +1,3 @@
-s="user-status" style="background: #10b981"></div>
-    `;
-  
-}
 
 // Setup event listeners
 function setupEventListeners() {
@@ -156,6 +152,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

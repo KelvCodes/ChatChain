@@ -1,7 +1,5 @@
 
 
-// Initialize ICP connection
-async function initializeICP() {
   // Create AuthClient for Internet Identity
   authClient = await AuthClient.create();
   
@@ -213,6 +211,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

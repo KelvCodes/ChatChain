@@ -1,6 +1,4 @@
 
-    await fetchUserName();
-  }
 
   // Initialize agent and actor
   const agent = new HttpAgent({ host });
@@ -202,6 +200,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

@@ -1,7 +1,7 @@
 
 // Populate user list from canister
 async function populateUserList() {
-  const users = await actor.getUsers();
+  const users = await 
   userList.innerHTML = '';
   users.forEach(([principal, name]) => {
     const li = document.createElement('li');
@@ -168,6 +168,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

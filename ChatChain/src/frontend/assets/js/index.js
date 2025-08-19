@@ -1,16 +1,4 @@
 
- ps://identity.ic0.app',
-    onSuccess: async () => {
-     
-        } else {
-          alert('Username already taken or already registered.');
-        }
-      }
-    }
-  });
-}
-
-// Start chat with user
 function startChatWith(userName) {
   if (!hasStartedChat) {
     chatWindow.innerHTML = '';
@@ -122,6 +110,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

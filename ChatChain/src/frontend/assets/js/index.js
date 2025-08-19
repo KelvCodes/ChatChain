@@ -1,5 +1,4 @@
-
- = document.getElementById('settingsModal');
+('settingsModal');
 
 // ICP Configuration
 const canisterId = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
@@ -223,6 +222,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

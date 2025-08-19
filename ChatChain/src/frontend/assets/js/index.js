@@ -1,7 +1,4 @@
-
-// Fetch current user's name
-async function fetchUserName() {
-  const users = await actor.getUsers();
+);
   for (const [principal, name] of users) {
     if (principal.toString() === currentUserPrincipal.toString()) {
       currentUserName = name;
@@ -187,6 +184,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

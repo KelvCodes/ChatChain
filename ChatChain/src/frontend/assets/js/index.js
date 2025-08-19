@@ -1,6 +1,4 @@
 
-  authClient = await AuthClient.create();
-  
   // Check if user is authenticated
   if (await authClient.isAuthenticated()) {
     currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
@@ -209,6 +207,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

@@ -1,6 +1,4 @@
 
-let authClient;
-let currente = 'Anonymous';
 let hasStartedChat = false;
 
 // Initialize ICP connection
@@ -216,6 +214,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

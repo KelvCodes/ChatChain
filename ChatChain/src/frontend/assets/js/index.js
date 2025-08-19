@@ -1,5 +1,4 @@
-
-const canisterId = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
+; // Replace with your deployed canister ID
 const host = 'https://icp-api.io'; // Use 'http://127.0.0.1:4943' for local development
 let actor;
 let authClient;
@@ -220,6 +219,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

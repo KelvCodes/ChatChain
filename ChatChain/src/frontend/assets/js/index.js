@@ -1,5 +1,4 @@
-t');
-const userList = document.getElementById('userList');
+document.getElementById('userList');
 const settingsBtn = document.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 
@@ -225,6 +224,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

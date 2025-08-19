@@ -1,11 +1,5 @@
 
-  modalContent.appendChild(loginButton);
-}
-
-// Handle Internet Identity login
-async function handleLogin() {
-  await authClient.login({
-    identityProvider: 'https://identity.ic0.app',
+ ps://identity.ic0.app',
     onSuccess: async () => {
       currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
       // Prompt for username
@@ -136,6 +130,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

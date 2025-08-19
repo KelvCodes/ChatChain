@@ -1,5 +1,4 @@
 
-  // Check if user is authenticated
   if (await authClient.isAuthenticated()) {
     currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
     await fetchUserName();
@@ -207,6 +206,7 @@ messageInput.addEventListener('keypress', (e) => {
   }
 
 });
+
 
 
 

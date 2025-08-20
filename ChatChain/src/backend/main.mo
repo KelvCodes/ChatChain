@@ -1,9 +1,6 @@
 
 
-  // ---------------------
-user with a display name.
-  /// Fails if the user is already registered.
-  ///
+  // -----
   /// @param name The name the user wants to register with
   /// @return `true` if successful, `false` if already registered
   public shared(msg) func registerUser(name: Text): async Bool {
@@ -74,6 +71,7 @@ user with a display name.
     messages := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
 
-actor ChatChain {
 
   // -------------------------------
   // TYPE DEFINITIONS
@@ -109,6 +108,7 @@ actor ChatChain {
     messages := [];
   };
 };
+
 
 
 

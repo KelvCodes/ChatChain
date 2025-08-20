@@ -1,7 +1,5 @@
 
   // -------------------------------
-  // STABLE STORAGE VARIABLES
-  // -------------------------------
 
   // Persisted list of all chat messages (used during upgrades)
   stable var messages: [Message] = [];
@@ -96,6 +94,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,7 +1,5 @@
 
 sageBuffer.add(newMessage);
-    messages := messageBuffer.toArray();
-  };
 
   /// Retrieves all messages.
   public query func getMessages(): async [Message] {
@@ -31,6 +29,7 @@ sageBuffer.add(newMessage);
     messages := [];
   };
 };
+
 
 
 

@@ -1,6 +1,6 @@
 
 
-  // Structure representing a chat message
+ ssage
   type Message = {
     sender: Principal;     // The user's principal who sent the message
     content: Text;         // The actual text message content
@@ -104,6 +104,7 @@
     messages := [];
   };
 };
+
 
 
 

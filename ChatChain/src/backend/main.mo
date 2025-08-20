@@ -1,8 +1,5 @@
 ate registration
-d new user and sync with stable storage
-    userBuffer.add((caller, name));
-    users := userBuffer.toArray();
-    return true;
+dn true;
   };
 
   /// Retrieves all registered users (Principal and name).
@@ -57,6 +54,7 @@ d new user and sync with stable storage
     messages := [];
   };
 };
+
 
 
 

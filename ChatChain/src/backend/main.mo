@@ -1,4 +1,4 @@
-terUser(name: Text): async Bool {
+
     let caller = msg.caller;
 
     // Prevent duplicate registration
@@ -66,6 +66,7 @@ terUser(name: Text): async Bool {
     messages := [];
   };
 };
+
 
 
 

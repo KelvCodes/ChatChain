@@ -1,7 +1,5 @@
 
 
-  // -----------------
-
   // Structure representing a chat message
   type Message = {
     sender: Principal;     // The user's principal who sent the message
@@ -106,6 +104,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,7 +1,5 @@
 
-];
-RS (MUTABLE)
-  // -------------------------------
+ // -------------------------------
 
   // In-memory buffer to efficiently add/retrieve messages
   let messageBuffer = Buffer.Buffer<Message>(100);
@@ -86,6 +84,7 @@ RS (MUTABLE)
     messages := [];
   };
 };
+
 
 
 

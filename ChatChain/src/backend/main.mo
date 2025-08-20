@@ -1,6 +1,4 @@
-
-import Time uffer";
-import Text "mo:base/Text";
+se/Text";
 import Array "mo:base/Array";
 
 // Define the main actor (smart contract)
@@ -114,6 +112,7 @@ actor ChatChain {
     messages := [];
   };
 };
+
 
 
 

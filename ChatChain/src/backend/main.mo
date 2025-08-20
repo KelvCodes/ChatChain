@@ -1,9 +1,7 @@
 ate registration
 dn true
   /// Retrieves all registered users (Principal and name).
-  public query func getUsers(): async [(Principal, Text)] {
-    userBuffer.toArray();
-  };
+\\
 
   // -------------------------------
   // MESSAGE SENDING AND RETRIEVAL
@@ -52,6 +50,7 @@ dn true
     messages := [];
   };
 };
+
 
 
 

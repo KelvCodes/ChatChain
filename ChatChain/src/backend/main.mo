@@ -1,8 +1,6 @@
 
 
-  // -------------------------------
-  // TYPE DEFINITIONS
-  // -------------------------------
+  // -----------------
 
   // Structure representing a chat message
   type Message = {
@@ -108,6 +106,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,8 +1,6 @@
 
 
-  // -------------------------------
-  // USER REGISTRATION
-  // -------------------------------
+  // ---------------------
 
   /// Registers a new user with a display name.
   /// Fails if the user is already registered.
@@ -77,6 +75,7 @@
     messages := [];
   };
 };
+
 
 
 

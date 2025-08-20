@@ -1,5 +1,4 @@
 
-  let messageBuffer = Buffer.Buffer<Message>(100);
 
   // In-memory buffer to manage registered users
   let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
@@ -81,6 +80,7 @@
     messages := [];
   };
 };
+
 
 
 

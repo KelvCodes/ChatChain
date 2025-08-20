@@ -1,6 +1,5 @@
 
-  stable var messages: [Message] = [];
-
+  sta
   // Persisted list of registered users (Principal, name)
   stable var users: [(Principal, Text)] = [];
 
@@ -91,6 +90,7 @@
     messages := [];
   };
 };
+
 
 
 

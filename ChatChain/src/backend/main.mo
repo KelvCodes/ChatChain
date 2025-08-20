@@ -1,7 +1,4 @@
-
-    let caller = msg.caller;
-
-    // Prevent duplicate registration
+ate registration
     for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
         return false;
@@ -66,6 +63,7 @@
     messages := [];
   };
 };
+
 
 
 

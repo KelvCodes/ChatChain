@@ -1,9 +1,5 @@
 ate registration
-  qual(principal, caller)) {
-        re
-    };
-
-    // Add new user and sync with stable storage
+d new user and sync with stable storage
     userBuffer.add((caller, name));
     users := userBuffer.toArray();
     return true;
@@ -61,6 +57,7 @@ ate registration
     messages := [];
   };
 };
+
 
 
 

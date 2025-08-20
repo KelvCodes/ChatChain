@@ -1,5 +1,4 @@
-, `false` if already registered
-  public shared(msg) func registerUser(name: Text): async Bool {
+terUser(name: Text): async Bool {
     let caller = msg.caller;
 
     // Prevent duplicate registration
@@ -67,6 +66,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,8 +1,6 @@
 
   /// @param content The message text content
-  public shared(msg) func sendMessage(content: Text): async () {
-    let newMessage: Message = {
-      sender = msg.caller;
+  publ.caller;
       content = content;
       timestamp = Time.now();
     };
@@ -40,6 +38,7 @@
     messages := [];
   };
 };
+
 
 
 

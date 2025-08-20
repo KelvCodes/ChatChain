@@ -1,7 +1,6 @@
 ate registration
   qual(principal, caller)) {
-        return false;
-      }
+        re
     };
 
     // Add new user and sync with stable storage
@@ -62,6 +61,7 @@ ate registration
     messages := [];
   };
 };
+
 
 
 

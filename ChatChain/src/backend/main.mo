@@ -1,8 +1,6 @@
 trieves all registered users (Principal and name).
 \\
-
-  // -------------------------------
-  // MESSAGE SENDING AND RETRIEVAL
+SAGE SENDING AND RETRIEVAL
   // -------------------------------
 
   /// Allows a user to send a message.
@@ -48,6 +46,7 @@ trieves all registered users (Principal and name).
     messages := [];
   };
 };
+
 
 
 

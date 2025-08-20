@@ -1,4 +1,4 @@
-ate registration
+ registration
 dn true
   /// Retrieves all registered users (Principal and name).
 \\
@@ -50,6 +50,7 @@ dn true
     messages := [];
   };
 };
+
 
 
 

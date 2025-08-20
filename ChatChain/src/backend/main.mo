@@ -1,10 +1,5 @@
 
-sageBuffer.add(newMessage);
-
-es;
-  };
-
-  /// Retrieves messages sent since a specific timestamp.
+trieves messages sent since a specific timestamp.
   ///
   /// @param timestamp The earliest time to retrieve messages from
   /// @return An array of messages sent on or after the given timestamp
@@ -27,6 +22,7 @@ es;
     messages := [];
   };
 };
+
 
 
 

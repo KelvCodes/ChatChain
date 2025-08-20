@@ -1,9 +1,6 @@
 
   /// @param content The message text content
-  publ.caller;
-      content = content;
-      timestamp = Time.now();
-    };
+
 
     // Add to buffer and persist to stable variable
     messageBuffer.add(newMessage);
@@ -38,6 +35,7 @@
     messages := [];
   };
 };
+
 
 
 

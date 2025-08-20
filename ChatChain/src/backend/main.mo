@@ -1,9 +1,7 @@
 
 sageBuffer.add(newMessage);
 
-  /// Retrieves all messages.
-  public query func getMessages(): async [Message] {
-    messages;
+es;
   };
 
   /// Retrieves messages sent since a specific timestamp.
@@ -29,6 +27,7 @@ sageBuffer.add(newMessage);
     messages := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
-\
-  // In-memory buffer to efficiently add/retrieve messages
+to efficiently add/retrieve messages
   let messageBuffer = Buffer.Buffer<Message>(100);
 
   // In-memory buffer to manage registered users
@@ -82,6 +81,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,6 +1,5 @@
 ate registration
-    for ((principal, _) in userBuffer.toArray().vals()) {
-      if (Principal.equal(principal, caller)) {
+  qual(principal, caller)) {
         return false;
       }
     };
@@ -63,6 +62,7 @@ ate registration
     messages := [];
   };
 };
+
 
 
 

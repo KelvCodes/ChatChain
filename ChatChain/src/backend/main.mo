@@ -1,10 +1,4 @@
-trieves all registered users (Principal and name).
-\\
-SAGE SENDING AND RETRIEVAL
-  // -------------------------------
 
-  /// Allows a user to send a message.
-  ///
   /// @param content The message text content
   public shared(msg) func sendMessage(content: Text): async () {
     let newMessage: Message = {
@@ -46,6 +40,7 @@ SAGE SENDING AND RETRIEVAL
     messages := [];
   };
 };
+
 
 
 

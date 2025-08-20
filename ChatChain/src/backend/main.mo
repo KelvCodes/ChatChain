@@ -1,7 +1,6 @@
 
   sta
-  // Persisted list of registered users (Principal, name)
-  stable var users: [(Principal, Text)] = [];
+  // Persisted list oText)] = [];
 
   // -------------------------------
   // IN-MEMORY BUFFERS (MUTABLE)
@@ -90,6 +89,7 @@
     messages := [];
   };
 };
+
 
 
 

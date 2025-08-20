@@ -1,8 +1,6 @@
 
 
-
-  type Message = {
-    sender: Principal;     // The user's principal who sent the message
+     // The user's principal who sent the message
     content: Text;         // The actual text message content
     timestamp: Time.Time;  // The time the message was sent
   };
@@ -104,6 +102,7 @@
     messages := [];
   };
 };
+
 
 
 

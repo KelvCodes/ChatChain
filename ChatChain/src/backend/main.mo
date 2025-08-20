@@ -1,8 +1,7 @@
 
 
   // ---------------------
-
-  /// Registers a new user with a display name.
+user with a display name.
   /// Fails if the user is already registered.
   ///
   /// @param name The name the user wants to register with
@@ -75,6 +74,7 @@
     messages := [];
   };
 };
+
 
 
 

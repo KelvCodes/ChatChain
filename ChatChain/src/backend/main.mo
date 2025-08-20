@@ -1,7 +1,6 @@
 
 age
-    content: Text;         // The actual text message content
-    timestamp: Time.Time;  // The time the message was sent
+    coTime;  // The time the message was sent
   };
 
   // -------------------------------
@@ -101,6 +100,7 @@ age
     messages := [];
   };
 };
+
 
 
 

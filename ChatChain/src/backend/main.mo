@@ -1,8 +1,4 @@
 
-age
-    coTime;  // The time the message was sent
-  };
-
   // -------------------------------
   // STABLE STORAGE VARIABLES
   // -------------------------------
@@ -100,6 +96,7 @@ age
     messages := [];
   };
 };
+
 
 
 

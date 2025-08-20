@@ -1,5 +1,4 @@
 
-  // Persisted list of all chat messages (used during upgrades)
   stable var messages: [Message] = [];
 
   // Persisted list of registered users (Principal, name)
@@ -92,6 +91,7 @@
     messages := [];
   };
 };
+
 
 
 

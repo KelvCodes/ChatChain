@@ -1,8 +1,6 @@
 
 
-  // -----
-  /// @paraThe name the user wants to register with
-  /// @return `true` if successful, `false` if already registered
+  // -- successful, `false` if already registered
   public shared(msg) func registerUser(name: Text): async Bool {
     let caller = msg.caller;
 
@@ -71,6 +69,7 @@
     messages := [];
   };
 };
+
 
 
 

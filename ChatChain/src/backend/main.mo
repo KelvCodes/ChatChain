@@ -1,7 +1,5 @@
 
 
-  let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
-
   // -------------------------------
   // USER REGISTRATION
   // -------------------------------
@@ -79,6 +77,7 @@
     messages := [];
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
 
-
-// Define the main actor (smart contract)
 actor ChatChain {
 
   // -------------------------------
@@ -111,6 +109,7 @@ actor ChatChain {
     messages := [];
   };
 };
+
 
 
 

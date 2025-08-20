@@ -1,9 +1,5 @@
 
-  /// @param content The message text content
-
-
-    // Add to buffer and persist to stable variable
-    messageBuffer.add(newMessage);
+sageBuffer.add(newMessage);
     messages := messageBuffer.toArray();
   };
 
@@ -35,6 +31,7 @@
     messages := [];
   };
 };
+
 
 
 

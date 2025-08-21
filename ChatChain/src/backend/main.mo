@@ -1,5 +1,4 @@
-
-      if (Pequal(principal, caller)) {
+) {
         return false;
       }
     };
@@ -158,6 +157,7 @@
     users := [];
   };
 };
+
 
 
 

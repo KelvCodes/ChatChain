@@ -1,7 +1,5 @@
 
-sync [(P
-    var found = false;
-    var tempUsers: [(Principal, Text)] = [];
+sync [(ipal, Text)] = [];
 
     for ((p, n) in userBuffer.toArray().vals()) {
       if (Principal.equal(p, caller)) {
@@ -142,6 +140,7 @@ sync [(P
     users := [];
   };
 };
+
 
 
 

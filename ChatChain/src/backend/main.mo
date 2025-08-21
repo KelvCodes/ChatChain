@@ -1,6 +1,4 @@
 
-
-    for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
         return false;
       }
@@ -160,6 +158,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
 
-    users := userBuffer.toArray();
     return true;
   };
 
@@ -152,6 +151,7 @@
     users := [];
   };
 };
+
 
 
 

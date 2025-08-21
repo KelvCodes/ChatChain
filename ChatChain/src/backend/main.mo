@@ -1,5 +1,4 @@
-
-    id: Nat;               // Unique ID for message
+d: Nat;               // Unique ID for message
     sender: Principal;     
     content: Text;         
     timestamp: Time.Time;  
@@ -184,6 +183,7 @@
     users := [];
   };
 };
+
 
 
 

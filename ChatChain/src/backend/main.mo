@@ -1,7 +1,5 @@
 
 
-        tempUsers := Array.append(tempUsers, [(p, newName)]);
-        found := true;
       } else {
         tempUsers := Array.append(tempUsers, [(p, n)]);
       }
@@ -137,6 +135,7 @@
     users := [];
   };
 };
+
 
 
 

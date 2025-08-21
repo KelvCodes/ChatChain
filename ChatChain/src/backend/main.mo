@@ -1,5 +1,5 @@
 
-      if (Principal.equal(principal, caller)) {
+      if (Pequal(principal, caller)) {
         return false;
       }
     };
@@ -158,6 +158,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -1,7 +1,4 @@
 
-
-  // -------------------------------
-  // USER REGISTRATION / MANAGEMENT
   // -------------------------------
   public shared(msg) func registerUser(name: Text): async Bool {
     let caller = msg.caller;
@@ -166,6 +163,7 @@
     users := [];
   };
 };
+
 
 
 

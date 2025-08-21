@@ -1,5 +1,4 @@
 
-    let caller = msg.caller;
 
     for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
@@ -161,6 +160,7 @@
     users := [];
   };
 };
+
 
 
 

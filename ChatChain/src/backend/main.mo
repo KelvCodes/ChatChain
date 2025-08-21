@@ -1,8 +1,5 @@
 
-
-actor ChatChain {
-
-  // -------------------------------
+---------------------
   // TYPE DEFINITIONS
   // -------------------------------
   type Message = {
@@ -191,6 +188,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

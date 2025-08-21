@@ -1,5 +1,4 @@
-         
-    timestamp: Time.Time;  
+estamp: Time.Time;  
   };
 
   // -------------------------------
@@ -181,6 +180,7 @@
     users := [];
   };
 };
+
 
 
 

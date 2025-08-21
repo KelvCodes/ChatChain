@@ -1,6 +1,4 @@
 
-  stable var nextMessageId: Nat = 0; // for unique message IDs
-
   // -------------------------------
   // IN-MEMORY BUFFERS
   // -------------------------------
@@ -173,6 +171,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -1,5 +1,3 @@
-al, Text)] = [];
-    var found = false;
 
     for ((p, n) in userBuffer.toArray().vals()) {
       if (Principal.equal(p, caller)) {
@@ -118,6 +116,7 @@ al, Text)] = [];
     users := [];
   };
 };
+
 
 
 

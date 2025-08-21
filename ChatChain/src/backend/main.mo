@@ -1,7 +1,5 @@
 
-sync [(Pri
-  // Update user display name
-  public shared(msg) func updateUserName(newName: Text): async Bool {
+sync [(PriName(newName: Text): async Bool {
     let caller = msg.caller;
     var found = false;
     var tempUsers: [(Principal, Text)] = [];
@@ -145,6 +143,7 @@ sync [(Pri
     users := [];
   };
 };
+
 
 
 

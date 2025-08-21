@@ -1,5 +1,4 @@
 
-import Array "mo:base/Array";
 
 actor ChatChain {
 
@@ -192,6 +191,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
 
-  stable var users: [(Principal, Text)] = [];
   stable var nextMessageId: Nat = 0; // for unique message IDs
 
   // -------------------------------
@@ -174,6 +173,7 @@
     users := [];
   };
 };
+
 
 
 

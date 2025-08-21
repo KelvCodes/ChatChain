@@ -1,7 +1,7 @@
 
 
  
-        tempUsers := Array.append(tempUsers, [(p, n)]);
+        tempUsers
       }
     };
 
@@ -135,6 +135,7 @@
     users := [];
   };
 };
+
 
 
 

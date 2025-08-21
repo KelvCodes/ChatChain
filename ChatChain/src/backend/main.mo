@@ -1,6 +1,4 @@
 
-  // -------------------------------
-  type Message = {
     id: Nat;               // Unique ID for message
     sender: Principal;     
     content: Text;         
@@ -186,6 +184,7 @@
     users := [];
   };
 };
+
 
 
 

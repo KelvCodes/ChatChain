@@ -1,7 +1,4 @@
 ;
-      for (u in tempUsers.vals()) { userBuffer.add(u); }
-      users := userBuffer.toArray();
-    };
     return found;
   };
 
@@ -127,6 +124,7 @@
     users := [];
   };
 };
+
 
 
 

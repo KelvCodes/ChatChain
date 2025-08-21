@@ -1,5 +1,4 @@
 
-  let messageBuffeBuffer<Message>(100);
   let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
 
   // -------------------------------
@@ -168,6 +167,7 @@
     users := [];
   };
 };
+
 
 
 

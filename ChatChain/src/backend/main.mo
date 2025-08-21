@@ -1,5 +1,4 @@
-d:     
-    content: Text;         
+         
     timestamp: Time.Time;  
   };
 
@@ -182,6 +181,7 @@ d:
     users := [];
   };
 };
+
 
 
 

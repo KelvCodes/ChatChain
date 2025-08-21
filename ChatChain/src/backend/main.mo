@@ -1,7 +1,4 @@
-estamp: Time.Time;  
-  };
-
-  // -------------------------------
+-----------------------
   // STABLE STORAGE VARIABLES
   // -------------------------------
   stable var messages: [Message] = [];
@@ -180,6 +177,7 @@ estamp: Time.Time;
     users := [];
   };
 };
+
 
 
 

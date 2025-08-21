@@ -1,6 +1,4 @@
-
-  // -------------------------------
-  public shared(msg) func registerUser(name: Text): async Bool {
+e: Text): async Bool {
     let caller = msg.caller;
 
     for ((principal, _) in userBuffer.toArray().vals()) {
@@ -163,6 +161,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
-) {
 
-    userBuffer.add((caller, name));
     users := userBuffer.toArray();
     return true;
   };
@@ -154,6 +152,7 @@
     users := [];
   };
 };
+
 
 
 

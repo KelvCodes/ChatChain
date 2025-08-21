@@ -1,4 +1,4 @@
-e: Text): async Bool {
+
     let caller = msg.caller;
 
     for ((principal, _) in userBuffer.toArray().vals()) {
@@ -161,6 +161,7 @@ e: Text): async Bool {
     users := [];
   };
 };
+
 
 
 

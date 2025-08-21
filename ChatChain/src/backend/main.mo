@@ -1,6 +1,5 @@
 
-sync [(ipal, Text)] = [];
-caller)) {
+
         tempUsers := Array.append(tempUsers, [(p, newName)]);
         found := true;
       } else {
@@ -138,6 +137,7 @@ caller)) {
     users := [];
   };
 };
+
 
 
 

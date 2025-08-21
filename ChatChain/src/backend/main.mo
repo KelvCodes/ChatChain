@@ -1,5 +1,4 @@
 
-  public shared(msg) func deleteUser(): async Bool {
     let caller = msg.caller;
     var tempUsers: [(Principal, Text)] = [];
     var found = false;
@@ -121,6 +120,7 @@
     users := [];
   };
 };
+
 
 
 

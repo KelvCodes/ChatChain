@@ -1,6 +1,5 @@
 
-    return true;
-  };
+  
 
   public query func getUsers(): async [(Principal, Text)] {
     userBuffer.toArray();
@@ -151,6 +150,7 @@
     users := [];
   };
 };
+
 
 
 

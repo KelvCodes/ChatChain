@@ -1,6 +1,4 @@
 
----------------------
-  // TYPE DEFINITIONS
   // -------------------------------
   type Message = {
     id: Nat;               // Unique ID for message
@@ -188,6 +186,7 @@
     users := [];
   };
 };
+
 
 
 

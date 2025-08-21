@@ -1,6 +1,4 @@
-
-    let caller = msg.caller;
-    var tempUsers: [(Principal, Text)] = [];
+al, Text)] = [];
     var found = false;
 
     for ((p, n) in userBuffer.toArray().vals()) {
@@ -120,6 +118,7 @@
     users := [];
   };
 };
+
 
 
 

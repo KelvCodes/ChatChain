@@ -1,5 +1,4 @@
------------------------
-  // STABLE STORAGE VARIABLES
+S
   // -------------------------------
   stable var messages: [Message] = [];
   stable var users: [(Principal, Text)] = [];
@@ -177,6 +176,7 @@
     users := [];
   };
 };
+
 
 
 

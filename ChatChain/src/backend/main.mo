@@ -1,6 +1,5 @@
 
-sync [(PriName(newName: Text): async Bool {
-    let caller = msg.caller;
+sync [(P
     var found = false;
     var tempUsers: [(Principal, Text)] = [];
 
@@ -143,6 +142,7 @@ sync [(PriName(newName: Text): async Bool {
     users := [];
   };
 };
+
 
 
 

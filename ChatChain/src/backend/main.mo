@@ -1,9 +1,6 @@
 
 
  
-        tempUsers
-      }
-    };
 
     if (found) {
       userBuffer.clear();
@@ -135,6 +132,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -1,8 +1,5 @@
 
-sync [(Principal, Text)] {
-    userBuffer.toArray();
-  };
-
+sync [(Pri
   // Update user display name
   public shared(msg) func updateUserName(newName: Text): async Bool {
     let caller = msg.caller;
@@ -148,6 +145,7 @@ sync [(Principal, Text)] {
     users := [];
   };
 };
+
 
 
 

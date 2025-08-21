@@ -1,7 +1,5 @@
 
-  
-
-  public query func getUsers(): async [(Principal, Text)] {
+sync [(Principal, Text)] {
     userBuffer.toArray();
   };
 
@@ -150,6 +148,7 @@
     users := [];
   };
 };
+
 
 
 

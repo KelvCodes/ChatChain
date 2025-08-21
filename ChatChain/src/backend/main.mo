@@ -1,8 +1,6 @@
 
 sync [(ipal, Text)] = [];
-
-    for ((p, n) in userBuffer.toArray().vals()) {
-      if (Principal.equal(p, caller)) {
+caller)) {
         tempUsers := Array.append(tempUsers, [(p, newName)]);
         found := true;
       } else {
@@ -140,6 +138,7 @@ sync [(ipal, Text)] = [];
     users := [];
   };
 };
+
 
 
 

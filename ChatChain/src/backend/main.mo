@@ -1,5 +1,4 @@
 
-    for ((p, n) in userBuffer.toArray().vals()) {
       if (Principal.equal(p, caller)) {
         found := true;
       } else {
@@ -116,6 +115,7 @@
     users := [];
   };
 };
+
 
 
 

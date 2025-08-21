@@ -1,12 +1,4 @@
 
-      if (Principal.equal(p, caller)) {
-        found := true;
-      } else {
-        tempUsers := Array.append(tempUsers, [(p, n)]);
-      }
-    };
-
-    if (found) {
       userBuffer.clear();
       for (u in tempUsers.vals()) { userBuffer.add(u); }
       users := userBuffer.toArray();
@@ -115,6 +107,7 @@
     users := [];
   };
 };
+
 
 
 

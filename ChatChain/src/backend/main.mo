@@ -1,5 +1,4 @@
-
-    content: Text;         // The actual text content of the message
+     // The actual text content of the message
     timestamp: Time.Time;  // The system time at which the message was sent
   };
 
@@ -232,6 +231,7 @@
     users := [];
   };
 };
+
 
 
 

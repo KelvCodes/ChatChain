@@ -1,6 +1,4 @@
-
-    // Add new user to buffer
-    userBuffer.add((caller, name));
+name));
 
     // Sync buffer to stable storage
     users := userBuffer.toArray();
@@ -198,6 +196,7 @@
     users := [];
   };
 };
+
 
 
 

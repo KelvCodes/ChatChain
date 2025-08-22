@@ -1,8 +1,5 @@
 name));
 
-    // Sync buffer to stable storage
-    users := userBuffer.toArray();
-
     return true;
   };
 
@@ -196,6 +193,7 @@ name));
     users := [];
   };
 };
+
 
 
 

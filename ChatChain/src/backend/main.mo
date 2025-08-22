@@ -1,6 +1,4 @@
 
-  // =========================================
-
   // Each message in the chat is represented by this record type
   type Message = {
     id: Nat;               // Unique numeric ID for message
@@ -238,6 +236,7 @@
     users := [];
   };
 };
+
 
 
 

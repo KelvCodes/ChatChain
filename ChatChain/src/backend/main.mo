@@ -1,4 +1,4 @@
---------------------------
+
 // Actor Declaration
 // -----------------------------------------------------------
 // ChatChain is our main actor (like a smart contract)
@@ -246,6 +246,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

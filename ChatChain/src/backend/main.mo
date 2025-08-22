@@ -1,6 +1,3 @@
-uffer
-    for ((princi
-    };
 
     // Add new user to buffer
     userBuffer.add((caller, name));
@@ -201,6 +198,7 @@ uffer
     users := [];
   };
 };
+
 
 
 

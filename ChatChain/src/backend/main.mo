@@ -1,4 +1,4 @@
-essages before syncing to stable array
+essages 
   let userBuffer = Buffer.Buffer<(Principal, Text)>(100); // Holds up to 100 users before syncing to stable array
 
   // ===========================================================
@@ -217,6 +217,7 @@ essages before syncing to stable array
     users := [];
   };
 };
+
 
 
 

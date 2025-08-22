@@ -1,4 +1,4 @@
-ion to register a new user
+
   // Each user is uniquely identified by their Principal (msg.caller)
   // Returns sterUser(name: Text): async Bool {
     let caller = msg.caller;
@@ -209,6 +209,7 @@ ion to register a new user
     users := [];
   };
 };
+
 
 
 

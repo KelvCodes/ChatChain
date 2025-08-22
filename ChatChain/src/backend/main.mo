@@ -1,4 +1,3 @@
-s Array utilities (filter, append, size, etc.)
 
 // -----------------------------------------------------------
 // Actor Declaration
@@ -248,6 +247,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

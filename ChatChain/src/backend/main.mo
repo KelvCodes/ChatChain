@@ -1,5 +1,4 @@
- update methods
-actor ChatChain {
+
 
   // ===========================================================
   // TYPE DEFINITIONS
@@ -242,6 +241,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

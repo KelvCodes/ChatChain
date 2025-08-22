@@ -1,4 +1,4 @@
-          // Provides Text utilities (strings, searching, etc.)
+ilities (strings, searching, etc.)
 import Array "mo:base/Array";         // Provides Array utilities (filter, append, size, etc.)
 
 // -----------------------------------------------------------
@@ -249,6 +249,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

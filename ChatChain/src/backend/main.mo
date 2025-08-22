@@ -1,5 +1,4 @@
-==========================================
-  // USER REGISTRATION AND MANAGEMENT FUNCTIONS
+
   // ===========================================================
 
   // Function to register a new user
@@ -214,6 +213,7 @@
     users := [];
   };
 };
+
 
 
 

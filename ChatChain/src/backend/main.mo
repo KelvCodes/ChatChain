@@ -1,72 +1,176 @@
-name));
+// ============================================================
+// ChatChain Actor in Motoko
+// ============================================================
+// This actor implements a full-featured chat system with
+// user registration, message sending, editing, deletion,
+// search, and administrative utilities.
+// It uses stable storage for persistent data across upgrades
+// and temporary buffers for runtime efficiency.
+// ============================================================
+
+// -----------------------------------------------------------
+// Importing Core Motoko Base Libraries
+// -----------------------------------------------------------
+// These provide essential functionality for the actor
+
+import Principal "mo:base/Principal"; // Principal type: unique identity of users and actors
+import Time "mo:base/Time";           // Time utilities for timestamps
+import Buffer "mo:base/Buffer";       // Dynamic buffer structures
+import Text "mo:base/Text";           // Text manipulation utilities
+import Array "mo:base/Array";         // Array manipulation utilities (append, filter, size, etc.)
+
+// -----------------------------------------------------------
+// Actor Declaration
+// -----------------------------------------------------------
+// ChatChain acts as our main smart contract
+// It handles all chat logic, user management, and message storage
+
+actor ChatChain {
+
+  // ===========================================================
+  // TYPE DEFINITIONS
+  // ===========================================================
+
+  // -----------------------------------------------------------------
+  // Each chat message is represented as a record
+  // Contains unique ID, sender, text content, and timestamp
+  // -----------------------------------------------------------------
+  type Message = {
+    id: Nat;               // Unique identifier for the message
+    sender: Principal;     // Principal identity of the sender
+    content: Text;         // Actual textual content of the message
+    timestamp: Time.Time;  // Time when the message was sent
+  };
+
+  // ===========================================================
+  // STABLE STORAGE VARIABLES (persistent across upgrades)
+  // ===========================================================
+
+  // Stores all chat messages permanently
+  stable var messages: [Message] = [];
+
+  // Stores all registered users as tuples of (Principal, DisplayName)
+  stable var users: [(Principal, Text)] = [];
+
+  // Counter to assign unique IDs to each message
+  stable var nextMessageId: Nat = 0;
+
+  // ===========================================================
+  // IN-MEMORY BUFFERS (temporary, runtime only)
+  // ===========================================================
+
+  // Buffer to hold up to 100 messages before syncing to stable storage
+  let messageBuffer = Buffer.Buffer<Message>(100);
+
+  // Buffer to hold up to 100 users before syncing to stable storage
+  let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
+
+  // ===========================================================
+  // USER REGISTRATION AND MANAGEMENT FUNCTIONS
+  // ===========================================================
+
+  // -----------------------------------------------------------------
+  // Register a new user with a display name
+  // Checks if the user already exists, returns true if successful
+  // -----------------------------------------------------------------
+  public shared(msg) func registerUser(displayName: Text): async Bool {
+    let caller = msg.caller;
+
+    // Loop through buffer to check if user already exists
+    for ((existingPrincipal, _) in userBuffer.toArray().vals()) {
+      if (Principal.equal(existingPrincipal, caller)) {
+        return false; // User is already registered
+      }
+    };
+
+    // Add the new user to the buffer
+    userBuffer.add((caller, displayName));
+
+    // Sync buffer to stable storage
+    users := userBuffer.toArray();
 
     return true;
   };
 
-  // Function to
-
-  // Function to update a user’s display name
-  // Only the caller can update their own name
-  public shared(msg) func updateUserName(newName: Text): async Bool {
-    let caller = msg.caller;
-    var found: Bool = false;
-    var tempUsers: [(Principal, Text)] = [];
-
-    // Rebuild the user list with updated name
-    for ((p, n) in userBuffer.toArray().vals()) {
-      if (Principal.equal(p, caller)) {
-        tempUsers := Array.append(tempUsers, [(p, newName)]);
-        found := true;
-      } else {
-        tempUsers := Array.append(tempUsers, [(p, n)]);
-      }
-    };
-
-    // Update buffers if user was found
-    if (found) {
-      userBuffer.clear();
-      for (u in tempUsers.vals()) {
-        userBuffer.add(u);
-      };
-      users := userBuffer.toArray();
-    };
-
-    return found;
+  // -----------------------------------------------------------------
+  // Retrieve the list of all registered users
+  // Returns an array of tuples (Principal, DisplayName)
+  // -----------------------------------------------------------------
+  public query func getUsers(): async [(Principal, Text)] {
+    userBuffer.toArray()
   };
 
-  // Function to delete a user
-  // Only the caller can delete themselves
-  public shared(msg) func deleteUser(): async Bool {
+  // -----------------------------------------------------------------
+  // Update the caller’s display name
+  // Only the user themselves can update their name
+  // Returns true if update was successful
+  // -----------------------------------------------------------------
+  public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
     let caller = msg.caller;
-    var tempUsers: [(Principal, Text)] = [];
-    var found: Bool = false;
+    var updatedSuccessfully: Bool = false;
+    var temporaryUserList: [(Principal, Text)] = [];
 
+    // Rebuild user list with updated name for caller
     for ((p, n) in userBuffer.toArray().vals()) {
       if (Principal.equal(p, caller)) {
-        found := true;
+        temporaryUserList := Array.append(temporaryUserList, [(p, newDisplayName)]);
+        updatedSuccessfully := true;
       } else {
-        tempUsers := Array.append(tempUsers, [(p, n)]);
+        temporaryUserList := Array.append(temporaryUserList, [(p, n)]);
       }
     };
 
-    // Update storage if deletion occurred
-    if (found) {
+    // If user was found, update buffer and stable storage
+    if (updatedSuccessfully) {
       userBuffer.clear();
-      for (u in tempUsers.vals()) {
+      for (u in temporaryUserList.vals()) {
         userBuffer.add(u);
       };
       users := userBuffer.toArray();
     };
 
-    return found;
+    return updatedSuccessfully;
+  };
+
+  // -----------------------------------------------------------------
+  // Delete the caller from the user list
+  // Only the user themselves can delete their account
+  // Returns true if deletion occurred
+  // -----------------------------------------------------------------
+  public shared(msg) func deleteUser(): async Bool {
+    let caller = msg.caller;
+    var temporaryUserList: [(Principal, Text)] = [];
+    var userDeleted: Bool = false;
+
+    // Loop through users, keep all except the caller
+    for ((p, n) in userBuffer.toArray().vals()) {
+      if (Principal.equal(p, caller)) {
+        userDeleted := true;
+      } else {
+        temporaryUserList := Array.append(temporaryUserList, [(p, n)]);
+      }
+    };
+
+    // Update buffer and storage if deletion occurred
+    if (userDeleted) {
+      userBuffer.clear();
+      for (u in temporaryUserList.vals()) {
+        userBuffer.add(u);
+      };
+      users := userBuffer.toArray();
+    };
+
+    return userDeleted;
   };
 
   // ===========================================================
   // MESSAGE SENDING AND RETRIEVAL FUNCTIONS
   // ===========================================================
 
-  // Function to send a message
-  // Returns the message ID assigned to this message
+  // -----------------------------------------------------------------
+  // Send a new message
+  // Returns the assigned unique message ID
+  // -----------------------------------------------------------------
   public shared(msg) func sendMessage(content: Text): async Nat {
     let newMessage: Message = {
       id = nextMessageId;
@@ -75,193 +179,133 @@ name));
       timestamp = Time.now();
     };
 
-    // Increment ID counter for next message
+    // Increment message ID for the next message
     nextMessageId += 1;
 
-    // Add message to buffer and sync to stable storage
+    // Add message to buffer
     messageBuffer.add(newMessage);
+
+    // Sync buffer to stable storage
     messages := messageBuffer.toArray();
 
     return newMessage.id;
   };
 
-  // Function to retrieve all messages
+  // -----------------------------------------------------------------
+  // Retrieve all messages
+  // Returns an array of Message records
+  // -----------------------------------------------------------------
   public query func getMessages(): async [Message] {
     messages
   };
 
-  // Function to retrieve all messages since a given timestamp
+  // -----------------------------------------------------------------
+  // Retrieve all messages sent since a specific timestamp
+  // Useful for fetching only new messages
+  // -----------------------------------------------------------------
   public query func getMessagesSince(timestamp: Time.Time): async [Message] {
-    Array.filter(
-      messages,
-      func(msg: Message): Bool { msg.timestamp >= timestamp }
-    )
+    Array.filter(messages, func(m: Message): Bool { m.timestamp >= timestamp })
   };
 
-  // Function to edit a message (only sender can edit their message)
+  // -----------------------------------------------------------------
+  // Edit a message (only the sender can edit)
+  // Returns true if message was successfully updated
+  // -----------------------------------------------------------------
   public shared(msg) func editMessage(messageId: Nat, newContent: Text): async Bool {
     let caller = msg.caller;
-    var updated: Bool = false;
-    var tempMessages: [Message] = [];
+    var messageUpdated: Bool = false;
+    var tempMessageList: [Message] = [];
 
-    // Rebuild message array with updated content
+    // Rebuild message list with updated content
     for (m in messages.vals()) {
       if (m.id == messageId and Principal.equal(m.sender, caller)) {
-        tempMessages := Array.append(tempMessages, [{ m with content = newContent }]);
-        updated := true;
+        tempMessageList := Array.append(tempMessageList, [{ m with content = newContent }]);
+        messageUpdated := true;
       } else {
-        tempMessages := Array.append(tempMessages, [m]);
+        tempMessageList := Array.append(tempMessageList, [m]);
       }
     };
 
-    // If message was updated, sync back to buffers
-    if (updated) {
+    // Update buffer and stable storage if updated
+    if (messageUpdated) {
       messageBuffer.clear();
-      for (m in tempMessages.vals()) {
+      for (m in tempMessageList.vals()) {
         messageBuffer.add(m);
       };
       messages := messageBuffer.toArray();
     };
 
-    return updated;
+    return messageUpdated;
   };
 
-  // Function to delete a message (only sender can delete)
+  // -----------------------------------------------------------------
+  // Delete a message (only the sender can delete)
+  // Returns true if deletion was successful
+  // -----------------------------------------------------------------
   public shared(msg) func deleteMessage(messageId: Nat): async Bool {
     let caller = msg.caller;
-    var tempMessages: [Message] = [];
-    var deleted: Bool = false;
+    var temporaryMessages: [Message] = [];
+    var messageDeleted: Bool = false;
 
-    // Filter out the message to delete
     for (m in messages.vals()) {
       if (m.id == messageId and Principal.equal(m.sender, caller)) {
-        deleted := true;
+        messageDeleted := true;
       } else {
-        tempMessages := Array.append(tempMessages, [m]);
+        temporaryMessages := Array.append(temporaryMessages, [m]);
       }
     };
 
-    // Update buffers if deletion occurred
-    if (deleted) {
+    // Update buffer and storage if deletion occurred
+    if (messageDeleted) {
       messageBuffer.clear();
-      for (m in tempMessages.vals()) {
+      for (m in temporaryMessages.vals()) {
         messageBuffer.add(m);
       };
       messages := messageBuffer.toArray();
     };
 
-    return deleted;
+    return messageDeleted;
   };
 
-  // Function to search for messages containing a keyword
+  // -----------------------------------------------------------------
+  // Search messages containing a specific keyword
+  // Returns an array of matching messages
+  // -----------------------------------------------------------------
   public query func searchMessages(keyword: Text): async [Message] {
-    Array.filter(messages, func(m: Message): Bool {
-      Text.contains(m.content, keyword)
-    })
+    Array.filter(messages, func(m: Message): Bool { Text.contains(m.content, keyword) })
   };
 
-  // Function to get total number of messages
+  // -----------------------------------------------------------------
+  // Get the total number of messages
+  // -----------------------------------------------------------------
   public query func messageCount(): async Nat {
     Array.size(messages)
   };
 
-  // Function to get the number of messages sent by a particular user
+  // -----------------------------------------------------------------
+  // Get the number of messages sent by a specific user
+  // -----------------------------------------------------------------
   public query func userMessageCount(user: Principal): async Nat {
-    Array.size(
-      Array.filter(messages, func(m: Message): Bool {
-        Principal.equal(m.sender, user)
-      })
-    )
+    Array.size(Array.filter(messages, func(m: Message): Bool { Principal.equal(m.sender, user) }))
   };
 
   // ===========================================================
   // ADMIN / UTILITY FUNCTIONS
   // ===========================================================
 
-  // Function to clear all messages (Admin utility)
+  // -----------------------------------------------------------------
+  // Clear all messages (admin utility)
+  // -----------------------------------------------------------------
   public shared(msg) func clearMessages(): async () {
     messageBuffer.clear();
     messages := [];
   };
 
-  // Function to clear all users (Admin utility)
+  // -----------------------------------------------------------------
+  // Clear all users (admin utility)
+  // -----------------------------------------------------------------
   public shared(msg) func clearUsers(): async () {
     userBuffer.clear();
     users := [];
   };
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

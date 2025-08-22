@@ -1,6 +1,5 @@
 
-  // Each user is uniquely identified by their Principal (msg.caller)
-  // Returns sterUser(name: Text): async Bool {
+  // Each user is uniquely iden
     let caller = msg.caller;
 
     // Check if user already exists in buffer
@@ -209,6 +208,7 @@
     users := [];
   };
 };
+
 
 
 

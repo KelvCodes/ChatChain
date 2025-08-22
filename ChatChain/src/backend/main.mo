@@ -1,5 +1,4 @@
-
-// Importing necessary base libraries from Motoko
+ase libraries from Motoko
 // -----------------------------------------------------------
 import Principal "mo:base/Principal"; // Provides Principal type (unique identity of users/actors)
 import Time "mo:base/Time";           // Provides Time utilities (timestamps)
@@ -255,6 +254,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

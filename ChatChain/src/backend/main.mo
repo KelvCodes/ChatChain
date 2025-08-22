@@ -1,6 +1,4 @@
-     // The actual text content of the message
-    timestamp: Time.Time;  // The system time at which the message was sent
-  };
+     // The actual text cont  };
 
   // ===========================================================
   // STABLE STORAGE VARIABLES (persist across upgrades)
@@ -231,6 +229,7 @@
     users := [];
   };
 };
+
 
 
 

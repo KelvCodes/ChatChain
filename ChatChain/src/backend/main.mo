@@ -1,6 +1,5 @@
 
-  // TYPE DEFINITIONS
-  // ===========================================================
+  // =========================================
 
   // Each message in the chat is represented by this record type
   type Message = {
@@ -239,6 +238,7 @@
     users := [];
   };
 };
+
 
 
 

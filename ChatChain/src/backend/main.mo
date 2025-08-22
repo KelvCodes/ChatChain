@@ -1,6 +1,4 @@
-
-  // Each 
-if user already exists in buffer
+uffer
     for ((principal, _) in userBuffer.toArray().vals()) {
       if (Principal.equal(principal, caller)) {
         return false; // user already registered
@@ -206,6 +204,7 @@ if user already exists in buffer
     users := [];
   };
 };
+
 
 
 

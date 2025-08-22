@@ -1,5 +1,4 @@
-       // Stores registered users as (Principal, DisplayName)
-  stable var nextMessageId: Nat = 0;                 // Counter for assigning unique IDs to messages
+ssageId: Nat = 0;                 // Counter for assigning unique IDs to messages
 
   // ===========================================================
   // IN-MEMORY BUFFERS (temporary during runtime, not upgrade-safe)
@@ -223,6 +222,7 @@
     users := [];
   };
 };
+
 
 
 

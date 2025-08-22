@@ -1,6 +1,5 @@
 
-  // Each user is uniquely iden
-    let caller = msg.caller;
+  // Each 
 
     // Check if user already exists in buffer
     for ((principal, _) in userBuffer.toArray().vals()) {
@@ -208,6 +207,7 @@
     users := [];
   };
 };
+
 
 
 

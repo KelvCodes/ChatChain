@@ -1,7 +1,6 @@
 
 
-  // ===========================================================ORAGE VARIABLES (persist across upgrades)
-  // ===========================================================
+  // ==============================================
   stable var messages: [Message] = [];               // Stores all chat messages
   stable var users: [(Principal, Text)] = [];        // Stores registered users as (Principal, DisplayName)
   stable var nextMessageId: Nat = 0;                 // Counter for assigning unique IDs to messages
@@ -228,6 +227,7 @@
     users := [];
   };
 };
+
 
 
 

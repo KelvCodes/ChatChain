@@ -1,5 +1,5 @@
 
-// ChatChain is our main actor (like a smart contract)
+/ain actor (like a smart contract)
 // It will handle users, messages, and provide query + update methods
 actor ChatChain {
 
@@ -244,6 +244,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

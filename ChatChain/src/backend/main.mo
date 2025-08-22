@@ -1,4 +1,4 @@
-ssageId: Nat = 0;                 // Counter for assigning unique IDs to messages
+ assigning unique IDs to messages
 
   // ===========================================================
   // IN-MEMORY BUFFERS (temporary during runtime, not upgrade-safe)
@@ -222,6 +222,7 @@ ssageId: Nat = 0;                 // Counter for assigning unique IDs to message
     users := [];
   };
 };
+
 
 
 

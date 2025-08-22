@@ -1,5 +1,5 @@
 
-l"; // Provides Principal type (unique identity of users/actors)
+Principal type (unique identity of users/actors)
 import Time "mo:base/Time";           // Provides Time utilities (timestamps)
 import Buffer "mo:base/Buffer";       // Provides dynamic buffer structure for temporary storage
 import Text "mo:base/Text";           // Provides Text utilities (strings, searching, etc.)
@@ -253,6 +253,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

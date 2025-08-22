@@ -3,10 +3,7 @@ name));
     return true;
   };
 
-  // Function to get all users
-  public query func getUsers(): async [(Principal, Text)] {
-    userBuffer.toArray()
-  };
+  // Function to
 
   // Function to update a user’s display name
   // Only the caller can update their own name
@@ -193,6 +190,7 @@ name));
     users := [];
   };
 };
+
 
 
 

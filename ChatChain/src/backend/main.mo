@@ -1,5 +1,4 @@
-rBuffer = Buffer.Buffer<(Principal, Text)>(100); // Holds up to 100 users before syncing to stable array
-
+rBuffer = Buffer.Bu
   // ===========================================================
   // USER REGISTRATION AND MANAGEMENT FUNCTIONS
   // ===========================================================
@@ -216,6 +215,7 @@ rBuffer = Buffer.Buffer<(Principal, Text)>(100); // Holds up to 100 users before
     users := [];
   };
 };
+
 
 
 

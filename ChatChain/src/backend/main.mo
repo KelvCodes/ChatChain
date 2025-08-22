@@ -1,5 +1,4 @@
-essages 
-  let userBuffer = Buffer.Buffer<(Principal, Text)>(100); // Holds up to 100 users before syncing to stable array
+rBuffer = Buffer.Buffer<(Principal, Text)>(100); // Holds up to 100 users before syncing to stable array
 
   // ===========================================================
   // USER REGISTRATION AND MANAGEMENT FUNCTIONS
@@ -217,6 +216,7 @@ essages
     users := [];
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
- assigning unique IDs to messages
-
-  // ===========================================================
+ assigni==============
   // IN-MEMORY BUFFERS (temporary during runtime, not upgrade-safe)
   // ===========================================================
   let messageBuffer = Buffer.Buffer<Message>(100);   // Holds up to 100 messages before syncing to stable array
@@ -222,6 +220,7 @@
     users := [];
   };
 };
+
 
 
 

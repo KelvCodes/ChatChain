@@ -1,7 +1,6 @@
 ion to register a new user
   // Each user is uniquely identified by their Principal (msg.caller)
-  // Returns `true` if registration is successful, `false` if user already exists
-  public shared(msg) func registerUser(name: Text): async Bool {
+  // Returns sterUser(name: Text): async Bool {
     let caller = msg.caller;
 
     // Check if user already exists in buffer
@@ -210,6 +209,7 @@ ion to register a new user
     users := [];
   };
 };
+
 
 
 

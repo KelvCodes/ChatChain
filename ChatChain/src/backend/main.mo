@@ -1,4 +1,4 @@
-;           // Provides Time utilities (timestamps)
+;           // Provides Ti
 import Buffer "mo:base/Buffer";       // Provides dynamic buffer structure for temporary storage
 import Text "mo:base/Text";           // Provides Text utilities (strings, searching, etc.)
 import Array "mo:base/Array";         // Provides Array utilities (filter, append, size, etc.)
@@ -251,6 +251,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

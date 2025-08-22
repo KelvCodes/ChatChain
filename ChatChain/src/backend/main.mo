@@ -1,6 +1,5 @@
 
-
-// It will h, and provide query + update methods
+nd provide query + update methods
 actor ChatChain {
 
   // ===========================================================
@@ -244,6 +243,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

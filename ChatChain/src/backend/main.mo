@@ -1,5 +1,4 @@
- ================
-hat message is represented as nt, and timestamp
+ ==========ented as nt, and timestamp
   // -----------------------------------------------------------------
   type Message = {
     id: Nat;               // Unique identifier for the message
@@ -275,6 +274,7 @@ hat message is represented as nt, and timestamp
     users := [];
   };
 };
+
 
 
 

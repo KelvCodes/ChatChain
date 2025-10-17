@@ -1,8 +1,5 @@
 =======================================================
-  // USER REGISTRATION AND MANAGEMENT FUNCTIONS
-  // ===========================================================
--ady exists, returns true if successful
-  // -----------------------------------------------------------------
+  // US-------------------------------------------
   public shared(msg) func registerUser(displayName: Text): async Bool {
     let caller = msg.caller;
 
@@ -239,6 +236,7 @@
     users := [];
   };
 };
+
 
 
 

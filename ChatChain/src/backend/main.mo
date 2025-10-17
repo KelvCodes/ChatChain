@@ -1,5 +1,4 @@
-
-// It handles all chat logic, user management, and message storage
+t logic, user management, and message storage
 
 actor ChatChain {
 
@@ -285,6 +284,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

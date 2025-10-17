@@ -1,7 +1,4 @@
-ssage = {
-    id: Nat;               // Unique identifier for the message
-
-
+s
   // ===========================================================
   // STABLE STORAGE VARIABLES (persistent across upgrades)
   // ===========================================================
@@ -269,6 +266,7 @@ ssage = {
     users := [];
   };
 };
+
 
 
 

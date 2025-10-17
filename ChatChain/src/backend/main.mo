@@ -1,7 +1,5 @@
 ==================
-
-// ---------ko Base Libraries
-// -----------------------------------------------------------
+---------------------------------------------
 // These provide essential functionality for the actor
 
 import Principal "mo:base/Principal"; // Principal type: unique identity of users and actors
@@ -300,6 +298,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

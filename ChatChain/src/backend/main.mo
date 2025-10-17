@@ -1,5 +1,4 @@
-          // Text manipulation utilities
-import Array "mo:base/Array";         // Array manipulation utilities (append, filter, size, etc.)
+/ Array manipulation utilities (append, filter, size, etc.)
 
 // -----------------------------------------------------------
 // Actor Declaration
@@ -291,6 +290,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

@@ -1,7 +1,6 @@
 ==================
 
-// -----------------------------------------------------------
-// Importing Core Motoko Base Libraries
+// ---------ko Base Libraries
 // -----------------------------------------------------------
 // These provide essential functionality for the actor
 
@@ -301,6 +300,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

@@ -1,6 +1,5 @@
  ================================
-hat message is represented as a record
-  // Contains unique ID, sender, text content, and timestamp
+hat message is represented as nt, and timestamp
   // -----------------------------------------------------------------
   type Message = {
     id: Nat;               // Unique identifier for the message
@@ -276,6 +275,7 @@ hat message is represented as a record
     users := [];
   };
 };
+
 
 
 

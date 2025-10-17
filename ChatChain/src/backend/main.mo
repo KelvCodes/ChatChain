@@ -1,6 +1,5 @@
 otoko
-// ============================================================
-// This actor implements a full-featured chat system with
+ments a full-featured chat system with
 // user registration, message sending, editing, deletion,
 // search, and administrative utilities.
 // It uses stable storage for persistent data across upgrades
@@ -308,5 +307,6 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 

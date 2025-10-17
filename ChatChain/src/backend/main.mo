@@ -1,9 +1,6 @@
 =====================================
 
-  // Stores all registered users as tuples of (Principal, DisplayName)
-  stable var users: [(Principal, Text)] = [];
-
-  // Counter to assign unique IDs to each message
+  // Stores all s to each message
   stable var nextMessageId: Nat = 0;
 
   // ===========================================================
@@ -260,6 +257,7 @@
     users := [];
   };
 };
+
 
 
 

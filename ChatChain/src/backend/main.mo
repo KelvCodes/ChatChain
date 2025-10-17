@@ -1,5 +1,4 @@
-g, buffers for runtime efficiency.
-// =====================================================
+==================
 
 // -----------------------------------------------------------
 // Importing Core Motoko Base Libraries
@@ -302,6 +301,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

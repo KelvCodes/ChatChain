@@ -1,7 +1,4 @@
-
-import Time "mo:ba           // Time utilities for timestamps
-import Buffer "mo:base/Buffer";       // Dynamic buffer structures
-import Text "mo:base/Text";           // Text manipulation utilities
+          // Text manipulation utilities
 import Array "mo:base/Array";         // Array manipulation utilities (append, filter, size, etc.)
 
 // -----------------------------------------------------------
@@ -294,6 +291,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

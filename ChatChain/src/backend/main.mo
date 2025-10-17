@@ -1,7 +1,5 @@
 e, etc.)
-
-// -----------------------------------------------------------
-// Actor Declaration
+aration
 // -- acts as our main smart contract
 // It handles all chat logic, user management, and message storage
 
@@ -289,6 +287,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
-e sending, editing, deletion,
-// search, and administrative utilities.
+e sending, editingities.
 // It uses stable storage for persistent data across upgrades
 // and temporary buffers for runtime efficiency.
 // ============================================================
@@ -305,6 +304,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

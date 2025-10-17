@@ -2,9 +2,7 @@
   // USER REGISTRATION AND MANAGEMENT FUNCTIONS
   // ===========================================================
 
-  // -----------------------------------------------------------------
-  // Register a new user with a display name
-  // Checks if the user already exists, returns true if successful
+  // ------ady exists, returns true if successful
   // -----------------------------------------------------------------
   public shared(msg) func registerUser(displayName: Text): async Bool {
     let caller = msg.caller;
@@ -242,6 +240,7 @@
     users := [];
   };
 };
+
 
 
 

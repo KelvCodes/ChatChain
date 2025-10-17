@@ -1,4 +1,4 @@
-l functionality for the actor
+
 
 import Principal "mo:base/Principal"; // Principal type: unique identity of users and actors
 import Time "mo:base/Time";           // Time utilities for timestamps
@@ -296,6 +296,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

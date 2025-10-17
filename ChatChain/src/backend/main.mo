@@ -1,7 +1,6 @@
 ssage = {
     id: Nat;               // Unique identifier for the message
-estamp: Time.Time;  // Time when the message was sent
-  };
+
 
   // ===========================================================
   // STABLE STORAGE VARIABLES (persistent across upgrades)
@@ -270,6 +269,7 @@ estamp: Time.Time;  // Time when the message was sent
     users := [];
   };
 };
+
 
 
 

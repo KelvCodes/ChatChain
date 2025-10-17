@@ -1,6 +1,4 @@
-e, etc.)
-aration
-// -- acts as our main smart contract
+e, etc.in smart contract
 // It handles all chat logic, user management, and message storage
 
 actor ChatChain {
@@ -287,6 +285,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

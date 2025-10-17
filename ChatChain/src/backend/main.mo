@@ -1,8 +1,5 @@
 =====================================
 
-  // Stores all chat messages permanently
-  stable var messages: [Message] = [];
-
   // Stores all registered users as tuples of (Principal, DisplayName)
   stable var users: [(Principal, Text)] = [];
 
@@ -263,6 +260,7 @@
     users := [];
   };
 };
+
 
 
 

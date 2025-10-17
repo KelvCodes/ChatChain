@@ -1,8 +1,6 @@
 =====================================
 
-  // Store
-  // ===========================================================
-  // IN-MEMORY BUFFERS (temporary, runtime only)
+  // Store (temporary, runtime only)
   // ===========================================================
 
   // Buffer to hold up to 100 messages before syncing to stable storage
@@ -255,6 +253,7 @@
     users := [];
   };
 };
+
 
 
 

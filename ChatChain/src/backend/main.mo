@@ -1,6 +1,6 @@
 =======================================================
   // US-------------------------------------------
-  public shared(msg) func registerUser(displayName: Text): async Bool {
+  public (msg) func registerUser(displayName: Text): async Bool {
     let caller = msg.caller;
 
     // Loop through buffer to check if user already exists
@@ -236,6 +236,7 @@
     users := [];
   };
 };
+
 
 
 

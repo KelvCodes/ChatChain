@@ -1,8 +1,6 @@
 ssage = {
     id: Nat;               // Unique identifier for the message
-    sender: Principal;     // Principal identity of the sender
-    content: Text;         // Actual textual content of the message
-    timestamp: Time.Time;  // Time when the message was sent
+estamp: Time.Time;  // Time when the message was sent
   };
 
   // ===========================================================
@@ -272,6 +270,7 @@ ssage = {
     users := [];
   };
 };
+
 
 
 

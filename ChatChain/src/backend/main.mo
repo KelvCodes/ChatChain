@@ -1,5 +1,4 @@
-l-featured chat system with
-// user registration, message sending, editing, deletion,
+e sending, editing, deletion,
 // search, and administrative utilities.
 // It uses stable storage for persistent data across upgrades
 // and temporary buffers for runtime efficiency.
@@ -306,6 +305,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

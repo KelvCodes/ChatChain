@@ -1,11 +1,4 @@
-=======================================================
-  // US-------------------------------------------
-  public (msg) func registerUser(displayName: Text): async Bool {
-    let caller = msg.caller;
-
-    // L
-    };
-
+===================
     // Add the new user to the buffer
     userBuffer.add((caller, displayName));
 
@@ -232,6 +225,7 @@
     users := [];
   };
 };
+
 
 
 

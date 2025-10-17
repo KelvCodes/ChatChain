@@ -1,7 +1,4 @@
-s
-  /==================================================
-  // STABLE STORAGE VARIABLES (persistent across upgrades)
-  // ===========================================================
+=====================================
 
   // Stores all chat messages permanently
   stable var messages: [Message] = [];
@@ -266,6 +263,7 @@ s
     users := [];
   };
 };
+
 
 
 

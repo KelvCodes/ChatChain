@@ -1,5 +1,4 @@
- ==========ented as nt, and timestamp
-  // -----------------------------------------------------------------
+ ==========ented as nt, and times-----------------------------
   type Message = {
     id: Nat;               // Unique identifier for the message
     sender: Principal;     // Principal identity of the sender
@@ -274,6 +273,7 @@
     users := [];
   };
 };
+
 
 
 

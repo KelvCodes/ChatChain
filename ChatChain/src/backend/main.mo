@@ -1,7 +1,5 @@
  ================================
-
-  // -----------------------------------------------------------------
-  // Each chat message is represented as a record
+hat message is represented as a record
   // Contains unique ID, sender, text content, and timestamp
   // -----------------------------------------------------------------
   type Message = {
@@ -278,6 +276,7 @@
     users := [];
   };
 };
+
 
 
 

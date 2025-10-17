@@ -1,5 +1,4 @@
-==================================================
-// ChatChain Actor in Motoko
+otoko
 // ============================================================
 // This actor implements a full-featured chat system with
 // user registration, message sending, editing, deletion,
@@ -309,4 +308,5 @@ actor ChatChain {
     users := [];
   };
 };
+
 

@@ -1,6 +1,4 @@
-age storage
-
-actor ChatChain {
+age storag
 
   // ===========================================================
   // TYPE DEFINITIONS
@@ -284,6 +282,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
------------------------------
-  type Message = {
+ssage = {
     id: Nat;               // Unique identifier for the message
     sender: Principal;     // Principal identity of the sender
     content: Text;         // Actual textual content of the message
@@ -273,6 +272,7 @@
     users := [];
   };
 };
+
 
 
 

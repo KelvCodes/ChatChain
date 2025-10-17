@@ -1,8 +1,6 @@
 =====================================
 
-  // Stores all s to each message
-  stable var nextMessageId: Nat = 0;
-
+  // Store
   // ===========================================================
   // IN-MEMORY BUFFERS (temporary, runtime only)
   // ===========================================================
@@ -257,6 +255,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -3,11 +3,7 @@
   public (msg) func registerUser(displayName: Text): async Bool {
     let caller = msg.caller;
 
-    // Loop through buffer to check if user already exists
-    for ((existingPrincipal, _) in userBuffer.toArray().vals()) {
-      if (Principal.equal(existingPrincipal, caller)) {
-        return false; // User is already registered
-      }
+    // L
     };
 
     // Add the new user to the buffer
@@ -236,6 +232,7 @@
     users := [];
   };
 };
+
 
 
 

@@ -5,9 +5,7 @@
 0 messages before syncing to stable storage
   let messageBuffer = Buffer.Buffer<Message>(100);
 
-  // Buffer to hold up to 100 users before syncing to stable storage
-  let userBuffer = Buffer.Buffer<(Principal, Text)>(100);
-
+  
   // ===========================================================
   // USER REGISTRATION AND MANAGEMENT FUNCTIONS
   // ===========================================================
@@ -252,6 +250,7 @@
     users := [];
   };
 };
+
 
 
 

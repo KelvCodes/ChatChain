@@ -1,7 +1,6 @@
 ------users : [User] = [];
   stable var messages : [Message] = [];
-  stable var nextMessageId : Nat = 0;
-
+  
   // -------------------------
   // USER MANAGEMENT
   // -------------------------
@@ -204,6 +203,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

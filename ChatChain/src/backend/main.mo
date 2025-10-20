@@ -1,8 +1,6 @@
 
     leue;
-  };
-
-    var updated: Bool = false;
+ updated: Bool = false;
     var tmp: [User] = [];
 
     for (u in users.vals()) {
@@ -179,6 +177,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

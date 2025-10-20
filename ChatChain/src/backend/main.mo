@@ -2,8 +2,7 @@
 
 
   
-    pr
-    role: UserRole;
+    p
   };
 
   type Reaction = {
@@ -230,6 +229,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

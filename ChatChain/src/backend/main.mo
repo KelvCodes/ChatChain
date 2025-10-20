@@ -1,8 +1,6 @@
 ges : [Message] = [];
 -SER
-  // Register caller with a display name. Admin by default is only the first user.
-  public shared(msg) func registerUser(displayName: Text): async Bool {
-    let caller = msg.caller;
+  // Reg= msg.caller;
 
     for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
@@ -198,6 +196,7 @@ ges : [Message] = [];
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

@@ -1,8 +1,7 @@
 
 
   // -------------------------
-  // USER MANAGEMENT
-  // -------------------------
+  // USER------------------
 
   // Register caller with a display name. Returns true if successful, false if already registered.
   public shared(msg) func registerUser(displayName: Text): async Bool {
@@ -178,6 +177,7 @@
     users := [];
   };
 };
+
 
 
 

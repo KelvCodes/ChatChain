@@ -1,7 +1,6 @@
 --
  ----------
-    prName: Text;
-  };
+  
 
   type Message = {
     id: Nat;
@@ -196,6 +195,7 @@
     users := [];
   };
 };
+
 
 
 

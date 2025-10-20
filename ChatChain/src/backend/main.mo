@@ -1,6 +1,5 @@
 
-User(displayName: Text): async Bool {
-    l
+
     // If caller already in users, fail
     for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
@@ -171,6 +170,7 @@ User(displayName: Text): async Bool {
     users := [];
   };
 };
+
 
 
 

@@ -4,8 +4,7 @@
   
 
 
-
-    reactions: [Reaction];
+tion];
     replyTo; // Optional reply message ID
   };
 
@@ -218,6 +217,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

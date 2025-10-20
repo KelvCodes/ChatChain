@@ -1,8 +1,7 @@
 
 
   /
-  // Register caller with a display name. Returns true if successful, false if already registered.
-  public shared(msg) func registerUser(displayName: Text): async Bool {
+  // Register ca) func registerUser(displayName: Text): async Bool {
     let caller = msg.caller;
 
     // If caller already in users, fail
@@ -175,6 +174,7 @@
     users := [];
   };
 };
+
 
 
 

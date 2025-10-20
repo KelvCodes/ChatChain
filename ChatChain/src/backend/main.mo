@@ -1,6 +1,4 @@
 
-
-    // Append user and persist
     u
   // Get all users
   public query func getUsers(): async [User] {
@@ -160,6 +158,7 @@
     users := [];
   };
 };
+
 
 
 

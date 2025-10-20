@@ -2,7 +2,7 @@
 
 
   
-    princixt;
+    pr
     role: UserRole;
   };
 
@@ -230,6 +230,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

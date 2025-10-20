@@ -5,10 +5,7 @@
 
   // Delete the caller from user list. Returns true if deleted.
   public shared(msg) func deleteUser(): async Bool {
-    let caller = msg.caller;
-    var tmp: [User] = [];
-    var deleted: Bool = false;
-
+   
     for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
         deleted := true;
@@ -134,6 +131,7 @@
     users := [];
   };
 };
+
 
 
 

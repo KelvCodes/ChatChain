@@ -1,17 +1,5 @@
 
-    leue;
- updated: Bool = false;
-    var tmpals()) {
-   
-    };
-
-    if (updated) { users := tmp };
-    updated
-  };
-
-  public shared(msg) func deleteUser(): async Bool {
-    let caller = msg.caller;
-    var tmp: [User] = [];
+ tmp: [User] = [];
     var deleted: Bool = false;
 
     for (u in users.vals()) {
@@ -170,6 +158,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

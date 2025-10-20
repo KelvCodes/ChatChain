@@ -1,18 +1,4 @@
 
- tmp: [User] = [];
-    var deleted: Bool = false;
-
-    for (u in users.vals()) {
-      if (Principal.equal(u.principal, caller)) {
-        deleted := true;
-      } else {
-        tmp := Array.append(tmp, [u]);
-      }
-    };
-
-    if (deleted) { users := tmp };
-    deleted
-  };
 
   public query func getUserRole(user: Principal): async ?UserRole {
     for (u in users.vals()) {
@@ -158,6 +144,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

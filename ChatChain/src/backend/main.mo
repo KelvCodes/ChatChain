@@ -1,11 +1,6 @@
 
 te the caller's display name. Returns true if updated, false if not found.
-  public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
-  p := Array.append(tmp, [u]);
-      }
-    };
-
-    if (found) {
+(found) {
       users := tmp;
     };
 
@@ -143,6 +138,7 @@ te the caller's display name. Returns true if updated, false if not found.
     users := [];
   };
 };
+
 
 
 

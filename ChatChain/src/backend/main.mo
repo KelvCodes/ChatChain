@@ -1,9 +1,7 @@
 
 
 
-    replyTo; // Optional reply message ID
-  };
-
+    replyTo; // Optional reply me
   // -------------------------
   // Stable storage (persistent across upgrades)
   // -------------------------
@@ -213,6 +211,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

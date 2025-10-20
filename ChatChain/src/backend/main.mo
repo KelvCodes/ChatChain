@@ -1,9 +1,7 @@
 
     leue;
  updated: Bool = false;
-    var tmp: [User] = [];
-
-    for (u in users.vals()) {
+    var tmpals()) {
       if (Principal.equal(u.principal, caller)) {
         tmp := Array.append(tmp, [{ u with displayName = newDisplayName }]);
         updated := true;
@@ -177,6 +175,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

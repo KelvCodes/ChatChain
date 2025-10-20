@@ -1,4 +1,4 @@
-ar nextMessageId : Nat = 0;
+
 
   // -------------------------
   // USER MANAGEMENT
@@ -178,6 +178,7 @@ ar nextMessageId : Nat = 0;
     users := [];
   };
 };
+
 
 
 

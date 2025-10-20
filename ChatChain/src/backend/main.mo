@@ -1,9 +1,5 @@
 
 
-      if (Principal.equal(u.principal, caller)) {
-        r
-    };
-
     // Append user and persist
     users := Array.append(users, [{ principal = caller; displayName = displayName }]);
     return true;
@@ -167,6 +163,7 @@
     users := [];
   };
 };
+
 
 
 

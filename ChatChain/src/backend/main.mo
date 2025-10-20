@@ -1,7 +1,5 @@
 
-  type
-    sender: Principal;
-    content: Text;
+ntent: Text;
     timestamp: Time.Time;
     edited: Bool; // true if message was edited after creation
   };
@@ -191,6 +189,7 @@
     users := [];
   };
 };
+
 
 
 

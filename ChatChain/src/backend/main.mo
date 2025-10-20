@@ -1,6 +1,5 @@
 
 
-actor ChatChain {
 
   // -------------------------
   // Types
@@ -203,6 +202,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

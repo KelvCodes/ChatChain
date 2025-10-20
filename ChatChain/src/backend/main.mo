@@ -1,7 +1,5 @@
 ] = [];
 -SER
-  // Reg= msg.caller;
-
     for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
         return false;
@@ -196,6 +194,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

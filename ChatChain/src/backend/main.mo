@@ -1,6 +1,5 @@
 
-
-ca) func registerUser(displayName: Text): async Bool {
+User(displayName: Text): async Bool {
     let caller = msg.caller;
 
     // If caller already in users, fail
@@ -173,6 +172,7 @@ ca) func registerUser(displayName: Text): async Bool {
     users := [];
   };
 };
+
 
 
 

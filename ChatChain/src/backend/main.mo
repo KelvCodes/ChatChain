@@ -1,6 +1,5 @@
 
-
-    edited: Bool; // true if message was edited after creation
+l; // true if message was edited after creation
   };
 
   // -------------------------
@@ -188,6 +187,7 @@
     users := [];
   };
 };
+
 
 
 

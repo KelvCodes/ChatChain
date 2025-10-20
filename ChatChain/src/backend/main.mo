@@ -1,7 +1,4 @@
 
-    u
-ic query func getUsers(): async [User] {
- 
 
   // Update the caller's display name. Returns true if updated, false if not found.
   public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
@@ -156,6 +153,7 @@ ic query func getUsers(): async [User] {
     users := [];
   };
 };
+
 
 
 

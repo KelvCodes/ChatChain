@@ -1,5 +1,4 @@
-ase/Text";
-import Array "mo:base/Array";
+ Array "mo:base/Array";
 
 actor ChatChain {
 
@@ -204,6 +203,7 @@ actor ChatChain {
     users := [];
   };
 };
+
 
 
 

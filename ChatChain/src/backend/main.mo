@@ -1,5 +1,4 @@
- [User] = [];
-  stable var messages : [Message] = [];
+ges : [Message] = [];
   
   // -------------------------
   // USER MANAGEMENT
@@ -203,6 +202,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

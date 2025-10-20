@@ -1,10 +1,7 @@
 
 
     // Append user and persist
-    users := Array.append(users, [{ principal = caller; displayName = displayName }]);
-    return true;
-  };
-
+    u
   // Get all users
   public query func getUsers(): async [User] {
     users
@@ -163,6 +160,7 @@
     users := [];
   };
 };
+
 
 
 

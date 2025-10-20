@@ -2,8 +2,7 @@
   // Types
   // -------------------------
   type User = {
-    principal: Principal;
-    displayName: Text;
+    prName: Text;
   };
 
   type Message = {
@@ -199,6 +198,7 @@
     users := [];
   };
 };
+
 
 
 

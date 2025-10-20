@@ -1,19 +1,5 @@
 
-  // -------------------------
-  // MESSAGING
-  // -------------------------
 
-  public shared(msg) func sendMessage(content: Text, replyTo: ?Nat): async Nat {
-    let sender = msg.caller;
-    let id = nextMessageId;
-
-    let m: Message = {
-      id = id;
-      sender = sender;
-      content = content;
-      timestamp = Time.now();
-      edited = false;
-      reactions = [];
       replyTo = replyTo;
     };
 
@@ -134,6 +120,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

@@ -1,5 +1,5 @@
 
-Text "mo:base/Text";
+/Text";
 import Array "mo:base/Array";
 
 actor ChatChain {
@@ -242,6 +242,7 @@ actor ChatChain {
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

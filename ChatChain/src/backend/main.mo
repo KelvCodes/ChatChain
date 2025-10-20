@@ -1,5 +1,5 @@
 
-    timestamp: Time.Time;
+    timestamp: T
     edited: Bool; // true if message was edited after creation
   };
 
@@ -188,6 +188,7 @@
     users := [];
   };
 };
+
 
 
 

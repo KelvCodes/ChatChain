@@ -1,5 +1,4 @@
-
-  stable var messages : [Message] = [];
+ messages : [Message] = [];
   stable var nextMessageId : Nat = 0;
 
   // -------------------------
@@ -180,6 +179,7 @@
     users := [];
   };
 };
+
 
 
 

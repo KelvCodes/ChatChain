@@ -2,9 +2,7 @@ alse;
       };
     };
 
-    let role: UserRole = if (Array.size(users) == 0) { #Admin } else { #User };
-    users := Array.append(users, [{ principal = caller; displayName = displayName; role = role }]);
-    return true;
+    leue;
   };
 
   public query func getUsers(): async [User] {
@@ -190,6 +188,7 @@ alse;
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

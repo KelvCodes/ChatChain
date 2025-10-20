@@ -1,4 +1,4 @@
-------users : [User] = [];
+ [User] = [];
   stable var messages : [Message] = [];
   
   // -------------------------
@@ -203,6 +203,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

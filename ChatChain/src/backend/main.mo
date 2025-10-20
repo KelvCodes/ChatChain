@@ -1,6 +1,4 @@
-] = [users.vals()) {
-      if (Principal.equal(u.principal, caller)) {
-        return false;
+] = [ualse;
       };
     };
 
@@ -192,6 +190,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

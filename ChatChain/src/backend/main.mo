@@ -1,5 +1,4 @@
- [];
-  stable var nextMessageId : Nat = 0;
+ar nextMessageId : Nat = 0;
 
   // -------------------------
   // USER MANAGEMENT
@@ -179,6 +178,7 @@
     users := [];
   };
 };
+
 
 
 

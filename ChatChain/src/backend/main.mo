@@ -2,8 +2,7 @@
  ----------
   
 
-  type Message = {
-    id: Nat;
+  type
     sender: Principal;
     content: Text;
     timestamp: Time.Time;
@@ -195,6 +194,7 @@
     users := [];
   };
 };
+
 
 
 

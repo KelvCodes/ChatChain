@@ -1,15 +1,4 @@
-
-
-    found
-  };
-
-  // Delete the caller from user list. Returns true if deleted.
-  public shared(msg) func deleteUser(): async Bool {
-   
-    for (u in users.vals()) {
-      if (Principal.equal(u.principal, caller)) {
-        deleted := true;
-      } else {
+lse {
         tmp := Array.append(tmp, [u]);
       }
     };
@@ -131,6 +120,7 @@
     users := [];
   };
 };
+
 
 
 

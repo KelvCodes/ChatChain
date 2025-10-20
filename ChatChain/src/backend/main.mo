@@ -1,14 +1,4 @@
 
-
-  public query func getUserRole(user: Principal): async ?UserRole {
-    for (u in users.vals()) {
-      if (Principal.equal(u.principal, user)) {
-        return ?u.role;
-      }
-    };
-    return null;
-  };
-
   // -------------------------
   // MESSAGING
   // -------------------------
@@ -144,6 +134,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

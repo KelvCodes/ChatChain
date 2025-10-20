@@ -2,8 +2,7 @@
     u
   // Get all users
   public query func getUsers(): async [User] {
-    users
-  };
+ 
 
   // Update the caller's display name. Returns true if updated, false if not found.
   public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
@@ -158,6 +157,7 @@
     users := [];
   };
 };
+
 
 
 

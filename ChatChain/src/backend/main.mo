@@ -1,4 +1,4 @@
-age (persistent across upgrades)
+)
   // -------------------------
   stable var users : [User] = [];
   stable var messages : [Message] = [];
@@ -182,6 +182,7 @@ age (persistent across upgrades)
     users := [];
   };
 };
+
 
 
 

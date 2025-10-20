@@ -1,6 +1,6 @@
 
 
-    // If caller already in users, fail
+r already in users, fail
     for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
         return false;
@@ -170,6 +170,7 @@
     users := [];
   };
 };
+
 
 
 

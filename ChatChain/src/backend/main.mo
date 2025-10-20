@@ -1,8 +1,6 @@
 
 
 
-    replyTo; // Optional reply me
-  // -------------------------
   // Stable storage (persistent across upgrades)
   // -------------------------
   stable var users : [User] = [];
@@ -211,6 +209,7 @@
     Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(secs) # "s")
   };
 };
+
 
 
 

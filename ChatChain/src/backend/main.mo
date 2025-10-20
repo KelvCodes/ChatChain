@@ -1,6 +1,5 @@
 
 
-    for (u in users.vals()) {
       if (Principal.equal(u.principal, caller)) {
         return false;
       };
@@ -169,6 +168,7 @@
     users := [];
   };
 };
+
 
 
 

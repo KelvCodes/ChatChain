@@ -1,8 +1,7 @@
 
 
       if (Principal.equal(u.principal, caller)) {
-        return false;
-      };
+        r
     };
 
     // Append user and persist
@@ -168,6 +167,7 @@
     users := [];
   };
 };
+
 
 
 

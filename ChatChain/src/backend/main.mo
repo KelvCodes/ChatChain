@@ -1,7 +1,4 @@
 
-l; // true if message was edited after creation
-  };
-
   // -------------------------
   // Stable storage (persistent across upgrades)
   // -------------------------
@@ -187,6 +184,7 @@ l; // true if message was edited after creation
     users := [];
   };
 };
+
 
 
 

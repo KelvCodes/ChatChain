@@ -1,7 +1,6 @@
 
     u
-  // Get all users
-  public query func getUsers(): async [User] {
+ic query func getUsers(): async [User] {
  
 
   // Update the caller's display name. Returns true if updated, false if not found.
@@ -157,6 +156,7 @@
     users := [];
   };
 };
+
 
 
 

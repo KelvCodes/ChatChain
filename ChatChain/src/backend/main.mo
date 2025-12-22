@@ -1,4 +1,4 @@
-adable & feature-rich Motoko actor
+ure-rich Motoko actor
 // Changes made:
 // 1. Clearer types and comments
 // 2. Admin / moderator roles and transfer of admin
@@ -440,6 +440,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

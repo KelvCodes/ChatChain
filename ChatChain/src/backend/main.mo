@@ -1,4 +1,4 @@
-er types and comments
+
 // 2. Admin / moderator roles and transfer of admin
 // 3. Pagination for messages and thread retrieval
 // 4. Reaction toggling (react/unreact) and dedup handling
@@ -438,6 +438,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

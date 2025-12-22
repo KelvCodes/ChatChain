@@ -1,5 +1,4 @@
-
-// 2. Admin / moderator roles and transfer of admin
+ator roles and transfer of admin
 // 3. Pagination for messages and thread retrieval
 // 4. Reaction toggling (react/unreact) and dedup handling
 // 5. Safe edit window (only editable within a timeframe) and admin override
@@ -438,6 +437,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

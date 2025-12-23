@@ -1,7 +1,4 @@
-
-  };
-
-  private func formatIso(ts: Time.Time): Text {
+c formatIso(ts: Time.Time): Text {
     // Simple human-friendly ISO-like formatter
     let secs = Time.toSeconds(ts);
     let days = secs / 86400;
@@ -377,6 +374,7 @@
   };
 
 };
+
 
 
 

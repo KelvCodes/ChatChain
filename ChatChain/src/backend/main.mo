@@ -1,5 +1,3 @@
-erRole;
-  };
 
   type Reaction = {
     reactor: Principal;
@@ -411,6 +409,7 @@ erRole;
   };
 
 };
+
 
 
 

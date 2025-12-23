@@ -1,4 +1,4 @@
-S : Nat = 15 * 60; // allow edits within 15 minutes
+
 
   // -----------------te)
   // -------------------------
@@ -384,6 +384,7 @@ S : Nat = 15 * 60; // allow edits within 15 minutes
   };
 
 };
+
 
 
 

@@ -1,8 +1,4 @@
-s / 3600) % 24;
-  
 
-      if (Principal.equal(u.principal, p)) { return ?i };
-      i += 1;
     };
     null
   };
@@ -364,6 +360,7 @@ s / 3600) % 24;
   };
 
 };
+
 
 
 

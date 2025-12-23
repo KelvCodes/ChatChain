@@ -2,10 +2,7 @@
     };
     null
   };
-
-  private query func getMessageIndex(id: Nat): async ?Nat {
-    var i: Nat = 0;
-    for (m in messages.vals()) {
+in messages.vals()) {
       if (m.id == id) { return ?i };
       i += 1;
     };
@@ -360,6 +357,7 @@
   };
 
 };
+
 
 
 

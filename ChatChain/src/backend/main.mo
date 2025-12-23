@@ -1,5 +1,4 @@
-ime.Time;
-    edited: Bool;
+d: Bool;
     reactions: [Reaction];
     replyTo: ?Nat; // Optional reply message ID (threading)
   };
@@ -399,6 +398,7 @@ ime.Time;
   };
 
 };
+
 
 
 

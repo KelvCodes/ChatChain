@@ -1,5 +1,4 @@
-
-  stable var messages : [Message] = [];
+Message] = [];
   stable var nextMessageId : Nat = 0;
 
   // Configurable behaviour
@@ -390,6 +389,7 @@
   };
 
 };
+
 
 
 

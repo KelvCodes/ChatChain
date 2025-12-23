@@ -1,7 +1,4 @@
-message ID (threading)
-  };
-
-  // -------------------------
+---------------------
   // Stable storage
   // -------------------------
   stable var users : [User] = [];
@@ -396,6 +393,7 @@ message ID (threading)
   };
 
 };
+
 
 
 

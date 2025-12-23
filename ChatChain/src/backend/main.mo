@@ -1,9 +1,4 @@
-+= 1;
-    };
-    null
-  };
-
-  private query func isAdmin(p: Principal): async Bool {
+te query func isAdmin(p: Principal): async Bool {
     switch (getUserRole(p)) {
       case (?role) { switch (role) { case (#Admin) { true }; case (_) { false } } };
       case null { false };
@@ -351,6 +346,7 @@
   };
 
 };
+
 
 
 

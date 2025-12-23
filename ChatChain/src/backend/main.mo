@@ -1,8 +1,5 @@
 s / 3600) % 24;
-    let minutes = (secs / 60) % 60;
-    let s = secs % 60;
-    Text.concat(Text.fromInt(days) # "d " # Text.fromInt(hours) # "h " # Text.fromInt(minutes) # "m " # Text.fromInt(s) # "s")
-  };
+  
 
   private query func getUserIndex(p: Principal): async ?Nat {
     var i: Nat = 0;
@@ -370,6 +367,7 @@ s / 3600) % 24;
   };
 
 };
+
 
 
 

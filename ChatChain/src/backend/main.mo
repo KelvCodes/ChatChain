@@ -1,4 +1,4 @@
- Time.toSeconds(ts);
+s(ts);
     let days = secs / 86400;
     let hours = (secs / 3600) % 24;
     let minutes = (secs / 60) % 60;
@@ -372,6 +372,7 @@
   };
 
 };
+
 
 
 

@@ -1,4 +1,4 @@
-dly ISO-like formatter
+ike formatter
     let secs = Time.toSeconds(ts);
     let days = secs / 86400;
     let hours = (secs / 3600) % 24;
@@ -373,6 +373,7 @@ dly ISO-like formatter
   };
 
 };
+
 
 
 

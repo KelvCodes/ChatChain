@@ -1,9 +1,6 @@
 te query func isAdmin(p: Principal): async Bool {
     switch
-
-  private query func isModeratorOrAdmin(p: Principal): async Bool {
-    switch (getUserRole(p)) {
-      case (?role) { switch (role) { case (#Admin) { true }; case (#Moderator) { true }; case (_) { false } } };
+     case (?role) { switch (role) { case (#Admin) { true }; case (#Moderator) { true }; case (_) { false } } };
       case null { false };
     }
   };
@@ -342,6 +339,7 @@ te query func isAdmin(p: Principal): async Bool {
   };
 
 };
+
 
 
 

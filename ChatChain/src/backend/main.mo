@@ -1,5 +1,4 @@
 
-  type Reaction = {
     reactor: Principal;
     emoji: Text;
   };
@@ -409,6 +408,7 @@
   };
 
 };
+
 
 
 

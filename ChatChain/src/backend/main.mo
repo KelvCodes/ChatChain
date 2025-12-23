@@ -1,6 +1,4 @@
-
-    id: Nat;
-    sender: Principal;
+incipal;
     content: Text;
     timestamp: Time.Time;
     edited: Bool;
@@ -403,6 +401,7 @@
   };
 
 };
+
 
 
 

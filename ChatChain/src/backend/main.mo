@@ -1,5 +1,4 @@
-"mo:base/Time";
-import Text "mo:base/Text";
+Text";
 import Array "mo:base/Array";
 
 actor ChatChain {
@@ -429,6 +428,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

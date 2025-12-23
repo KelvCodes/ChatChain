@@ -1,6 +1,4 @@
 
-    #Admin;
-  };
 
   type User = {
     principal: Principal;
@@ -418,6 +416,7 @@
   };
 
 };
+
 
 
 

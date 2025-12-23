@@ -1,5 +1,4 @@
-Name: Text;
-    role: UserRole;
+erRole;
   };
 
   type Reaction = {
@@ -412,6 +411,7 @@ Name: Text;
   };
 
 };
+
 
 
 

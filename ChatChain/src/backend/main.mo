@@ -1,5 +1,4 @@
- utilities for searching, counting, and getting message by id
-// 7. Better timestamp formatting (ISO-like) and general refactor for readability
+tamp formatting (ISO-like) and general refactor for readability
 
 import Principal "mo:base/Principal";
 import Time "mo:base/Time";
@@ -433,6 +432,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

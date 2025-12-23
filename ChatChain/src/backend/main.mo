@@ -1,6 +1,4 @@
-incipal;
-    content: Text;
-    timestamp: Time.Time;
+ime.Time;
     edited: Bool;
     reactions: [Reaction];
     replyTo: ?Nat; // Optional reply message ID (threading)
@@ -401,6 +399,7 @@ incipal;
   };
 
 };
+
 
 
 

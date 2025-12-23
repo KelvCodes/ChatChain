@@ -1,5 +1,4 @@
-d: Bool;
-    reactions: [Reaction];
+ion];
     replyTo: ?Nat; // Optional reply message ID (threading)
   };
 
@@ -398,6 +397,7 @@ d: Bool;
   };
 
 };
+
 
 
 

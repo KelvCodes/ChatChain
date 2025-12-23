@@ -1,9 +1,6 @@
 s / 3600) % 24;
   
 
-  private query func getUserIndex(p: Principal): async ?Nat {
-    var i: Nat = 0;
-    for (u in users.vals()) {
       if (Principal.equal(u.principal, p)) { return ?i };
       i += 1;
     };
@@ -367,6 +364,7 @@ s / 3600) % 24;
   };
 
 };
+
 
 
 

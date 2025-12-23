@@ -1,19 +1,4 @@
-te qugisterUser(displayName: Text): async Bool {
-    let caller = msg.caller;
-
-    // Prevent duplicate registration
-    for (u in users.vals()) {
-      if (Principal.equal(u.principal, caller)) { return false };
-    };
-
-    let role: UserRole = if (Array.size(users) == 0) { #Admin } else { #User };
-    users := Array.append(users, [{ principal = caller; displayName = displayName; role = role }]);
-    true
-  };
-
-  public query func getUsers(): async [User] { users };
-
-  /// Update the display name of the caller
+caller
   public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
     let caller = msg.caller;
     var updated = false;
@@ -326,6 +311,7 @@ te qugisterUser(displayName: Text): async Bool {
   };
 
 };
+
 
 
 

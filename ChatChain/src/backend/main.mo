@@ -1,7 +1,4 @@
- : Nat = 0;
-
-  // Configurable behaviour
-  let EDIT_WINDOW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
+OW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
 
   // -------------------------
   // Helper utilities (private)
@@ -388,6 +385,7 @@
   };
 
 };
+
 
 
 

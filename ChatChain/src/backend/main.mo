@@ -1,5 +1,4 @@
 
-actor ChatChain {
 
   // -------------------------
   // Types
@@ -426,6 +425,7 @@ actor ChatChain {
   };
 
 };
+
 
 
 

@@ -1,4 +1,4 @@
-OW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
+S : Nat = 15 * 60; // allow edits within 15 minutes
 
   // -----------------te)
   // -------------------------
@@ -384,6 +384,7 @@ OW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
   };
 
 };
+
 
 
 

@@ -1,5 +1,4 @@
- {
-    // Simple human-friendly ISO-like formatter
+uman-friendly ISO-like formatter
     let secs = Time.toSeconds(ts);
     let days = secs / 86400;
     let hours = (secs / 3600) % 24;
@@ -374,6 +373,7 @@
   };
 
 };
+
 
 
 

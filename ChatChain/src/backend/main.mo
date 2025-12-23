@@ -1,19 +1,4 @@
-caller
-  public shared(msg) func updateUserName(newDisplayName: Text): async Bool {
-    let caller = msg.caller;
-    var updated = false;
-    var tmp: [User] = [];
 
-    for (u in users.vals()) {
-      if (Principal.equal(u.principal, caller)) {
-        tmp := Array.append(tmp, [{ u with displayName = newDisplayName }]);
-        updated := true;
-      } else {
-        tmp := Array.append(tmp, [u]);
-      };
-    };
-
-    if (updated) { users := tmp };
     updated
   };
 
@@ -311,6 +296,7 @@ caller
   };
 
 };
+
 
 
 

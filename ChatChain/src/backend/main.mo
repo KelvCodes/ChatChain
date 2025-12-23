@@ -1,7 +1,4 @@
 
-  };
-
-  type Message = {
     id: Nat;
     sender: Principal;
     content: Text;
@@ -406,6 +403,7 @@
   };
 
 };
+
 
 
 

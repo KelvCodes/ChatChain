@@ -1,8 +1,5 @@
 
-    };
-    null
-  };
-in messages.vals()) {
+s()) {
       if (m.id == id) { return ?i };
       i += 1;
     };
@@ -357,6 +354,7 @@ in messages.vals()) {
   };
 
 };
+
 
 
 

@@ -1,6 +1,4 @@
 
-    reactor: Principal;
-    emoji: Text;
   };
 
   type Message = {
@@ -408,6 +406,7 @@
   };
 
 };
+
 
 
 

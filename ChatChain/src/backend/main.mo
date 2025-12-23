@@ -1,7 +1,5 @@
 
 
-  // -------------------------
-
   private func nowSeconds(): Nat {
     // Convert Time.Time to seconds
     Time.toSeconds(Time.now())
@@ -383,6 +381,7 @@
   };
 
 };
+
 
 
 

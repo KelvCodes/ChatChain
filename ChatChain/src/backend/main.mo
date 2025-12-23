@@ -1,14 +1,4 @@
-te query func isAdmin(p: Principal): async Bool {
-    }
-  };
-
-  // -------------------------
-  // User management
-  // -------------------------
-
-  /// Register caller with a display name.
-  /// The first registered user becomes Admin.
-  public shared(msg) func registerUser(displayName: Text): async Bool {
+te qugisterUser(displayName: Text): async Bool {
     let caller = msg.caller;
 
     // Prevent duplicate registration
@@ -336,6 +326,7 @@ te query func isAdmin(p: Principal): async Bool {
   };
 
 };
+
 
 
 

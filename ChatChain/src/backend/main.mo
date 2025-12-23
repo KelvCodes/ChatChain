@@ -1,7 +1,6 @@
 OW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
 
-  // -------------------------
-  // Helper utilities (private)
+  // -----------------te)
   // -------------------------
 
   private func nowSeconds(): Nat {
@@ -385,6 +384,7 @@ OW_SECONDS : Nat = 15 * 60; // allow edits within 15 minutes
   };
 
 };
+
 
 
 

@@ -1,4 +1,4 @@
-Seconds(): Nat {
+
     // Convert Time.Time to seconds
     Time.toSeconds(Time.now())
   };
@@ -379,6 +379,7 @@ Seconds(): Nat {
   };
 
 };
+
 
 
 

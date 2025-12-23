@@ -1,6 +1,4 @@
 
-    // Convime.Time to seconds
-    Time.toSeconds(Time.now())
   };
 
   private func formatIso(ts: Time.Time): Text {
@@ -379,6 +377,7 @@
   };
 
 };
+
 
 
 

@@ -1,6 +1,5 @@
 ext.concat(
-      Text.fromInt(d) # "d " #
-      Text.fromInt(h) # "h " #
+      romInt(h) # "h " #
       Text.fromInt(m) # "m " #
       Text.fromInt(sec) # "s"
     )
@@ -312,6 +311,7 @@ ext.concat(
     findUser(caller)
   };
 };
+
 
 
 

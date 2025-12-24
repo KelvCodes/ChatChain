@@ -1,6 +1,4 @@
 =======================================
-  // USER MANAGEMENT
-  // ===========================================================================
 
   /// Register a user (first user becomes Admin)
   public shared ({ caller }) func registerUser(name : Text) : async Bool {
@@ -281,6 +279,7 @@
     findUser(caller)
   };
 };
+
 
 
 

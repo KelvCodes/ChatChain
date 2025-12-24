@@ -1,6 +1,5 @@
 scription:
-// A feature-rich decentralized chat system with roles, moderation,
-// threading, pagination, reactions, safe edits, and admin utilities.
+//  pagination, reactions, safe edits, and admin utilities.
 // ============================================================================
 
 import Principal "mo:base/Principal";
@@ -384,6 +383,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

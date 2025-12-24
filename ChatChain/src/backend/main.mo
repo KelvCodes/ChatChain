@@ -1,10 +1,7 @@
 ers };
 
   public shared ({ caller }) func updateDisplayName(name : Text) : async Bool {
-    var updated = false;
-
-    users := Array.map(users, func(u) {
-      if (Principal.equal(u.principal, caller)) {
+    var al(u.principal, caller)) {
         updated := true;
         { u with displayName = name }
       } else u
@@ -261,6 +258,7 @@ ers };
     findUser(caller)
   };
 };
+
 
 
 

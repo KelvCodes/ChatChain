@@ -1,7 +1,5 @@
 scription:
-//  pagination, reactions, safe edits, and admin utilities.
-// ============================================================================
-
+//
 import Principal "mo:base/Principal";
 import Time "mo:base/Time";
 import Text "mo:base/Text";
@@ -383,6 +381,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

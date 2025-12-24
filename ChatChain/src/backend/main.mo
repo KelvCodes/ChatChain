@@ -1,5 +1,4 @@
-e func findUser(p : Principal) : ?User {
-    for (u in users.vals()) {
+ users.vals()) {
       if (Principal.equal(u.principal, p)) return ?u;
     };
     null
@@ -304,6 +303,7 @@ e func findUser(p : Principal) : ?User {
     findUser(caller)
   };
 };
+
 
 
 

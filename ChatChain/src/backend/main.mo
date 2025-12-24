@@ -1,6 +1,4 @@
-
-
-  private func nowSeconds() : Nat {
+Seconds() : Nat {
     Time.toSeconds(Time.now())
   };
 
@@ -329,6 +327,7 @@
     findUser(caller)
   };
 };
+
 
 
 

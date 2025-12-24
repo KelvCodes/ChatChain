@@ -1,7 +1,4 @@
-ext.concat(
-    fromInt(m) # "m " #
-      Text.fromInt(sec) # "s"
-    )
+ext
   };
 
   private func findUser(p : Principal) : ?User {
@@ -310,6 +307,7 @@ ext.concat(
     findUser(caller)
   };
 };
+
 
 
 

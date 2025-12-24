@@ -1,4 +1,4 @@
- isModOrAdmin(p : Principal) : Bool {
+cipal) : Bool {
     switch (findUser(p)) {
       case (?u) {
         u.role == #Admin or u.role == #Moderator
@@ -290,6 +290,7 @@
     findUser(caller)
   };
 };
+
 
 
 

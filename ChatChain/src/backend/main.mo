@@ -1,8 +1,4 @@
-
-ds(ts) <= EDIT_WINDOW_SECONDS
-  };
-
-  private func formatIso(ts : Time.Time) : Text {
+ormatIso(ts : Time.Time) : Text {
     let s = Time.toSeconds(ts);
     let d = s / 86400;
     let h = (s / 3600) % 24;
@@ -323,6 +319,7 @@ ds(ts) <= EDIT_WINDOW_SECONDS
     findUser(caller)
   };
 };
+
 
 
 

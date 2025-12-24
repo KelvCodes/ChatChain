@@ -1,7 +1,5 @@
 ts : Time.TtoSeconds(ts);
-    let d = s / 86400;
-    let h = (s / 3600) % 24;
-    let m = (s / 60) % 60;
+ (s / 60) % 60;
     let sec = s % 60;
 
     Text.concat(
@@ -318,6 +316,7 @@ ts : Time.TtoSeconds(ts);
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,7 +1,4 @@
-ds(ts);
- (s / = s % 60;
-
-    Text.concat(
+ext.concat(
       Text.fromInt(d) # "d " #
       Text.fromInt(h) # "h " #
       Text.fromInt(m) # "m " #
@@ -315,6 +312,7 @@ ds(ts);
     findUser(caller)
   };
 };
+
 
 
 

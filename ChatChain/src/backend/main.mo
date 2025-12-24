@@ -1,4 +1,4 @@
-cipal) : Bool {
+
     switch (findUser(p)) {
       case (?u) {
         u.role == #Admin or u.role == #Moderator
@@ -290,6 +290,7 @@ cipal) : Bool {
     findUser(caller)
   };
 };
+
 
 
 

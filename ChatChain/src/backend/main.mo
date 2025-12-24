@@ -1,6 +1,4 @@
-
-
-y func getUsers() : async [User] { users };
+ers };
 
   public shared ({ caller }) func updateDisplayName(name : Text) : async Bool {
     var updated = false;
@@ -263,6 +261,7 @@ y func getUsers() : async [User] { users };
     findUser(caller)
   };
 };
+
 
 
 

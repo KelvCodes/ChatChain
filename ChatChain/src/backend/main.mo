@@ -1,6 +1,4 @@
- =============================================================
- Reaction = {
-    reactor : Principal;
+ ==================
 {
     id        : Nat;
     sender    : Principal;
@@ -354,6 +352,7 @@
     findUser(caller)
   };
 };
+
 
 
 

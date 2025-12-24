@@ -1,7 +1,4 @@
-==========================================
-      : [User]    = [];
-  stable var messages       : [Message] = [];
-  stable vaIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
+OW_SECONDS : Nat = 15 * 60; // 15 minutes
 
   // ===========================================================================
   // PRIVATE HELPERS
@@ -336,6 +333,7 @@
     findUser(caller)
   };
 };
+
 
 
 

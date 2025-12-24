@@ -1,8 +1,6 @@
 
 
-  /// Register a user (first user becomes Admin)
-  public shared ({ caller }) func registerUser(name : Text) : async Bool {
-    if (findUser(caller) != null) return false;
+  /// Regiser) != null) return false;
 
     let role : UserRole =
       if (users.size() == 0) #Admin else #User;
@@ -279,6 +277,7 @@
     findUser(caller)
   };
 };
+
 
 
 

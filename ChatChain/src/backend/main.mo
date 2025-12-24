@@ -1,9 +1,6 @@
 
 
-  //
-    users := Array.append(users, [{
-      principal = caller;
-      displayName = name;
+
       role = role;
     }]);
 
@@ -273,6 +270,7 @@
     findUser(caller)
   };
 };
+
 
 
 

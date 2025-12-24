@@ -1,4 +1,4 @@
-ormatIso(ts : Time.Time) : Text {
+ts : Time.Time) : Text {
     let s = Time.toSeconds(ts);
     let d = s / 86400;
     let h = (s / 3600) % 24;
@@ -319,6 +319,7 @@ ormatIso(ts : Time.Time) : Text {
     findUser(caller)
   };
 };
+
 
 
 

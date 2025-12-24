@@ -1,6 +1,5 @@
 Seconds() : Nat {
-    Time.toSeconds(Time.now())
-  };
+
 
   private func isWithinEditWindow(ts : Time.Time) : Bool {
     nowSeconds() - Time.toSeconds(ts) <= EDIT_WINDOW_SECONDS
@@ -327,6 +326,7 @@ Seconds() : Nat {
     findUser(caller)
   };
 };
+
 
 
 

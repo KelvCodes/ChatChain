@@ -1,7 +1,6 @@
 
     id        : Nat;
-    sender    : Principal;
-    content   : Text;
+    sender    :
     timestamp : Time.Time;
     edited    : Bool;
     reactions : [Reaction];
@@ -351,6 +350,7 @@
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
-o Chat Canister
-// Author: Kelvin Agyare Yeboah
-// Description:
+scription:
 // A feature-rich decentralized chat system with roles, moderation,
 // threading, pagination, reactions, safe edits, and admin utilities.
 // ============================================================================
@@ -386,6 +384,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

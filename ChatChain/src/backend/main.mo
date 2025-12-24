@@ -1,7 +1,5 @@
 
-
-  private func isWithinEditWindow(ts : Time.Time) : Bool {
-    nowSeconds() - Time.toSeconds(ts) <= EDIT_WINDOW_SECONDS
+ds(ts) <= EDIT_WINDOW_SECONDS
   };
 
   private func formatIso(ts : Time.Time) : Text {
@@ -325,6 +323,7 @@
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,10 +1,6 @@
 
 
-  /// Regiser) != null) return false;
-
-    let role : UserRole =
-      if (users.size() == 0) #Admin else #User;
-
+  //
     users := Array.append(users, [{
       principal = caller;
       displayName = name;
@@ -277,6 +273,7 @@
     findUser(caller)
   };
 };
+
 
 
 

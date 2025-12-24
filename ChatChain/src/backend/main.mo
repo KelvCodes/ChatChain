@@ -1,6 +1,5 @@
 scription:
-ext "mo:base/Text";
-import Array "mo:base/Array";
+ex "mo:base/Array";
 
 actor ChatChain {
 
@@ -378,6 +377,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

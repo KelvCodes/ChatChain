@@ -1,4 +1,4 @@
-ts : Time.TtoSeconds(ts);
+ds(ts);
  (s / 60) % 60;
     let sec = s % 60;
 
@@ -316,6 +316,7 @@ ts : Time.TtoSeconds(ts);
     findUser(caller)
   };
 };
+
 
 
 

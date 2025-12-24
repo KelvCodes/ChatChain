@@ -1,7 +1,6 @@
 
       case (?u) {
-        u.role == #Admin or u.role == #Moderator
-      };
+        u.rol
       case null { false };
     }
   };
@@ -289,6 +288,7 @@
     findUser(caller)
   };
 };
+
 
 
 

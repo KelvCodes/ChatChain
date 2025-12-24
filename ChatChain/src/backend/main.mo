@@ -3,8 +3,7 @@
     sender    :
     timestamp : ool;
     reactions : [Reaction];
-    replyTo   : ?Nat;        // Threading support
-  };
+    replyTo 
 
   // ===========================================================================
   // STABLE STATE
@@ -349,6 +348,7 @@
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,6 +1,5 @@
 ds(ts);
- (s / 60) % 60;
-    let sec = s % 60;
+ (s / = s % 60;
 
     Text.concat(
       Text.fromInt(d) # "d " #
@@ -316,6 +315,7 @@ ds(ts);
     findUser(caller)
   };
 };
+
 
 
 

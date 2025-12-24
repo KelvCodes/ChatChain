@@ -1,13 +1,6 @@
 
 
-
-      role = role;
-    }]);
-
-    true
-  };
-
-  public query func getUsers() : async [User] { users };
+y func getUsers() : async [User] { users };
 
   public shared ({ caller }) func updateDisplayName(name : Text) : async Bool {
     var updated = false;
@@ -270,6 +263,7 @@
     findUser(caller)
   };
 };
+
 
 
 

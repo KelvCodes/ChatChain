@@ -1,7 +1,4 @@
-ext
-  };
-
-  private func findUser(p : Principal) : ?User {
+e func findUser(p : Principal) : ?User {
     for (u in users.vals()) {
       if (Principal.equal(u.principal, p)) return ?u;
     };
@@ -307,6 +304,7 @@ ext
     findUser(caller)
   };
 };
+
 
 
 

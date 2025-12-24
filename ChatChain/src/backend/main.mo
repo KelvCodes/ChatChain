@@ -1,5 +1,4 @@
-ts : Time.Time) : Text {
-    let s = Time.toSeconds(ts);
+ts : Time.TtoSeconds(ts);
     let d = s / 86400;
     let h = (s / 3600) % 24;
     let m = (s / 60) % 60;
@@ -319,6 +318,7 @@ ts : Time.Time) : Text {
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,6 +1,5 @@
 ==========================================
-
-  stable var users          : [User]    = [];
+      : [User]    = [];
   stable var messages       : [Message] = [];
   stable vaIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
 
@@ -337,6 +336,7 @@
     findUser(caller)
   };
 };
+
 
 
 

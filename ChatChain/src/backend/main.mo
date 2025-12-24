@@ -1,4 +1,3 @@
-Seconds() : Nat {
 
 
   private func isWithinEditWindow(ts : Time.Time) : Bool {
@@ -326,6 +325,7 @@ Seconds() : Nat {
     findUser(caller)
   };
 };
+
 
 
 

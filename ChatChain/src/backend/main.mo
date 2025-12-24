@@ -1,7 +1,4 @@
- users.vals()) {
-
-  private func isAdmin(p : Principal) : Bool {
-    switch (findUser(p)) {
+ usersser(p)) {
  le == #Admin };
       case null { false };
     }
@@ -299,6 +296,7 @@
     findUser(caller)
   };
 };
+
 
 
 

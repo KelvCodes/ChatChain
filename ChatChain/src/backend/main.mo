@@ -2,9 +2,7 @@
 
   stable var users          : [User]    = [];
   stable var messages       : [Message] = [];
-  stable var nextMessageId  : Nat        = 0;
-
-  let EDIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
+  stable vaIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
 
   // ===========================================================================
   // PRIVATE HELPERS
@@ -339,6 +337,7 @@
     findUser(caller)
   };
 };
+
 
 
 

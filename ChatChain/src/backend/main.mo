@@ -2,15 +2,7 @@ ers };
 
   public shared ({ caller }) func updateDisplayName(name : Text) : async Bool {
     var al(u.principal, caller)) {
-        updated := true;
-        { u with displayName = name }
-      } else u
-    });
-
-    updated
-  };
-
-  public shared ({ caller }) func deleteAccount() : async Bool {
+       teAccount() : async Bool {
     let before = users.size();
     users := Array.filter(users, func(u) {
       not Principal.equal(u.principal, caller)
@@ -258,6 +250,7 @@ ers };
     findUser(caller)
   };
 };
+
 
 
 

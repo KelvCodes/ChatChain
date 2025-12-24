@@ -1,8 +1,7 @@
 
     id        : Nat;
     sender    :
-    timestamp : Time.Time;
-    edited    : Bool;
+    timestamp : ool;
     reactions : [Reaction];
     replyTo   : ?Nat;        // Threading support
   };
@@ -350,6 +349,7 @@
     findUser(caller)
   };
 };
+
 
 
 

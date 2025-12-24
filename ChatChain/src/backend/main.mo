@@ -1,9 +1,5 @@
 ==========================================  // =============================================================
-  };
-    role        : UserRole;
-  };
-
-  public type Reaction = {
+ Reaction = {
     reactor : Principal;
     emoji   : Text;
   };
@@ -361,6 +357,7 @@
     findUser(caller)
   };
 };
+
 
 
 

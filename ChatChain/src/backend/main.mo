@@ -1,5 +1,4 @@
-ns : [Reaction];
-================================================================
+=========================================
 
   stable var usersStable    : [(Principal, User)] = [];
   stable var messagesStable : [(Nat, Message)]    = [];
@@ -280,6 +279,7 @@ ns : [Reaction];
     true
   };
 };
+
 
 
 

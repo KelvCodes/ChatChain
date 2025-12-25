@@ -1,10 +1,4 @@
-====================================
 
-  public shared (
-      role = role;
-    });
-
-    true
   };
 
   public query func getUsers() : async [User] {
@@ -208,6 +202,7 @@
     true
   };
 };
+
 
 
 

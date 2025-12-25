@@ -1,18 +1,4 @@
-
-  private func isModOrAdmin(p : Principal) : Bool {
-    switch (users.get(p)) {
-      case (?u) { u.role == #Admin or u.role == #Moderator };
-      case null false;
-    }
-  };
-
-  private func messageArray() : [Message] {
-    Iter.toArray(messages.vals())
-  };
-
-  // ===========================================================================
-  // USER MANAGEMENT
-  // ===========================================================================
+====================================
 
   public shared ({ caller }) func registerUser(name : Text) : async Bool {
     if (users.get(caller) != null) return false;
@@ -230,6 +216,7 @@
     true
   };
 };
+
 
 
 

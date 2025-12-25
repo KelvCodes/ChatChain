@@ -1,7 +1,5 @@
 ns : [Reaction];
-
-  // = BACKUP (UPGRADE SAFE)
-  // ===========================================================================
+================================================================
 
   stable var usersStable    : [(Principal, User)] = [];
   stable var messagesStable : [(Nat, Message)]    = [];
@@ -282,6 +280,7 @@ ns : [Reaction];
     true
   };
 };
+
 
 
 

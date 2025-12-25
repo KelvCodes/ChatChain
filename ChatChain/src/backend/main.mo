@@ -1,5 +1,4 @@
-
-  public type User = {
+ype User = {
     principal   : Principal;
     displayName : Text;
     role        : UserRole;
@@ -303,6 +302,7 @@
     true
   };
 };
+
 
 
 

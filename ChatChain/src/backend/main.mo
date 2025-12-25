@@ -1,5 +1,3 @@
-rray(messages.entries());
-  };
 
   system func postupgrade() {
     for ((k, v) in usersStable.vals()) { users.put(k, v) };
@@ -258,6 +256,7 @@ rray(messages.entries());
     true
   };
 };
+
 
 
 

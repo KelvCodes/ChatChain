@@ -1,6 +1,5 @@
 
-eaction rincipal;
-    emoji   : Text;
+eac : Text;
   };
 
   public type Message = {
@@ -296,6 +295,7 @@ eaction rincipal;
     true
   };
 };
+
 
 
 

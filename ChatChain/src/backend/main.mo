@@ -1,6 +1,3 @@
-====================================================
-
-  public type UserRole = { #User; #Moderator; #Admin };
 
   public type User = {
     principal   : Principal;
@@ -306,6 +303,7 @@
     true
   };
 };
+
 
 
 

@@ -1,14 +1,6 @@
 ====================================
 
-  public shared ({ caller }) func registerUser(name : Text) : async Bool {
-    if (users.get(caller) != null) return false;
-
-    let role : UserRole =
-      if (users.size() == 0) #Admin else #User;
-
-    users.put(caller, {
-      principal = caller;
-      displayName = name;
+  public shared (
       role = role;
     });
 
@@ -216,6 +208,7 @@
     true
   };
 };
+
 
 
 

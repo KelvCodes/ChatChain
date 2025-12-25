@@ -1,5 +1,4 @@
-
-import Principal "mo:base/Principal";
+ "mo:base/Principal";
 import Time "mo:base/Time";
 import Text "mo:base/Text";
 import Array "mo:base/Array";
@@ -323,6 +322,7 @@ actor ChatChain {
     true
   };
 };
+
 
 
 

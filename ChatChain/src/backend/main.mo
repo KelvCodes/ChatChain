@@ -1,9 +1,6 @@
 
 ) in usersStable.vals()) { users.put(k, v) };
-    for ((k, v) in messagesStable.vals()) { messages.put(k, v) };
-    usersStable := [];
-    messagesStable := [];
-  };
+
 
   // ===========================================================================
   // PRIVATE HELPERS
@@ -255,6 +252,7 @@
     true
   };
 };
+
 
 
 

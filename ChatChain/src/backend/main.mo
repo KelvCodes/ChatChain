@@ -1,5 +1,4 @@
-: Time.Time;
-    edited    : Bool;
+ : Bool;
     reactions : [Reaction];
     replyTo   : ?Nat;
   };
@@ -287,6 +286,7 @@
     true
   };
 };
+
 
 
 

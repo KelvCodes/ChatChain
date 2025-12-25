@@ -1,5 +1,3 @@
-=========================================
- var messagesStable==========================================
 
   let users    = HashMap.HashMap<Principal, User>(32, Principal.equal, Principal.hash);
   let messages = HashMap.HashMap<Nat, Message>(256, Nat.equal, Nat.hash);
@@ -272,6 +270,7 @@
     true
   };
 };
+
 
 
 

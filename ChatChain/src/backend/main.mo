@@ -1,8 +1,4 @@
-
-
-    sender    : Principal;
-    content   : Text;
-    timestamp : Time.Time;
+: Time.Time;
     edited    : Bool;
     reactions : [Reaction];
     replyTo   : ?Nat;
@@ -291,6 +287,7 @@
     true
   };
 };
+
 
 
 

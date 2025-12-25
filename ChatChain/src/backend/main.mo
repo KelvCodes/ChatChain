@@ -1,4 +1,4 @@
-ap.HashMap<Principal, User>(32, Principal.equal, Principal.hash);
+ncipal.hash);
   let messages = HashMap.HashMap<Nat, Message>(256, Nat.equal, Nat.hash);
 
   let EDIT_WINDOW_SECONDS : Nat = 15 * 60;
@@ -269,6 +269,7 @@ ap.HashMap<Principal, User>(32, Principal.equal, Principal.hash);
     true
   };
 };
+
 
 
 

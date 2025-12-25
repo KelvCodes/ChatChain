@@ -1,5 +1,4 @@
-
-    principal   : Principal;
+  : Principal;
     displayName : Text;
     role        : UserRole;
   };
@@ -302,6 +301,7 @@
     true
   };
 };
+
 
 
 

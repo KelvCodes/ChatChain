@@ -1,6 +1,5 @@
 
-
-  public type Reaction = {
+eaction = {
     reactor : Principal;
     emoji   : Text;
   };
@@ -298,6 +297,7 @@
     true
   };
 };
+
 
 
 

@@ -1,6 +1,5 @@
 
-eaction = {
-    reactor : Principal;
+eaction rincipal;
     emoji   : Text;
   };
 
@@ -297,6 +296,7 @@ eaction = {
     true
   };
 };
+
 
 
 

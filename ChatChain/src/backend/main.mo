@@ -1,7 +1,5 @@
 
 
-  public type Message = {
-    id        : Nat;
     sender    : Principal;
     content   : Text;
     timestamp : Time.Time;
@@ -293,6 +291,7 @@
     true
   };
 };
+
 
 
 

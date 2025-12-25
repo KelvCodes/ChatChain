@@ -1,8 +1,4 @@
- func nowSeconds() : Nat {
-    Time.toSeconds(Time.now())
-  };
-
-  private func canEdit(ts : Time.Time) : Bool {
+ts : Time.Time) : Bool {
     nowSeconds() - Time.toSeconds(ts) <= EDIT_WINDOW_SECONDS
   };
 
@@ -244,6 +240,7 @@
     true
   };
 };
+
 
 
 

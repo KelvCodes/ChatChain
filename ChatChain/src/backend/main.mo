@@ -1,4 +1,4 @@
- Enterprise-Grade, Upgrade-Safe Chat Canister
+e, Upgrade-Safe Chat Canister
 // Author: Kelvin Agyare Yeboah
 // ============================================================================
 
@@ -326,6 +326,7 @@ actor ChatChain {
     true
   };
 };
+
 
 
 

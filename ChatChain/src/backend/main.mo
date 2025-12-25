@@ -1,6 +1,4 @@
 
-eac : Text;
-  };
 
   public type Message = {
     id        : Nat;
@@ -295,6 +293,7 @@ eac : Text;
     true
   };
 };
+
 
 
 

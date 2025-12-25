@@ -1,6 +1,5 @@
 
-  system func postupgrade() {
-    for ((k, v) in usersStable.vals()) { users.put(k, v) };
+) in usersStable.vals()) { users.put(k, v) };
     for ((k, v) in messagesStable.vals()) { messages.put(k, v) };
     usersStable := [];
     messagesStable := [];
@@ -256,6 +255,7 @@
     true
   };
 };
+
 
 
 

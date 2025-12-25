@@ -1,6 +1,4 @@
-ncipal.hash);
-  let messages = HashMap.HashMap<Nat, Message>(256, Nat.equal, Nat.hash);
-
+ncip
   let EDIT_WINDOW_SECONDS : Nat = 15 * 60;
 
   // ===========================================================================
@@ -269,6 +267,7 @@ ncipal.hash);
     true
   };
 };
+
 
 
 

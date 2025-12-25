@@ -1,5 +1,4 @@
-
-    displayName : Text;
+Text;
     role        : UserRole;
   };
 
@@ -301,6 +300,7 @@
     true
   };
 };
+
 
 
 

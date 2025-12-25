@@ -1,7 +1,5 @@
 =========================================
-
-  stable var usersStable    : [(Principal, User)] = [];
-  stable var messagesStable : [(Nat, Message)]    = [];
+ var messagesStable : [(Nat, Message)]    = [];
   stable var nextMessageId : Nat = 0;
 
   // ===========================================================================
@@ -279,6 +277,7 @@
     true
   };
 };
+
 
 
 

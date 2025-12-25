@@ -1,6 +1,4 @@
-{
-    usersStable := Iter.toArray(users.entries());
-    messagesStable := Iter.toArray(messages.entries());
+rray(messages.entries());
   };
 
   system func postupgrade() {
@@ -260,6 +258,7 @@
     true
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
-Text;
-    role        : UserRole;
-  };
+
 
   public type Reaction = {
     reactor : Principal;
@@ -300,6 +298,7 @@ Text;
     true
   };
 };
+
 
 
 

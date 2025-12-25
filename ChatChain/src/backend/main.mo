@@ -1,7 +1,4 @@
 
-  private f
-  };
-
   private func isModOrAdmin(p : Principal) : Bool {
     switch (users.get(p)) {
       case (?u) { u.role == #Admin or u.role == #Moderator };
@@ -233,6 +230,7 @@
     true
   };
 };
+
 
 
 

@@ -1,20 +1,4 @@
 
-  };
-
-  public query func getUsers() : async [User] {
-    Iter.toArray(users.vals())
-  };
-
-  public shared ({ caller }) func updateDisplayName(name : Text) : async Bool {
-    switch (users.get(caller)) {
-      case (?u) {
-        users.put(caller, { u with displayName = name });
-        true
-      };
-      case null false;
-    }
-  };
-
   public shared ({ caller }) func deleteAccount() : async Bool {
     users.remove(caller) != null
   };
@@ -202,6 +186,7 @@
     true
   };
 };
+
 
 
 

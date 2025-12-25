@@ -1,6 +1,4 @@
 ns : [Reaction];
-    replyTo   : ?Nat;
-  };
 
   // ===========================================================================
   // STABLE BACKUP (UPGRADE SAFE)
@@ -285,6 +283,7 @@ ns : [Reaction];
     true
   };
 };
+
 
 
 

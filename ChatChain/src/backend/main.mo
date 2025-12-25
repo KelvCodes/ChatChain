@@ -1,5 +1,4 @@
- : Bool;
-    reactions : [Reaction];
+ns : [Reaction];
     replyTo   : ?Nat;
   };
 
@@ -286,6 +285,7 @@
     true
   };
 };
+
 
 
 

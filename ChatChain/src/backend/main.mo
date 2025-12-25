@@ -1,5 +1,4 @@
-
-  system func preupgrade() {
+{
     usersStable := Iter.toArray(users.entries());
     messagesStable := Iter.toArray(messages.entries());
   };
@@ -261,6 +260,7 @@
     true
   };
 };
+
 
 
 

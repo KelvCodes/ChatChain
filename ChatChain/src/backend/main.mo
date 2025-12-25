@@ -1,5 +1,3 @@
-ts : Time.Time) : Bool {
-    nowSeconds() - Time.toSeconds(ts) <= 
 
   private func isAdmin(p : Principal) : Bool {
     switch (users.get(p)) {
@@ -239,6 +237,7 @@ ts : Time.Time) : Bool {
     true
   };
 };
+
 
 
 

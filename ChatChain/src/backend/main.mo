@@ -1,4 +1,4 @@
-ype User = {
+
     principal   : Principal;
     displayName : Text;
     role        : UserRole;
@@ -302,6 +302,7 @@ ype User = {
     true
   };
 };
+
 
 
 

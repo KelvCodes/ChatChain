@@ -6,7 +6,7 @@
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
 
-tor : Principal;
+
 
 
   putent : Text;
@@ -290,6 +290,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

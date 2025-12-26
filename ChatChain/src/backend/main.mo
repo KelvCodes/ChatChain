@@ -9,8 +9,7 @@
 
 
 [Eo     : ?Nat;
-    deleted     : Bool;
-    readBy      : [Principal];
+       : [Principal];
     pinned      : Bool;
   };
 
@@ -277,6 +276,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

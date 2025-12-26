@@ -8,7 +8,7 @@
 
 
 
-    edited      : Bool;
+
     editHistory : [EditRecord];
     reactions   : [Reaction];
     replyTo     : ?Nat;
@@ -280,6 +280,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

@@ -28,8 +28,8 @@ si
       : Time.Time;
   };
 
-  public type Message = {
-    id          : Nat;
+s         : Nat;
+
     sender      : Principal;
     content     : Text;
     timestamp   : Time.Time;
@@ -305,6 +305,7 @@ si
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

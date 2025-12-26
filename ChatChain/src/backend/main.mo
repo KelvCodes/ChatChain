@@ -9,8 +9,6 @@
 
 
 
-    pinned      : Bool;
-  };
 
   public type AuditEvent = {
     actor     : Principal;
@@ -275,6 +273,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

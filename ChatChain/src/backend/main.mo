@@ -7,7 +7,6 @@
 // ============================================================================
 
 
-     : Principal;
     content     : Text;
     timestamp   : Time.Time;
     edited      : Bool;
@@ -282,6 +281,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

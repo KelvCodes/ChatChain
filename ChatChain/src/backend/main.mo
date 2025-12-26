@@ -6,7 +6,7 @@
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
 
-import Principal "mo:base/Principal";
+ort Principal "mo:base/Principal";
 import Time "mo:base/Time";
 import Text "mo:base/Text";
 import Array "mo:base/Array";
@@ -331,5 +331,6 @@ actor ChatChain {
     auditLog.toArray()
   };
 };
+
 
 

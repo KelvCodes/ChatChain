@@ -7,8 +7,7 @@
 // ============================================================================
 
 
-     : Text;
-    timestamp   : Time.Time;
+ : Time.Time;
     edited      : Bool;
     editHistory : [EditRecord];
     reactions   : [Reaction];
@@ -281,6 +280,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

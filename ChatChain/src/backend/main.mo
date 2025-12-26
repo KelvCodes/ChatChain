@@ -9,9 +9,6 @@
 
 
 
-    a
-    action    : Text;
-    target
 
   // ===========================================================================
   // STABLE STORAGE (UPGRADE SAFE)
@@ -269,6 +266,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

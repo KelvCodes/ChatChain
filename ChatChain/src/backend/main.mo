@@ -10,11 +10,7 @@
 
 
 
-le    : [(Principal, User)]  = [];
-  stable var messagesStable : [(Nat, Message)]     = [];
-  stable var auditStable    : [AuditEvent]         = [];
-  stable var nextMessageId : Nat                   = 0;
-
+le
   // ===========================================================================
   // RUNTIME STATE
   // ===========================================================================
@@ -262,6 +258,7 @@ le    : [(Principal, User)]  = [];
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

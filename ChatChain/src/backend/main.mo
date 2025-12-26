@@ -6,9 +6,7 @@
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
 
-
-
-pe User = {
+ = {
 nedAt    : T
 n = {
     reactor : Principal;
@@ -296,6 +294,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

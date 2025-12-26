@@ -6,8 +6,7 @@
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
 {
-
-at = 15 * 60;
+0;
   5;    // messages per window
 
   // ===========================================================================
@@ -310,6 +309,7 @@ at = 15 * 60;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

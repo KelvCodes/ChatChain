@@ -11,7 +11,7 @@ es per window
   // TYPES
   // ===========================================================================
 
-  public type UserRole = { #User; #Moderator; #Admin };
+type UserRole = { #User; #Moderator; #Admin };
 
   public type User = {
     principal   : Principal;
@@ -307,6 +307,7 @@ es per window
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

@@ -8,8 +8,7 @@
 {
 
 TS
-  // ===========================================================================
-_WINDOW_SECONDS : Nat = 15 * 60;
+DS : Nat = 15 * 60;
   5;    // messages per window
 
   // ===========================================================================
@@ -312,6 +311,7 @@ _WINDOW_SECONDS : Nat = 15 * 60;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

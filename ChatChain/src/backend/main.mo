@@ -9,8 +9,7 @@
 
 
 
-
-  public type AuditEvent = {
+uditEvent = {
     actor     : Principal;
     action    : Text;
     targetId  : ?Nat;
@@ -273,6 +272,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

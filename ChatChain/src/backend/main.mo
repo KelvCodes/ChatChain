@@ -9,7 +9,7 @@
 
 
 
-    actor     : Principal;
+    a
     action    : Text;
     targetId  : ?Nat;
     timestamp : Time.Time;
@@ -271,6 +271,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

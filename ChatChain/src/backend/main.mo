@@ -318,9 +318,7 @@ actor ChatChain {
   };
 
   public query func getAuditLog() : async [AuditEvent] {
-    auditLog.toArray()
-  };
-};
+    auditLog.toArray(
 
 
 

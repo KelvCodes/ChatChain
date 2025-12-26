@@ -9,8 +9,7 @@
 
   // ==================================================================
   // ===========================================================================
-
-#Moderator; #Admin };
+#Admin };
 
   public type User = {
 nedAt    : T
@@ -300,6 +299,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

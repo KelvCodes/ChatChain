@@ -14,8 +14,7 @@
 
   public type User = {
 nedAt    : T
-
- Reaction = {
+n = {
     reactor : Principal;
 si 
   };
@@ -301,6 +300,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

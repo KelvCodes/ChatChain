@@ -9,7 +9,6 @@
 
 
 
-uditEvent = {
     actor     : Principal;
     action    : Text;
     targetId  : ?Nat;
@@ -272,6 +271,7 @@ uditEvent = {
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

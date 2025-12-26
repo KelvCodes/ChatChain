@@ -5,11 +5,7 @@
 // Fully-featured decentralized chat system with moderation, threading,
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
-  "mo:ort Bo// ============================================================================
-// ACTOR
-// ============================================================================
-
-actor ChatChain {
+{
 
   // ===========================================================================
   // CONSTANTS
@@ -318,6 +314,7 @@ actor ChatChain {
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

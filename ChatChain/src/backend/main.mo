@@ -10,17 +10,6 @@
 
 
 
-le
-  // ===========================================================================
-  // RUNTIME STATE
-  // ===========================================================================
-
-  let users       = HashMap.HashMap<Principal, User>(32, Principal.equal, Principal.hash);
-  let messages    = HashMap.HashMap<Nat, Message>(256, Nat.equal, Nat.hash);
-  let auditLog    = Array.Buffer<AuditEvent>(0);
-  let rateLimiter = HashMap.HashMap<Principal, [Time.Time]>(32, Principal.equal, Principal.hash);
-  let typingUsers = HashMap.HashMap<Principal, Time.Time>(32, Principal.equal, Principal.hash);
-
   // ===========================================================================
   // SYSTEM HOOKS
   // ===========================================================================
@@ -258,6 +247,7 @@ le
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

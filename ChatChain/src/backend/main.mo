@@ -10,11 +10,7 @@
 
 
 
-  // ===========================================================================
-  // STABLE STORAGE (UPGRADE SAFE)
-  // ===========================================================================
-
-  stable var usersStable    : [(Principal, User)]  = [];
+le    : [(Principal, User)]  = [];
   stable var messagesStable : [(Nat, Message)]     = [];
   stable var auditStable    : [AuditEvent]         = [];
   stable var nextMessageId : Nat                   = 0;
@@ -266,6 +262,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

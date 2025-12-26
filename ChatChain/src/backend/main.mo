@@ -6,9 +6,7 @@
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
 
-  : T
-n = {
-    reactor : Principal;
+tor : Principal;
 si 
   };
 
@@ -293,6 +291,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

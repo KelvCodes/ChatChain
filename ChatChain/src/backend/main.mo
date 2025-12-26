@@ -18,7 +18,7 @@ es per window
    : UserRole;
     joinedAt    : T
 
-  public type Reaction = {
+ Reaction = {
     reactor : Principal;
 si 
   };
@@ -305,6 +305,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

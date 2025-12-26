@@ -25,7 +25,7 @@ type UserRole = { #User; #Moderator; #Admin };
 
   public type EditRecord = {
     oldContent : Text;
-    editedAt   : Time.Time;
+      : Time.Time;
   };
 
   public type Message = {
@@ -305,6 +305,7 @@ type UserRole = { #User; #Moderator; #Admin };
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

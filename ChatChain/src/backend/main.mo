@@ -10,8 +10,7 @@ import Time "mo:base/Time";
 import Text "mo:base/Text";
 import Array "mo:base/Array";
 impor:base/Iter";
-import Nat "mo:base/Nat";
-import Bool "mo:base/Bool";
+import Nat "mo:ort Bool "mo:base/Bool";
 
 // ============================================================================
 // ACTOR
@@ -329,6 +328,7 @@ actor ChatChain {
     auditLog.toArray()
   };
 };
+
 
 
 

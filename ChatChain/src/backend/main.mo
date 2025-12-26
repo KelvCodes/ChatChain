@@ -20,7 +20,7 @@ type UserRole = { #User; #Moderator; #Admin };
 
   public type Reaction = {
     reactor : Principal;
-    emoji   : Text;
+si 
   };
 
   public type EditRecord = {
@@ -305,6 +305,7 @@ type UserRole = { #User; #Moderator; #Admin };
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

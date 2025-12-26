@@ -11,9 +11,7 @@
 
     a
     action    : Text;
-    targetId  : ?Nat;
-    timestamp : Time.Time;
-  };
+    target
 
   // ===========================================================================
   // STABLE STORAGE (UPGRADE SAFE)
@@ -271,6 +269,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

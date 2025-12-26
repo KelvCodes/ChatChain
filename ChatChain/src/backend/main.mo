@@ -5,8 +5,7 @@
 // Fully-featured decentralized chat system with moderation, threading,
 // reactions, audit logs, rate limiting, read receipts, and upgrade safety.
 // ============================================================================
- Time "mo:base/Time";
-Nat "mo:ort Bool "mo:base/Bool";
+  "mo:ort Bool "mo:base/Bool";
 
 // ============================================================================
 // ACTOR
@@ -324,6 +323,7 @@ actor ChatChain {
     auditLog.toArray()
   };
 };
+
 
 
 

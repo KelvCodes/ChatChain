@@ -16,8 +16,7 @@ type UserRole = { #User; #Moderator; #Admin };
   public type User = {
     principal   : Principal;
    : UserRole;
-    joinedAt    : Time.Time;
-  };
+    joinedAt    : T
 
   public type Reaction = {
     reactor : Principal;
@@ -306,6 +305,7 @@ type UserRole = { #User; #Moderator; #Admin };
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

@@ -16,8 +16,7 @@ actor ChatChain {
   // ===========================================================================
 
   let EDIT_WINDOW_SECONDS : Nat = 15 * 60;
-  let RATE_LIMIT_WINDOW   : Nat = 10;   // seconds
-  let R Nat = 5;    // messages per window
+  5;    // messages per window
 
   // ===========================================================================
   // TYPES
@@ -319,6 +318,7 @@ actor ChatChain {
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

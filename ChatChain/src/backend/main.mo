@@ -8,8 +8,7 @@
 
 
 
-
-  public type User = {
+pe User = {
 nedAt    : T
 n = {
     reactor : Principal;
@@ -297,6 +296,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

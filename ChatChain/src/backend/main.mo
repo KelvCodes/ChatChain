@@ -13,9 +13,7 @@
  UserRole = { #User; #Moderator; #Admin };
 
   public type User = {
-    principal   : Principal;
-   : UserRole;
-    joinedAt    : T
+nedAt    : T
 
  Reaction = {
     reactor : Principal;
@@ -303,6 +301,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

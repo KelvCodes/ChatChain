@@ -15,20 +15,7 @@
   // ===========================================================================
 
   system func preupgrade() {
-    usersStable := Iter.toArray(users.entries());
-    messagesStable := Iter.toArray(messages.entries());
-    auditStable := auditLog.toArray();
-  };
-
-  system func postupgrade() {
-    for ((k, v) in usersStable.vals()) { users.put(k, v) };
-    for ((k, v) in messagesStable.vals()) { messages.put(k, v) };
-    for (e in auditStable.vals()) { auditLog.add(e) };
-
-    usersStable := [];
-    messagesStable := [];
-    auditStable := [];
-  };
+    
 
   // ===========================================================================
   // PRIVATE HELPERS
@@ -247,6 +234,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

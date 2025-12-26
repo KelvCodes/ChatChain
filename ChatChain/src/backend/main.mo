@@ -8,9 +8,7 @@
 
 
 
-[Edit
-    reactions   : [Reaction];
-    replyTo     : ?Nat;
+[Eo     : ?Nat;
     deleted     : Bool;
     readBy      : [Principal];
     pinned      : Bool;
@@ -279,6 +277,7 @@
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

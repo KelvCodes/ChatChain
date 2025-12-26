@@ -23,8 +23,7 @@ dow
 si 
   };
 
-  public type EditRecord = {
-    oldContent : Text;
+  putent : Text;
       : Time.Time;
   };
 
@@ -305,6 +304,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

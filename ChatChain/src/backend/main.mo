@@ -8,12 +8,6 @@
 
 
 
-
-      : 
-  };
-
-s         : Nat;
-
     sender      : Principal;
     content     : Text;
     timestamp   : Time.Time;
@@ -289,6 +283,7 @@ s         : Nat;
 
   public query func getAuditLog() : async [AuditEvent] {
     auditLog.toArray(
+
 
 
 

@@ -1,8 +1,4 @@
-
-
-// ================== FETCH CURRENT USER'S NAME ==================
-async function fetchUserName() {
-  const users = await actor.getUsers();
+ait actor.getUsers();
   for (const [principal, name] of users) {
     if (principal.toString() === currentUserPrincipal.toString()) {
       currentUserName = name;
@@ -204,6 +200,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

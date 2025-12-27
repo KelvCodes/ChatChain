@@ -1,6 +1,4 @@
-= new HttpAgent({ host });
-  
-  // If running locally, fetch the root key for certificate validation
+root key for certificate validation
   if (host.includes('127.0.0.1')) {
     await agent.fetchRootKey();
   }
@@ -216,6 +214,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,6 +1,5 @@
- async () With(userName) {
-  if (!hasStartedChat) {
-    chatWindow.innerHTML = ''; // Clear chat window if first chat
+
+    nnerHTML = ''; // Clear chat window if first chat
     hasStartedChat = true;
   }
   addMessage('system', `Started conversation with ${userName}`, true);
@@ -121,6 +120,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

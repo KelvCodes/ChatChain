@@ -1,5 +1,4 @@
-ners(); // Setup UI interaction events
-  pollMessages(); // Start polling for new messages
+art polling for new messages
   addWelcomeMessages(); // Show welcome message in chat window
 }
 
@@ -188,6 +187,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

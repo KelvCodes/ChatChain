@@ -2,10 +2,7 @@
       currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
       
       // Prompt the user for a username after login
-       prompt('Enter your username:');
-      if (name) {
-        const success = await actor.registerUser(name);
-        if (success) {
+       prompt('Enter your s) {
           currentUserName = name;
           await populateUserList(); // Refresh user list
           closeSettings();
@@ -141,6 +138,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

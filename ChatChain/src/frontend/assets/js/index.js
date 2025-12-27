@@ -1,9 +1,5 @@
 
 
-  // Create after initializing ICP
-  initializeApp();
-}
-
 // ================== FETCH CURRENT USER'S NAME ==================
 async function fetchUserName() {
   const users = await actor.getUsers();
@@ -208,6 +204,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

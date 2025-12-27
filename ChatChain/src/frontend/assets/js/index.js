@@ -1,5 +1,4 @@
- = 'YOUR_CANISTER_ID'; Principal; // Principal (unique identifier) of the current logged-in user
-let currentUserName = 'Anonymous'; // dChat = false; // Tracks if a chat session has begun
+ = 'YOUR_CANISTER_ID'; Principal; // nymous'; // dChat = false; // Tracks if a chat session has begun
 
 // ================== INITIALIZE CONNECTION TO ICP ==================
 async function initializeICP() {
@@ -233,6 +232,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

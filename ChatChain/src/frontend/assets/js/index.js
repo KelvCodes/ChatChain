@@ -1,6 +1,4 @@
-Name(); // Try to fetch the username if authenticated
-  } else {
-    currentUserPrincipal = null; // User is anonymous
+pal = null; // User is anonymous
   }
 
   // Create an agent to talk to the IC canister
@@ -222,6 +220,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

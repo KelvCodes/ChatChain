@@ -1,6 +1,4 @@
-ument.getElementById('messageInput');
-const userList = document.getElementById('userList');
-const settingsBtn = document.getElementById('settingsBtn');
+ent.getElementById('settingsBtn');
 const settingsModal = document.getElementById('settingsModal');
 
 // ================== ICP CONFIGURATION ==================
@@ -244,6 +242,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

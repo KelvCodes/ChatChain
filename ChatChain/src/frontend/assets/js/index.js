@@ -1,11 +1,7 @@
  async () => {
       currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
       
-      // Prompt the user for a username after login
-       prompt('Enter your s) {
-          currentUserName = name;
-          await populateUserList(); // Refresh user list
-          closeSettings();
+      // Prompt the user for a username after );
         } else {
           alert('Username already taken or already registered.');
         }
@@ -138,6 +134,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

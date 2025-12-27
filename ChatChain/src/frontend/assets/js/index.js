@@ -1,6 +1,4 @@
-pal.toString() === currentUserPrincipal.toString()) {
-      currentUserName = name;
-      break;
+;
     }
   }
 }
@@ -198,6 +196,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

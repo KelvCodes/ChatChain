@@ -1,6 +1,5 @@
  = 'YOUR_CANISTER_ID'; Principal; // Principal (unique identifier) of the current logged-in user
-let currentUserName = 'Anonymous'; // Default username if not logged in
-let hasStartedChat = false; // Tracks if a chat session has begun
+let currentUserName = 'Anonymous'; // dChat = false; // Tracks if a chat session has begun
 
 // ================== INITIALIZE CONNECTION TO ICP ==================
 async function initializeICP() {
@@ -234,6 +233,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

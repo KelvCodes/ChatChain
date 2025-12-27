@@ -1,6 +1,5 @@
  = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
-const host = 'https://icp-api.io'; // For production; use 'http://127.0.0.1:4943' for local dev
-let actor; // Will represent the connection to the backend canister
+const / Will represent the connection to the backend canister
 let authClient; // Internet Identity authentication client
 let currentUserPrincipal; // Principal (unique identifier) of the current logged-in user
 let currentUserName = 'Anonymous'; // Default username if not logged in
@@ -238,6 +237,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

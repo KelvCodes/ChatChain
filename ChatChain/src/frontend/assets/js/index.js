@@ -1,11 +1,8 @@
 
 
 // ait actor.getUsers();
-  userList.innerHTML = ''; // Clear current list
-  
-  users.forEach(([principal, name]) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
+  userList.innerHTML = ''; // Clear current l
+  users.forEach(([principal,
       <div class="user-avatar">${name[0]}</div> <!-- First letter as avatar -->
       <span>${name}</span>
       <div class="user-status" style="background: #10b981"></div> <!-- Green dot for online -->
@@ -183,6 +180,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

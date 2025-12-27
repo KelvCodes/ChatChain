@@ -1,5 +1,4 @@
-AuthClient } from '@dfinity/auth-client';
-import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjust path based on your project structure
+} from '../../declarations/ChatChain/ChatChain'; // Adjust path based on your project structure
 
 // ================== DOM ELEMENT REFERENCES ==================
 const chatWindow = document.getElementById('chatWindow');
@@ -250,6 +249,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

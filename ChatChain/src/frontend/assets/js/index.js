@@ -1,5 +1,4 @@
-== DOM ELEMENT REFERENCES ==================
-const chatWindow = document.getElementById('chatWindow');
+ow = document.getElementById('chatWindow');
 const chatForm = document.getElementById('chatForm');
 const messageInput = document.getElementById('messageInput');
 const userList = document.getElementById('userList');
@@ -247,6 +246,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

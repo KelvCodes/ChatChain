@@ -1,9 +1,4 @@
-
-    nnerHTML = ''; 
-
-// ================== ADD MESSAGE TO CHAT WINDOW ==================
-function addMessage(sender, text, isSystem = false) {
-  const messageDiv = document.createElement('div');
+ = document.createElement('div');
   messageDiv.classList.add('message');
   
   if (isSystem) {
@@ -94,6 +89,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

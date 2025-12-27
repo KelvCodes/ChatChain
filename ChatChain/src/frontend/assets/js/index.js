@@ -2,15 +2,7 @@
   messageDiv.classList.add('message');
   
   if (isSystem) {
-    // System messages (like notifications)
-    messageDiv.innerHTML = `
-      <div style="text-align: center; color: #64748b; font-style: italic; padding: 1rem;">
-        ${text}
-      </div>
-    `;
-  } else {
-    // Chat messages from users
-    const isSentByMe = sender === currentUserName;
+    // System messages ByMe = sender === currentUserName;
     messageDiv.classList.add(isSentByMe ? 'me' : 'them');
 
     // Add timestamp
@@ -89,6 +81,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

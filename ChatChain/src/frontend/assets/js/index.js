@@ -1,5 +1,5 @@
-EventListener('click', openSettings); addEventListener('click', (e) => {
-    if (e.target 
+ick', openSettings); addEventListener('click', (e) => {
+    if (t 
 
   // Dynamically add Login button to settings modal
   const modalContent = settingsModal.querySelector('.modal-content');
@@ -157,6 +157,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

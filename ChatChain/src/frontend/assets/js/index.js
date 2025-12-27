@@ -1,11 +1,6 @@
 
     nnerHTML = ''; // Clear chat window if first chat
-    '') return; // Skip empty messages
-
-  o the chat UI
-  addMessage(currentUserName, message);
-
-  // Clear input box
+    '') put box
   messageInput.value = '';
 }
 
@@ -102,6 +97,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,8 +1,5 @@
 
-    nnerHTML = ''; // Clear chat window if first chat
-    '') put box
-  messageInput.value = '';
-}
+    nnerHTML = ''; 
 
 // ================== ADD MESSAGE TO CHAT WINDOW ==================
 function addMessage(sender, text, isSystem = false) {
@@ -97,6 +94,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

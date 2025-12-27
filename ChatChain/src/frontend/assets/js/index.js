@@ -1,5 +1,4 @@
-// Import DFINITY libraries for interacting with canisters and authentication
-import { Actor, HttpAgent } from '@dfinity/agent';
+ctor, HttpAgent } from '@dfinity/agent';
 import { AuthClient } from '@dfinity/auth-client';
 import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjust path based on your project structure
 
@@ -252,5 +251,6 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 

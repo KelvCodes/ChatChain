@@ -1,5 +1,4 @@
- 'https://identity.ic0.app', // Official II provider
-    onSuccess: async () => {
+ async () => {
       currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
       
       // Prompt the user for a username after login
@@ -142,6 +141,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

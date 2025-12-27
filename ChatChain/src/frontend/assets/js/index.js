@@ -1,6 +1,4 @@
-} from '../../declarations/ChatChain/ChatChain'; // Adjust path based on your project structure
-
-// ================== DOM ELEMENT REFERENCES ==================
+== DOM ELEMENT REFERENCES ==================
 const chatWindow = document.getElementById('chatWindow');
 const chatForm = document.getElementById('chatForm');
 const messageInput = document.getElementById('messageInput');
@@ -249,6 +247,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

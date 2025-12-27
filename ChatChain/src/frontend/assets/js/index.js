@@ -1,5 +1,4 @@
-ow = document.getElementById('chatWindow');
-const chatForm = document.getElementById('chatForm');
+.getElementById('chatForm');
 const messageInput = document.getElementById('messageInput');
 const userList = document.getElementById('userList');
 const settingsBtn = document.getElementById('settingsBtn');
@@ -246,6 +245,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

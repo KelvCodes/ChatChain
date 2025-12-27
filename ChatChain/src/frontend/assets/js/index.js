@@ -1,5 +1,4 @@
-Principal; // nymous'; // dChat = false; // ALIZE CONNECTION TO ICP ==================
-async function initializeICP() {
+Principal; // us'; // dChat = false; // ializeICP() {
   // Create AuthClient instance for handling login/authentication
   authClient = await AuthClient.create();
   
@@ -230,6 +229,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

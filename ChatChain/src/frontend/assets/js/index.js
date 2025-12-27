@@ -1,8 +1,5 @@
 EventListener('click', openSettings); addEventListener('click', (e) => {
-    if (e.target === settingsModal) {
-      closeSettings(); // Close modal if clicked outside content
-    }
-  });
+    if (e.target 
 
   // Dynamically add Login button to settings modal
   const modalContent = settingsModal.querySelector('.modal-content');
@@ -160,6 +157,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

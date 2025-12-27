@@ -1,6 +1,5 @@
  = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
-const / Will represent the connection to the backend canister
-let authClient; // Internet Identity authentication client
+const ; // Internet Identity authentication client
 let currentUserPrincipal; // Principal (unique identifier) of the current logged-in user
 let currentUserName = 'Anonymous'; // Default username if not logged in
 let hasStartedChat = false; // Tracks if a chat session has begun
@@ -237,6 +236,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

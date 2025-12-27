@@ -1,10 +1,4 @@
-;
-    }
-  }
-}
-
-// ================== INITIALIZE APP ==================
-function initializeApp() {
+p() {
   populateUserList(); // Show list of registered users
   setupEventListeners(); // Setup UI interaction events
   pollMessages(); // Start polling for new messages
@@ -196,6 +190,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,6 +1,4 @@
-s="user-status" style="background: #10b981"></div> <!-- Green dot istener('click', () => startChatWith(name));
-    userList.appendChild(li);
-  });
+s="user-status" 
 }
 
 // ================== SETUP EVENT LISTENERS ==================
@@ -169,6 +167,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

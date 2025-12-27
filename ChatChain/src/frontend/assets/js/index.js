@@ -1,6 +1,4 @@
-('127.0.0.1')) {
-    await agent.fetchRootKey();
-  }
+
 
   // Create actor (connection object) for interacting with canister methods
   actor = Actor.createActor(idlFactory, { agent, canisterId });
@@ -213,6 +211,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

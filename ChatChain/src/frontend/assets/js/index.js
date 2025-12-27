@@ -1,8 +1,4 @@
-s="user-status" 
-}
-
-// ================== SETUP EVENT LISTENERS ==================
-function setupEventListeners() {
+Listeners() {
   chatForm.addEventListener('submit', handleMessageSend); // Handle send button
   settingsBtn.addEventListener('click', openSettings); // Open settings modal
   settingsModal.addEventListener('click', (e) => {
@@ -167,6 +163,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

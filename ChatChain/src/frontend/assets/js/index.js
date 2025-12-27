@@ -1,4 +1,4 @@
-rPrincipal = (await authClient.getIdentity()).getPrincipal();
+Client.getIdentity()).getPrincipal();
     await fetchUserName(); // Try to fetch the username if authenticated
   } else {
     currentUserPrincipal = null; // User is anonymous
@@ -223,6 +223,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

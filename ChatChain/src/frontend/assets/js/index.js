@@ -2,10 +2,7 @@
     nnerHTML = ''; // Clear chat window if first chat
     hasStartedChat = true;
   }
-  addMessage('system', `Started conversation  handleMessageSend(e) {
-  e.preventDefault(); // Prevent page refresh
-  
-  const message = messageInput.value.trim();
+  addMessage('system', `Started ge = messageInput.value.trim();
   if (message === '') return; // Skip empty messages
 
   if (!hasStartedChat) {
@@ -116,6 +113,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

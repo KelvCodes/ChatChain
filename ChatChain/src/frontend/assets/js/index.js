@@ -1,6 +1,4 @@
-ait actor.getUsers();
-  for (const [principal, name] of users) {
-    if (principal.toString() === currentUserPrincipal.toString()) {
+pal.toString() === currentUserPrincipal.toString()) {
       currentUserName = name;
       break;
     }
@@ -200,6 +198,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

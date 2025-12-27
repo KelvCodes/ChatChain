@@ -1,8 +1,4 @@
-s="user-status" style="background: #10b981"></div> <!-- Green dot for online -->
-    `;
-    
-    // When user is clicked, start chat
-    li.addEventListener('click', () => startChatWith(name));
+s="user-status" style="background: #10b981"></div> <!-- Green dot istener('click', () => startChatWith(name));
     userList.appendChild(li);
   });
 }
@@ -173,6 +169,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,5 +1,4 @@
-ent.getElementById('settingsBtn');
-const settingsModal = document.getElementById('settingsModal');
+= document.getElementById('settingsModal');
 
 // ================== ICP CONFIGURATION ==================
 const canisterId = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
@@ -242,6 +241,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

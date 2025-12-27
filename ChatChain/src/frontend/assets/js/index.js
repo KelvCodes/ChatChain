@@ -1,10 +1,7 @@
 ick', openSettings); addEventListener('click', (e) => {
     if (t 
 
-  // Dynamically add Login button to inButton = document.createElement('button');
-  loginButton.innerText = 'Login with Internet Identity';
-  loginButton.style = 'margin-top: 1rem; padding: 0.5rem 1rem; background: #10b981; ', handleLogin);
-  modalContent.appendChild(loginButton);
+  // Dynamically add Login button to ndChild(loginButton);
 }
 
 // ================== HANDLE INTERNET IDENTITY LOGIN ==================
@@ -154,6 +151,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

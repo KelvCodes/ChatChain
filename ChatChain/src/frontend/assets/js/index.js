@@ -1,6 +1,4 @@
-Principal; // us'; // dChat = false; // ializeICP() {
-  // Create AuthClient instance for handling login/authentication
-  authClient = await AuthClient.create();
+Principal; // us'; // dChat = await AuthClient.create();
   
   // Check if the user is already authenticated
   if (await authClient.isAuthenticated()) {
@@ -229,6 +227,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

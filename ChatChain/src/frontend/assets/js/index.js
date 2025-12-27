@@ -1,14 +1,9 @@
-ick', 
-
-// ================== HANDLE INTERNET IDENTITY LOGIN ==================
-async function handleLogin() {
-  await authClient.login({
-    identityProvider: 'https://identity.ic0.app', // Official II provider
+ 'https://identity.ic0.app', // Official II provider
     onSuccess: async () => {
       currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
       
       // Prompt the user for a username after login
-      const name = prompt('Enter your username:');
+       prompt('Enter your username:');
       if (name) {
         const success = await actor.registerUser(name);
         if (success) {
@@ -147,6 +142,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

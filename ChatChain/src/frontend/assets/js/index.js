@@ -2,11 +2,7 @@
     nnerHTML = ''; // Clear chat window if first chat
     hasStartedChat = true;
   }
-  addMessage('system', `Started conversation with ${userName}`, true);
-}
-
-// ================== HANDLE MESSAGE SENDING ==================
-async function handleMessageSend(e) {
+  addMessage('system', `Started conversation  handleMessageSend(e) {
   e.preventDefault(); // Prevent page refresh
   
   const message = messageInput.value.trim();
@@ -120,6 +116,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

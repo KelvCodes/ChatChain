@@ -1,5 +1,4 @@
-ctor, HttpAgent } from '@dfinity/agent';
-import { AuthClient } from '@dfinity/auth-client';
+AuthClient } from '@dfinity/auth-client';
 import { idlFactory } from '../../declarations/ChatChain/ChatChain'; // Adjust path based on your project structure
 
 // ================== DOM ELEMENT REFERENCES ==================
@@ -251,6 +250,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

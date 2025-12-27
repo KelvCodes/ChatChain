@@ -1,6 +1,4 @@
-er-avatar">${name[0]}</div> <!-- First letter as avatar -->
-      <span>${name}</span>
-      <div class="user-status" style="background: #10b981"></div> <!-- Green dot for online -->
+s="user-status" style="background: #10b981"></div> <!-- Green dot for online -->
     `;
     
     // When user is clicked, start chat
@@ -175,6 +173,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

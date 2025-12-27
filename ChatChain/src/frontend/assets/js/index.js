@@ -1,5 +1,4 @@
- = ssages ByMe = sender ==e = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-    messageDiv.innerHTML = `
+ = ssages ByMe 
       ${!isSentByMe ? `<div class="message-sender">${sender}</div>` : ''}
       <div class="message-content">${text}</div>
       <div class="message-time">${time}</div>
@@ -73,6 +72,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

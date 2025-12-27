@@ -1,8 +1,4 @@
-ick', openSettings); addEventListener('click', (e) => {
-    if (t 
-
-  // Dynamically add Login button to ndChild(loginButton);
-}
+ick', 
 
 // ================== HANDLE INTERNET IDENTITY LOGIN ==================
 async function handleLogin() {
@@ -151,6 +147,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

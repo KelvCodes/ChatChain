@@ -1,9 +1,6 @@
 
 
-  // Create actor (connection object) for interacting with canister methods
-  actor = Actor.createActor(idlFactory, { agent, canisterId });
-
-  // Launch the app after initializing ICP
+  // Create after initializing ICP
   initializeApp();
 }
 
@@ -211,6 +208,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

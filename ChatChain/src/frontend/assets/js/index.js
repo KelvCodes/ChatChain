@@ -1,12 +1,4 @@
- = document.createElement('div');
-  messageDiv.classList.add('message');
-  
-  if (isSystem) {
-    // System messages ByMe = sender === currentUserName;
-    messageDiv.classList.add(isSentByMe ? 'me' : 'them');
-
-    // Add timestamp
-    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+ = ssages ByMe = sender ==e = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     messageDiv.innerHTML = `
       ${!isSentByMe ? `<div class="message-sender">${sender}</div>` : ''}
       <div class="message-content">${text}</div>
@@ -81,6 +73,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,5 +1,4 @@
-========= ICP CONFIGURATION ==================
-const canisterId = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
+ = 'YOUR_CANISTER_ID'; // Replace with your deployed canister ID
 const host = 'https://icp-api.io'; // For production; use 'http://127.0.0.1:4943' for local dev
 let actor; // Will represent the connection to the backend canister
 let authClient; // Internet Identity authentication client
@@ -239,6 +238,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

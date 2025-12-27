@@ -1,12 +1,7 @@
  async () rPrincipal = (await authClient.getIdentity()).getPrincipal();
       
       // 
-          alert('Username already taken or already registered.');
-        }
-      }
-    }
-  });
-}
+          
 
 // ================== START CHAT WITH A USER ==================
 function startChatWith(userName) {
@@ -132,6 +127,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

@@ -1,5 +1,4 @@
-Principal; // us'; // dChat = await AuthClient.creat
-  ted()) {
+
     currentUserPrincipal = (await authClient.getIdentity()).getPrincipal();
     await fetchUserName(); // Try to fetch the username if authenticated
   } else {
@@ -225,6 +224,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

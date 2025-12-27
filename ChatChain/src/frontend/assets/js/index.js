@@ -1,8 +1,6 @@
 
 
-// ================== POPULATE USER LIST FROM CANISTER ==================
-async function populateUserList() {
-  const users = await actor.getUsers();
+// ait actor.getUsers();
   userList.innerHTML = ''; // Clear current list
   
   users.forEach(([principal, name]) => {
@@ -185,6 +183,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

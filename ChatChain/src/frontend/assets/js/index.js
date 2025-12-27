@@ -1,6 +1,4 @@
- = 'YOUR_CANISTER_ID'; Principal; // nymous'; // dChat = false; // Tracks if a chat session has begun
-
-// ================== INITIALIZE CONNECTION TO ICP ==================
+ = 'YOUR_CANISTER_ID'; Principal; // nymous'; // dChat = false; // ALIZE CONNECTION TO ICP ==================
 async function initializeICP() {
   // Create AuthClient instance for handling login/authentication
   authClient = await AuthClient.create();
@@ -232,6 +230,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

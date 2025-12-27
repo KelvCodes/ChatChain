@@ -1,8 +1,4 @@
- = ssages ByMe 
-      ${!isSentByMe ? `<div class="message-sender">${sender}</div>` : ''}
-      <div class="message-content">${text}</div>
-      <div class="message-time">${time}</div>
-    `;
+
   }
 
   chatWindow.appendChild(messageDiv);
@@ -72,6 +68,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

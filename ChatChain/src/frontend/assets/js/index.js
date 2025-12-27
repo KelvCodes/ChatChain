@@ -2,12 +2,7 @@
     nnerHTML = ''; // Clear chat window if first chat
     '') return; // Skip empty messages
 
-  if (!hasStartedChat) {
-    chatWindow.innerHTML = '';
-    hasStartedChat = true;
-  }
-
-  // Send message to ICP canister
+  if (!hasStartedChat) ssage to ICP canister
   await actor.sendMessage(message);
 
   // Add my message to the chat UI
@@ -110,6 +105,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

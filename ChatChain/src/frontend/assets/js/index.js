@@ -1,9 +1,7 @@
 ick', openSettings); addEventListener('click', (e) => {
     if (t 
 
-  // Dynamically add Login button to settings modal
-  const modalContent = settingsModal.querySelector('.modal-content');
-  const loginButton = document.createElement('button');
+  // Dynamically add Login button to inButton = document.createElement('button');
   loginButton.innerText = 'Login with Internet Identity';
   loginButton.style = 'margin-top: 1rem; padding: 0.5rem 1rem; background: #10b981; color: white; border: none; border-radius: 5px; cursor: pointer;';
   loginButton.addEventListener('click', handleLogin);
@@ -157,6 +155,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

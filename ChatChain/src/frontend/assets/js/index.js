@@ -1,7 +1,6 @@
 Listeners() {
   chatForm.addEventListener('submit', handleMessageSend); // Handle send button
-  settingsBtn.addEventListener('click', openSettings); // Open settings modal
-  settingsModal.addEventListener('click', (e) => {
+  settingsBtn.addEventListener('click', openSettings); addEventListener('click', (e) => {
     if (e.target === settingsModal) {
       closeSettings(); // Close modal if clicked outside content
     }
@@ -163,6 +162,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

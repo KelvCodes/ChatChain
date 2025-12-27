@@ -1,8 +1,4 @@
-pal = null; // User is anonymous
-  }
-
-  // Create an agent to talk to the IC canister
-  const agent = new HttpAgent({ host });
+= new HttpAgent({ host });
   
   // If running locally, fetch the root key for certificate validation
   if (host.includes('127.0.0.1')) {
@@ -220,6 +216,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

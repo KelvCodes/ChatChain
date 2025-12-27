@@ -1,6 +1,4 @@
-art polling for new messages
-  addWelcomeMessages(); // Show welcome message in chat window
-}
+
 
 // ================== POPULATE USER LIST FROM CANISTER ==================
 async function populateUserList() {
@@ -187,6 +185,7 @@ messageInput.addEventListener('keypress', (e) => {
     chatForm.dispatchEvent(new Event('submit'));
   }
 });
+
 
 
 

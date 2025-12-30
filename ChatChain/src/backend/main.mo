@@ -1,4 +1,4 @@
-// ============================================================================
+===================================================================
 // ChatChain — Clean, Scalable & Production-Ready Motoko Chat Canister
 // Author: Kelvin Agyare Yeboah
 // Description:
@@ -387,3 +387,4 @@ actor ChatChain {
     findUser(caller)
   };
 };
+

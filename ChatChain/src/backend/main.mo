@@ -1,5 +1,4 @@
 
-    sender    : Principal;
     content   : Text;
     timestamp : Time.Time;
     edited    : Bool;
@@ -350,6 +349,7 @@
     findUser(caller)
   };
 };
+
 
 
 

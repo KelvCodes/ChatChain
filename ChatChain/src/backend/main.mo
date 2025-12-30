@@ -1,5 +1,4 @@
-Time.Time;
-    edited    : Bool;
+  : Bool;
     reactions : [Reaction];
     replyTo   : ?Nat;        // Threading support
   };
@@ -347,6 +346,7 @@ Time.Time;
     findUser(caller)
   };
 };
+
 
 
 

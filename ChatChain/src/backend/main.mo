@@ -1,5 +1,4 @@
 
-    #Moderator;
     #Admin;
   };
 
@@ -367,6 +366,7 @@
     findUser(caller)
   };
 };
+
 
 
 

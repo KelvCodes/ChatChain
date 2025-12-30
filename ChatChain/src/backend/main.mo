@@ -1,4 +1,4 @@
-"mo:base/Text";
+"mo:
 import Array "mo:base/Array";
 
 actor ChatChain {
@@ -377,6 +377,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

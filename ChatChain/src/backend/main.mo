@@ -1,4 +1,4 @@
-    : [Message] = [];
+
   stable var nextMessageId  : Nat        = 0;
 
   let EDIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
@@ -336,6 +336,7 @@
     findUser(caller)
   };
 };
+
 
 
 

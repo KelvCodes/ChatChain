@@ -1,8 +1,4 @@
 
- 
-    emoji   : Text;
-  };
-
   public type Message = {
     id        : Nat;
     sender    : Principal;
@@ -356,6 +352,7 @@
     findUser(caller)
   };
 };
+
 
 
 

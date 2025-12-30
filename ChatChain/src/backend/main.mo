@@ -1,4 +1,4 @@
-var users          : [User]    = [];
+     : [User]    = [];
   stable var messages       : [Message] = [];
   stable var nextMessageId  : Nat        = 0;
 
@@ -337,6 +337,7 @@ var users          : [User]    = [];
     findUser(caller)
   };
 };
+
 
 
 

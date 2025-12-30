@@ -1,5 +1,5 @@
 
-    reactions : [Reaction];
+ [Reaction];
     replyTo   : ?Nat;        // Threading support
   };
 
@@ -346,6 +346,7 @@
     findUser(caller)
   };
 };
+
 
 
 

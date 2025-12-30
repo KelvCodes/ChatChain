@@ -1,6 +1,4 @@
 
-    #Admin;
-incipal   : Principal;
     displayName : Text;
     role        : UserRole;
   };
@@ -363,6 +361,7 @@ incipal   : Principal;
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,4 +1,4 @@
-: Kelvin Agyare Yeboah
+
 // Description:
 // A feature-rich decentralized chat system with roles, moderation,
 // threading, pagination, reactions, safe edits, and admin utilities.
@@ -385,6 +385,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

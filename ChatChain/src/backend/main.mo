@@ -1,4 +1,4 @@
-xtMessageId  : Nat        = 0;
+
 
   let EDIT_WINDOW_SECONDS : Nat = 15 * 60; // 15 minutes
 
@@ -335,6 +335,7 @@ xtMessageId  : Nat        = 0;
     findUser(caller)
   };
 };
+
 
 
 

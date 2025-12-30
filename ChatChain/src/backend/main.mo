@@ -1,5 +1,4 @@
 
-Seconds() : Nat {
     Time.toSeconds(Time.now())
   };
 
@@ -328,6 +327,7 @@ Seconds() : Nat {
     findUser(caller)
   };
 };
+
 
 
 

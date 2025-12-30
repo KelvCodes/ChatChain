@@ -1,11 +1,4 @@
- #
-      Text.fromInt(m) # "m " #
-      Text.fromInt(sec) # "s"
-    )
-  };
 
-  private func findUser(p : Principal) : ?User {
-    for (u in users.vals()) {
       if (Principal.equal(u.principal, p)) return ?u;
     };
     null
@@ -310,6 +303,7 @@
     findUser(caller)
   };
 };
+
 
 
 

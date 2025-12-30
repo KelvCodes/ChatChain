@@ -1,4 +1,4 @@
-: Text;
+
     timestamp : Time.Time;
     edited    : Bool;
     reactions : [Reaction];
@@ -348,6 +348,7 @@
     findUser(caller)
   };
 };
+
 
 
 

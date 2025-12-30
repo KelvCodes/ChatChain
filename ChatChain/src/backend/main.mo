@@ -1,15 +1,6 @@
 
       if (Principal.equal(u.principal, p)) return ?u;
-    };
-    null
-  };
 
-  private func isAdmin(p : Principal) : Bool {
-    switch (findUser(p)) {
-      case (?u) { u.role == #Admin };
-      case null { false };
-    }
-  };
 
   private func isModOrAdmin(p : Principal) : Bool {
     switch (findUser(p)) {
@@ -303,6 +294,7 @@
     findUser(caller)
   };
 };
+
 
 
 

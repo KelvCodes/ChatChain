@@ -1,5 +1,4 @@
-=================================
-  public type UserRole = {
+
     #User;
     #Moderator;
     #Admin;
@@ -369,6 +368,7 @@
     findUser(caller)
   };
 };
+
 
 
 

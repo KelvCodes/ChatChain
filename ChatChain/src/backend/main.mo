@@ -1,5 +1,5 @@
 
-    reactor : Principal;
+ Principal;
     emoji   : Text;
   };
 
@@ -356,6 +356,7 @@
     findUser(caller)
   };
 };
+
 
 
 

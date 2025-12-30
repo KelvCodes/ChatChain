@@ -1,12 +1,4 @@
-onds(ts);
-    let d = s / 86400;
-    let h = (s / 3600) % 24;
-    let m = (s / 60) % 60;
-    let sec = s % 60;
-
-    Text.concat(
-      Text.fromInt(d) # "d " #
-      Text.fromInt(h) # "h " #
+ #
       Text.fromInt(m) # "m " #
       Text.fromInt(sec) # "s"
     )
@@ -318,6 +310,7 @@ onds(ts);
     findUser(caller)
   };
 };
+
 
 
 

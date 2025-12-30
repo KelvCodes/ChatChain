@@ -1,13 +1,4 @@
-
-    Time.toSeconds(Time.now())
-  };
-
-  private func isWithinEditWindow(ts : Time.Time) : Bool {
-    nowSeconds() - Time.toSeconds(ts) <= EDIT_WINDOW_SECONDS
-  };
-
-  private func formatIso(ts : Time.Time) : Text {
-    let s = Time.toSeconds(ts);
+onds(ts);
     let d = s / 86400;
     let h = (s / 3600) % 24;
     let m = (s / 60) % 60;
@@ -327,6 +318,7 @@
     findUser(caller)
   };
 };
+
 
 
 

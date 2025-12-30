@@ -1,9 +1,6 @@
 
     #Admin;
-  };
-
-  public type User = {
-    principal   : Principal;
+incipal   : Principal;
     displayName : Text;
     role        : UserRole;
   };
@@ -366,6 +363,7 @@
     findUser(caller)
   };
 };
+
 
 
 

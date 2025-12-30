@@ -1,4 +1,4 @@
- Production-Ready Motoko Chat Canister
+ Producady Motoko Chat Canister
 // Author: Kelvin Agyare Yeboah
 // Description:
 // A feature-rich decentralized chat system with roles, moderation,
@@ -386,6 +386,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
 
-    displayName : Text;
     role        : UserRole;
   };
 
@@ -361,6 +360,7 @@
     findUser(caller)
   };
 };
+
 
 
 

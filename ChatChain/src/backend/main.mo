@@ -1,6 +1,5 @@
 
-  public type Message = {
-    id        : Nat;
+  public type Message 
     sender    : Principal;
     content   : Text;
     timestamp : Time.Time;
@@ -352,6 +351,7 @@
     findUser(caller)
   };
 };
+
 
 
 

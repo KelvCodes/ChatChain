@@ -1,8 +1,6 @@
 :
 // A feature-rich decentralized chat system with roles, moderation,
-// threading, pagination, reactions, safe edits, and admin utilities.
-// ============================================================================
-
+// threadin
 import Principal "mo:base/Principal";
 import Time "mo:base/Time";
 import Text "mo:base/Text";
@@ -384,6 +382,7 @@ actor ChatChain {
     findUser(caller)
   };
 };
+
 
 
 

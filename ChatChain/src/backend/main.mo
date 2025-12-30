@@ -1,4 +1,4 @@
-  : Bool;
+
     reactions : [Reaction];
     replyTo   : ?Nat;        // Threading support
   };
@@ -346,6 +346,7 @@
     findUser(caller)
   };
 };
+
 
 
 

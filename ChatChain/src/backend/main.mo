@@ -1,7 +1,5 @@
 
 
-  public query func getUsers() : async [User] { users };
-
   public shared ({ caller }) func banUser(p : Principal) : async Bool {
     if (!isModOrAdmin(caller)) return false;
 
@@ -181,6 +179,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,5 +1,4 @@
 
-actor ChatChain {
 
   // ===========================================================================
   // CONSTANTS
@@ -312,6 +311,7 @@ actor ChatChain {
     findUser(caller)
   };
 }
+
 
 
 

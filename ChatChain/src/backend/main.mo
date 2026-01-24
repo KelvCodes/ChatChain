@@ -1,5 +1,4 @@
-==============================================================
-// ChatChain v3 — Enterprise-Grade, Upgrade-Safe Chat Canister
+
 // Author: Kelvin Agyare Yeboah
 // ============================================================================
 
@@ -323,6 +322,7 @@ actor ChatChain {
     findUser(caller)
   };
 }
+
 
 
 

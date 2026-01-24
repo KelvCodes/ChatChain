@@ -1,5 +1,4 @@
 
-// Author: Kelvin Agyare Yeboah
 // ============================================================================
 
 import Principal "mo:base/Principal";
@@ -322,6 +321,7 @@ actor ChatChain {
     findUser(caller)
   };
 }
+
 
 
 

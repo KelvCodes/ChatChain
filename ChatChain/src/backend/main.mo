@@ -1,6 +1,3 @@
-==================
-  // PRIVATE HELPERS
-  // ===========================================================================
 
   private func now() : Nat {
     Time.toSeconds(Time.now())
@@ -261,6 +258,7 @@
     findUser(caller)
   };
 }
+
 
 
 

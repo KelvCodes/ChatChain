@@ -1,7 +1,4 @@
 
-      displayName = name;
-      role = role;
-      banned = false;
       lastSeen = now();
     }]);
 
@@ -189,6 +186,7 @@
     findUser(caller)
   };
 }
+
 
 
 

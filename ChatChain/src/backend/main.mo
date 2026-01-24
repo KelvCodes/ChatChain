@@ -1,6 +1,4 @@
-
-  stable var nextMessageId : Nat        = 0;
-  stable var lastSendMap   : [(Principal, Nat)] = [];
+[];
 
   // ===========================================================================
   // PRIVATE HELPERS
@@ -265,6 +263,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,5 +1,4 @@
 
-    sender    : Principal;
     content   : Text;
     timestamp : Nat;
     edited    : Bool;
@@ -281,6 +280,7 @@
     findUser(caller)
   };
 }
+
 
 
 

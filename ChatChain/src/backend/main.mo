@@ -1,7 +1,4 @@
 
-      case (?u) { u.role == #Admin or u.role == #Moderator };
-      case null false;
-    }
   };
 
   private func isBanned(p : Principal) : Bool {
@@ -238,6 +235,7 @@
     findUser(caller)
   };
 }
+
 
 
 

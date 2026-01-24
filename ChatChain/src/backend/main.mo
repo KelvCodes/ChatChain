@@ -1,5 +1,4 @@
 
-    id        : Nat;
     sender    : Principal;
     content   : Text;
     timestamp : Nat;
@@ -282,6 +281,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,8 +1,5 @@
 
 
-  public shared ({ caller }) func banUser(p : Principal) : async Bool {
-    if (!isModOrAdmin(caller)) return false;
-
     users := Array.map(users, func(u) {
       if (Principal.equal(u.principal, p)) {
         { u with banned = true }
@@ -179,6 +176,7 @@
     findUser(caller)
   };
 }
+
 
 
 

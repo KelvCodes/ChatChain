@@ -1,6 +1,4 @@
 
-    users := Array.append(users, [{
-      principal = caller;
       displayName = name;
       role = role;
       banned = false;
@@ -191,6 +189,7 @@
     findUser(caller)
   };
 }
+
 
 
 

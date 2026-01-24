@@ -1,8 +1,4 @@
 
-      if (Principal.equal(u.principal, p)) return ?u;
-    };
-    null
-  };
 
   private func isAdmin(p : Principal) : Bool {
     switch (findUser(p)) {
@@ -252,6 +248,7 @@
     findUser(caller)
   };
 }
+
 
 
 

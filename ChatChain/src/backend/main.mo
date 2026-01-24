@@ -1,7 +1,4 @@
-n };
-      case null false;
-    }
-  };
+
 
   private func isModOrAdmin(p : Principal) : Bool {
     switch (findUser(p)) {
@@ -244,6 +241,7 @@ n };
     findUser(caller)
   };
 }
+
 
 
 

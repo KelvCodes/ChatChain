@@ -1,8 +1,4 @@
 
-  // ===========================================================================
-
-  public type UserRole = { #User; #Moderator; #Admin };
-
   public type User = {
     principal   : Principal;
     displayName : Text;
@@ -300,6 +296,7 @@
     findUser(caller)
   };
 }
+
 
 
 

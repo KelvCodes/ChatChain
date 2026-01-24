@@ -1,6 +1,4 @@
 
-    switch (findUser(p)) {
-      case (?u) u.banned;
       case null true;
     }
   };
@@ -232,6 +230,7 @@
     findUser(caller)
   };
 }
+
 
 
 

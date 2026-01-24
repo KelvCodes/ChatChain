@@ -1,6 +1,5 @@
 
 
-  private func isAdmin(p : Principal) : Bool {
     switch (findUser(p)) {
       case (?u) { u.role == #Admin };
       case null false;
@@ -248,6 +247,7 @@
     findUser(caller)
   };
 }
+
 
 
 

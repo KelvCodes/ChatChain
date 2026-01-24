@@ -1,5 +1,4 @@
-(e) {
-      if (Principal.equal(e.0, p)) {
+
         if (t - e.1 < RATE_LIMIT_SECONDS) blocked := true;
         (p, t)
       } else e
@@ -213,6 +212,7 @@
     findUser(caller)
   };
 }
+
 
 
 

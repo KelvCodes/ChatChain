@@ -1,7 +1,4 @@
-
-    var blocked = false;
-
-    lastSendMap := Array.map(lastSendMap, func(e) {
+(e) {
       if (Principal.equal(e.0, p)) {
         if (t - e.1 < RATE_LIMIT_SECONDS) blocked := true;
         (p, t)
@@ -216,6 +213,7 @@
     findUser(caller)
   };
 }
+
 
 
 

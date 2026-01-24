@@ -1,6 +1,4 @@
 
-
-  let EDIT_WINDOW_SECONDS : Nat = 15 * 60;
   let MAX_MESSAGE_LENGTH : Nat = 500;
   let RATE_LIMIT_SECONDS : Nat = 3;
 
@@ -307,6 +305,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,7 +1,4 @@
 
-
-    users := Array.map(users, func(u) {
-      if (Principal.equal(u.principal, p)) {
         { u with banned = true }
       } else u
     });
@@ -176,6 +173,7 @@
     findUser(caller)
   };
 }
+
 
 
 

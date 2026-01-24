@@ -1,9 +1,4 @@
 
-        { u with banned = true }
-      } else u
-    });
-
-    true
   };
 
   public shared ({ caller }) func unbanUser(p : Principal) : async Bool {
@@ -173,6 +168,7 @@
     findUser(caller)
   };
 }
+
 
 
 

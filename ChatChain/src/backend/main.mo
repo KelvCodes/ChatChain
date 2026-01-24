@@ -1,5 +1,4 @@
 
-  public type User = {
     principal   : Principal;
     displayName : Text;
     role        : UserRole;
@@ -296,6 +295,7 @@
     findUser(caller)
   };
 }
+
 
 
 

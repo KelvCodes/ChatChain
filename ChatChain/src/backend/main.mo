@@ -1,5 +1,4 @@
 
-    principal   : Principal;
     displayName : Text;
     role        : UserRole;
     banned      : Bool;
@@ -295,6 +294,7 @@
     findUser(caller)
   };
 }
+
 
 
 

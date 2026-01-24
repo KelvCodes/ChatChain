@@ -1,5 +1,4 @@
 
-    content   : Text;
     timestamp : Nat;
     edited    : Bool;
     deleted   : Bool;
@@ -280,6 +279,7 @@
     findUser(caller)
   };
 }
+
 
 
 

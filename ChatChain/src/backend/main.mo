@@ -1,8 +1,4 @@
 
-    }
-  };
-
-    users := Array.map(users, func(u) {
       if (Principal.equal(u.principal, p)) {
         { u with lastSeen = now() }
       } else u
@@ -228,6 +224,7 @@
     findUser(caller)
   };
 }
+
 
 
 

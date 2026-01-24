@@ -1,6 +1,4 @@
 
-    reactor : Principal;
-    emoji   : Text;
   };
 
   public type Message = {
@@ -287,6 +285,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,5 +1,4 @@
 
-    for (u in users.vals()) {
       if (Principal.equal(u.principal, p)) return ?u;
     };
     null
@@ -253,6 +252,7 @@
     findUser(caller)
   };
 }
+
 
 
 

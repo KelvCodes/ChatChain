@@ -1,9 +1,4 @@
 
-      lastSeen = now();
-    }]);
-
-    true
-  };
 
   public query func getUsers() : async [User] { users };
 
@@ -186,6 +181,7 @@
     findUser(caller)
   };
 }
+
 
 
 

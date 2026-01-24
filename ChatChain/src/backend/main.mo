@@ -1,5 +1,4 @@
 
-  public type Message = {
     id        : Nat;
     sender    : Principal;
     content   : Text;
@@ -283,6 +282,7 @@
     findUser(caller)
   };
 }
+
 
 
 

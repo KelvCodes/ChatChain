@@ -1,7 +1,4 @@
-
-
-    switch (findUser(p)) {
-      case (?u) { u.role == #Admin };
+n };
       case null false;
     }
   };
@@ -247,6 +244,7 @@
     findUser(caller)
   };
 }
+
 
 
 

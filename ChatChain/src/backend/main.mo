@@ -1,6 +1,4 @@
 
-
-  public type Reaction = {
     reactor : Principal;
     emoji   : Text;
   };
@@ -289,6 +287,7 @@
     findUser(caller)
   };
 }
+
 
 
 

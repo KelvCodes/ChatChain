@@ -1,6 +1,4 @@
 
-    timestamp : Nat;
-    edited    : Bool;
     deleted   : Bool;
     pinned    : Bool;
     reactions : [Reaction];
@@ -279,6 +277,7 @@
     findUser(caller)
   };
 }
+
 
 
 

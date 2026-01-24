@@ -1,7 +1,4 @@
 
-  };
-
-  private func isBanned(p : Principal) : Bool {
     switch (findUser(p)) {
       case (?u) u.banned;
       case null true;
@@ -235,6 +232,7 @@
     findUser(caller)
   };
 }
+
 
 
 

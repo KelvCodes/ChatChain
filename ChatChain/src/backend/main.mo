@@ -1,6 +1,4 @@
 
-  private func now() : Nat {
-    Time.toSeconds(Time.now())
   };
 
   private func findUser(p : Principal) : ?User {
@@ -258,6 +256,7 @@
     findUser(caller)
   };
 }
+
 
 
 

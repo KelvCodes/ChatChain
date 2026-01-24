@@ -1,5 +1,4 @@
 
-    displayName : Text;
     role        : UserRole;
     banned      : Bool;
     lastSeen    : Nat;
@@ -294,6 +293,7 @@
     findUser(caller)
   };
 }
+
 
 
 

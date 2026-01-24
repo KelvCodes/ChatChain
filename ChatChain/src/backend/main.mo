@@ -1,9 +1,4 @@
 
-    });
-  };
-
-  private func rateLimited(p : Principal) : Bool {
-    let t = now();
     var blocked = false;
 
     lastSendMap := Array.map(lastSendMap, func(e) {
@@ -221,6 +216,7 @@
     findUser(caller)
   };
 }
+
 
 
 

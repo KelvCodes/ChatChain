@@ -1,9 +1,4 @@
 
-  };
-
-  // =================
-  // ===========================================================================
-
   public shared ({ caller }) func registerUser(name : Text) : async Bool {
     if (findUser(caller) != null) return false;
 
@@ -201,6 +196,7 @@
     findUser(caller)
   };
 }
+
 
 
 

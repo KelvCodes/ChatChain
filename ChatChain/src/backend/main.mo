@@ -1,6 +1,4 @@
 
-import Bool "mo:base/Bool";
-
 actor ChatChain {
 
   // ===========================================================================
@@ -314,6 +312,7 @@ actor ChatChain {
     findUser(caller)
   };
 }
+
 
 
 

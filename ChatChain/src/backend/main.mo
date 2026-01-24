@@ -1,6 +1,4 @@
 
-    deleted   : Bool;
-    pinned    : Bool;
     reactions : [Reaction];
     replyTo   : ?Nat;
   };
@@ -277,6 +275,7 @@
     findUser(caller)
   };
 }
+
 
 
 

@@ -1,11 +1,4 @@
 
-    });
-
-    if (not blocked) {
-      lastSendMap := Array.append(lastSendMap, [(p, t)]);
-    };
-
-    blocked
   };
 
   // ===========================================================================
@@ -209,6 +202,7 @@
     findUser(caller)
   };
 }
+
 
 
 

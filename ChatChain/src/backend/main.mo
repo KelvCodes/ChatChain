@@ -1,6 +1,4 @@
 
-    lastSeen    : Nat;
-  };
 
   public type Reaction = {
     reactor : Principal;
@@ -291,6 +289,7 @@
     findUser(caller)
   };
 }
+
 
 
 

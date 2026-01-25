@@ -1,8 +1,5 @@
 
     #DoNotDisturb;
-  };
-
-  public type User = {
     principal   : Principal;
     displayName : Text;
     role        : UserRole;
@@ -875,6 +872,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
-r future extensions (file attachments, links, etc.)
-  };
+
 
   public type ChatRoom = {
     id : Nat;
@@ -843,6 +842,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

@@ -1,7 +1,4 @@
 
-  };
-    sender    : Principal;
-    content   : Text;
     timestamp : Nat;
     edited    : Bool;
     deleted   : Bool;
@@ -854,6 +851,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

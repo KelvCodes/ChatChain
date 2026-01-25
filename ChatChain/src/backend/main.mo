@@ -1,7 +1,4 @@
 
-    isPrivate : Bool;
-    moderators : [Principal];
-    createdBy : Principal;
     createdAt : Nat;
     messageCount : Nat;
   };
@@ -837,6 +834,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

@@ -1,7 +1,6 @@
 
 
-  public type ChatRoom = {
-    id : Nat;
+  public type ChatRoom =
     name : Text;
     description : ?Text;
     isPrivate : Bool;
@@ -842,6 +841,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

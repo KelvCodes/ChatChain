@@ -1,7 +1,5 @@
 
   
-    #Online;
-    #Away;
     #Offline;
     #DoNotDisturb;
   };
@@ -879,6 +877,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

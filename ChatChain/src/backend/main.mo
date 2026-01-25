@@ -1,5 +1,4 @@
 
-  stable var nextRoomId    : Nat = 0;
   
   // Using stable arrays for maps with manual serialization
   stable var lastSendMapEntries : [(Principal, Nat)] = [];
@@ -812,6 +811,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

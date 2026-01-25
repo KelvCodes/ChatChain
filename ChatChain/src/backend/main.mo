@@ -1,6 +1,4 @@
 
-
-  public type Reaction = {
     reactor : Principal;
     emoji   : Text;
     timestamp : Nat;
@@ -862,6 +860,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

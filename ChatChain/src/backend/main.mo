@@ -1,5 +1,4 @@
 
-    role        : UserRole;
     banned      : Bool;
     lastSeen    : Nat;
     status      : UserStatus;
@@ -869,6 +868,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

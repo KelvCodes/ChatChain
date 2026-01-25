@@ -1,5 +1,4 @@
 
-  stable var dailyMessageCountEntries : [(Principal, Nat)] = [];
   stable var userRoomMembershipEntries : [(Principal, [Nat])] = [];
 
   // ===========================================================================
@@ -808,6 +807,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

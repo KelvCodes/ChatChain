@@ -1,6 +1,4 @@
 
-    timestamp : Nat;
-    edited    : Bool;
     deleted   : Bool;
     pinned    : Bool;
     reactions : [Reaction];
@@ -851,6 +849,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

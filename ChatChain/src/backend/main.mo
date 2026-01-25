@@ -1,4 +1,4 @@
-// ============================================================================
+
 // ChatChain v4 — Enterprise-Grade, Upgrade-Safe Chat Canister
 // Author: Kelvin Agyare Yeboah
 // ============================================================================
@@ -915,4 +915,5 @@ module Result {
     #err : Err;
   };
 };
+
 

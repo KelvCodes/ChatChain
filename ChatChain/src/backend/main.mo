@@ -1,5 +1,4 @@
 
-    description : ?Text;
     isPrivate : Bool;
     moderators : [Principal];
     createdBy : Principal;
@@ -838,6 +837,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

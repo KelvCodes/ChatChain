@@ -1,5 +1,4 @@
 
-  // TYPES
   // ===========================================================================
 
   public type UserRole = { #User; #Moderator; #Admin };
@@ -884,6 +883,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

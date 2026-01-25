@@ -1,8 +1,5 @@
 
   };
-
-  public type Message = {
-    id        : Nat;
     sender    : Principal;
     content   : Text;
     timestamp : Nat;
@@ -857,6 +854,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

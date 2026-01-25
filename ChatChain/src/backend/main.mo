@@ -1,6 +1,4 @@
 
-  
-  // Using stable arrays for maps with manual serialization
   stable var lastSendMapEntries : [(Principal, Nat)] = [];
   stable var dailyMessageCountEntries : [(Principal, Nat)] = [];
   stable var userRoomMembershipEntries : [(Principal, [Nat])] = [];
@@ -811,6 +809,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

@@ -1,5 +1,4 @@
 
-    #DoNotDisturb;
     principal   : Principal;
     displayName : Text;
     role        : UserRole;
@@ -872,6 +871,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

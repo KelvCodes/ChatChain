@@ -1,6 +1,5 @@
 
   
-  public type UserStatus = {
     #Online;
     #Away;
     #Offline;
@@ -880,6 +879,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

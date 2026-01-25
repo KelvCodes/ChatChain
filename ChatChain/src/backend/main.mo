@@ -1,5 +1,4 @@
 
-    status      : UserStatus;
     joined      : Nat;
     messageCount : Nat;
   };
@@ -866,6 +865,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

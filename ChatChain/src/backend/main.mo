@@ -1,5 +1,4 @@
 
-    deleted   : Bool;
     pinned    : Bool;
     reactions : [Reaction];
     replyTo   : ?Nat;
@@ -849,6 +848,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

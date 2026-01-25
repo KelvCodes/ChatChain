@@ -1,9 +1,4 @@
-
-    pinned    : Bool;
-    reactions : [Reaction];
-    replyTo   : ?Nat;
-    threadId  : ?Nat; // For grouping messages in threads
-    metadata  : ?Text; // For future extensions (file attachments, links, etc.)
+r future extensions (file attachments, links, etc.)
   };
 
   public type ChatRoom = {
@@ -848,6 +843,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

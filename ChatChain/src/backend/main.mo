@@ -1,7 +1,6 @@
 
  
-    #NotFound;
-    #InvalidInput;
+    #No
     #RateLimited;
     #Banned;
     #NoPermission;
@@ -829,6 +828,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

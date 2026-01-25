@@ -1,5 +1,4 @@
 
-  let MESSAGE_RETENTION_DAYS : Nat = 90;
   let MAX_REACTIONS_PER_MESSAGE : Nat = 20;
 
   // ===========================================================================
@@ -888,6 +887,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

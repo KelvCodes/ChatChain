@@ -1,10 +1,5 @@
 
-    createdAt : Nat;
-    messageCount : Nat;
-  };
-
-  public type Error = {
-    #Unauthorized;
+ 
     #NotFound;
     #InvalidInput;
     #RateLimited;
@@ -834,6 +829,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

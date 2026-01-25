@@ -1,10 +1,6 @@
 
  
-    #No
-    #RateLimited;
-    #Banned;
-    #NoPermission;
-    #AlreadyExists;
+    
   };
 
   // ===========================================================================
@@ -828,6 +824,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

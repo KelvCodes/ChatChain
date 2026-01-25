@@ -1,6 +1,4 @@
 
-    messageCount : Nat;
-  };
 
   public type Reaction = {
     reactor : Principal;
@@ -864,6 +862,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

@@ -1,6 +1,4 @@
 
-  stable var userRoomMembershipEntries : [(Principal, [Nat])] = [];
-
   // ===========================================================================
   // IN-MEMORY COLLECTIONS (will be re-initialized on upgrade)
   // ===========================================================================
@@ -807,6 +805,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

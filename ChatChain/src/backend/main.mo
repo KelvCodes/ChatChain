@@ -1,6 +1,4 @@
 
-    principal   : Principal;
-    displayName : Text;
     role        : UserRole;
     banned      : Bool;
     lastSeen    : Nat;
@@ -871,6 +869,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

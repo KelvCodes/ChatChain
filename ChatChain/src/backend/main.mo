@@ -1,5 +1,4 @@
 
-  stable var users         : [User] = [];
   stable var messages      : [Message] = [];
   stable var chatRooms     : [ChatRoom] = [];
   stable var nextMessageId : Nat = 0;
@@ -816,6 +815,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

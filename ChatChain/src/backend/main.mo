@@ -1,6 +1,4 @@
-
-  // STABLE STATE WITH UPGRADE SAFETY
-  // ===========================================================================
+=================================
 
   stable var users         : [User] = [];
   stable var messages      : [Message] = [];
@@ -819,6 +817,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

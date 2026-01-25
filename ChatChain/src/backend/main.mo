@@ -1,5 +1,4 @@
 
-  stable var nextMessageId : Nat = 0;
   stable var nextRoomId    : Nat = 0;
   
   // Using stable arrays for maps with manual serialization
@@ -813,6 +812,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

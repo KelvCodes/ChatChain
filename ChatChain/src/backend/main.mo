@@ -1,5 +1,4 @@
 
-  let MAX_MESSAGES_PER_USER_PER_DAY : Nat = 1000;
   let MESSAGE_RETENTION_DAYS : Nat = 90;
   let MAX_REACTIONS_PER_MESSAGE : Nat = 20;
 
@@ -889,6 +888,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

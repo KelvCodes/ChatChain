@@ -1,6 +1,4 @@
 
-
-  public type UserRole = { #User; #Moderator; #Admin };
   
   public type UserStatus = {
     #Online;
@@ -882,6 +880,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

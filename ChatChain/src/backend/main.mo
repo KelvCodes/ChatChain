@@ -1,6 +1,5 @@
 
-  let MAX_DISPLAY_NAME_LENGTH : Nat = 50;
-  let RATE_LIMIT_SECONDS : Nat = 3;
+  let MAX_DISPLAY_NAME_LENGTH : Nat 
   let MAX_MESSAGES_PER_USER_PER_DAY : Nat = 1000;
   let MESSAGE_RETENTION_DAYS : Nat = 90;
   let MAX_REACTIONS_PER_MESSAGE : Nat = 20;
@@ -891,6 +890,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

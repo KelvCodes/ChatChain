@@ -1,7 +1,4 @@
 
-    reactor : Principal;
-    emoji   : Text;
-    timestamp : Nat;
   };
 
   public type Message = {
@@ -860,6 +857,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

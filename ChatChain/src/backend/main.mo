@@ -1,7 +1,4 @@
 
-
-  public type ChatRoom =
-    name : Text;
     description : ?Text;
     isPrivate : Bool;
     moderators : [Principal];
@@ -841,6 +838,7 @@ module Result {
     #err : Err;
   };
 };
+
 
 
 

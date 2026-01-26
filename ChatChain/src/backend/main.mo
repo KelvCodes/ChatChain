@@ -1,5 +1,4 @@
 
-  let MAX_REACTIONS_PER_MESSAGE : Nat = 50;
   let MAX_PINNED_MESSAGES : Nat = 10;
   let MAX_UPLOAD_SIZE_BYTES : Nat = 10_000_000; // 10MB
   let MAX_USER_BLOCKLIST_SIZE : Nat = 1000;
@@ -1754,6 +1753,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

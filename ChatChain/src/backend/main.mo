@@ -1,6 +1,4 @@
-
-    theme : Text;
-    notifications : Bool;
+ool;
     language : Text;
     autoDeleteDMs : Bool;
     showReadReceipts : Bool;
@@ -1728,6 +1726,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

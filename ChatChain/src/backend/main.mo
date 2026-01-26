@@ -1,5 +1,4 @@
 
-  let MESSAGE_RETENTION_DAYS : Nat = 365;
   let MAX_REACTIONS_PER_MESSAGE : Nat = 50;
   let MAX_PINNED_MESSAGES : Nat = 10;
   let MAX_UPLOAD_SIZE_BYTES : Nat = 10_000_000; // 10MB
@@ -1755,6 +1754,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

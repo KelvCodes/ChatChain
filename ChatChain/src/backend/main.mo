@@ -3,10 +3,6 @@
 
   public type Poll = {
     question : Text;
-    options : [PollOption];
-    multipleChoice : Bool;
-    endsAt : ?Nat;
-    voters : [Principal];
   };
 
   public type Message = {
@@ -1674,6 +1670,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

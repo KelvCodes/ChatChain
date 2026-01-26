@@ -1,7 +1,4 @@
 
-    banned : Bool;
-    bannedUntil : ?Nat;
-    lastSeen : Nat;
     status : UserStatus;
     joined : Nat;
     messageCount : Nat;
@@ -1714,6 +1711,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

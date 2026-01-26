@@ -1,6 +1,5 @@
 
-    preferences : UserPreferences;
-    isVerified : Bool;
+    preferences : UserPrefe
   };
 
   public type Reaction = {
@@ -1707,6 +1706,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

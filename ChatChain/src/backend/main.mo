@@ -1,5 +1,4 @@
 
-  let MAX_UPLOAD_SIZE_BYTES : Nat = 10_000_000; // 10MB
   let MAX_USER_BLOCKLIST_SIZE : Nat = 1000;
   let TYPING_INDICATOR_TIMEOUT : Nat = 10; // seconds
 
@@ -1752,6 +1751,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

@@ -1,5 +1,4 @@
 
-import HashMap "mo:base/HashMap";
 import Iter "mo:base/Iter";
 import TrieMap "mo:base/TrieMap";
 import Debug "mo:base/Debug";
@@ -1775,6 +1774,7 @@ actor ChatChain {
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

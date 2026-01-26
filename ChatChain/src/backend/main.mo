@@ -1,6 +1,4 @@
 
-    status : UserStatus;
-    joined : Nat;
     messageCount : Nat;
     reputation : Int;
     preferences : UserPreferences;
@@ -1711,6 +1709,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

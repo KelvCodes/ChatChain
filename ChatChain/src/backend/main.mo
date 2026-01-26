@@ -1,5 +1,4 @@
 
-  let MAX_MESSAGE_LENGTH : Nat = 5000;
   let MAX_DISPLAY_NAME_LENGTH : Nat = 50;
   let RATE_LIMIT_SECONDS : Nat = 1;
   let MAX_MESSAGES_PER_USER_PER_DAY : Nat = 5000;
@@ -1759,6 +1758,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

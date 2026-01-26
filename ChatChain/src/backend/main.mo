@@ -1,6 +1,4 @@
 
-import Result "mo:base/Result";
-import CRC32 "mo:base/CRC32";
 import SHA256 "mo:base/SHA256";
 
 actor ChatChain {
@@ -1770,6 +1768,7 @@ actor ChatChain {
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

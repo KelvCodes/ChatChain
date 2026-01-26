@@ -1,5 +1,4 @@
 
-  let RATE_LIMIT_SECONDS : Nat = 1;
   let MAX_MESSAGES_PER_USER_PER_DAY : Nat = 5000;
   let MESSAGE_RETENTION_DAYS : Nat = 365;
   let MAX_REACTIONS_PER_MESSAGE : Nat = 50;
@@ -1757,6 +1756,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

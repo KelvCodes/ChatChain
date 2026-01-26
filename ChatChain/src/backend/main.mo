@@ -1,15 +1,4 @@
 
-  public type Poll = {
-    question : Text;
-  };
-
-  public type Message = {
-    id : Nat;
-    sender : Principal;
-    content : Text;
-    timestamp : Nat;
-    edited : Bool;
-    deleted : Bool;
     pinned : Bool;
     reactions : [Reaction];
     replyTo : ?Nat;
@@ -1668,6 +1657,7 @@
 // ============================================================================
 // END OF CHATCHAIN V5
 // ============================================================================
+
 
 
 

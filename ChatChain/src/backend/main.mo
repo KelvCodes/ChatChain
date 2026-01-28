@@ -1,10 +1,6 @@
 ;
     uploadedBy : Principal;
-    timestamp : Int;
-  };
 
-  public type MessageType = {
-    #Text;
     #Image;
     #File;
     #Voice;
@@ -1207,6 +1203,7 @@
     })
   };
 }
+
 
 
 

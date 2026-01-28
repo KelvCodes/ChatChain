@@ -1,8 +1,5 @@
 
-    bio : ?Text;
-    avatar : ?Text;
-    role : UserRole;
-    banned : Bool;
+
     bannedUntil : ?Int;
     lastSeen : Int;
     status : UserStatus;
@@ -1233,6 +1230,7 @@
     })
   };
 }
+
 
 
 

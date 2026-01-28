@@ -1,5 +1,4 @@
 
-// Author: Kelvin Agyare Yeboah
 // ============================================================================
 
 import Principal "mo:base/Principal";
@@ -1287,6 +1286,7 @@ actor class ChatChain(owner : Principal) {
     })
   };
 }
+
 
 
 

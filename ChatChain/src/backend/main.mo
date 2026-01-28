@@ -1,7 +1,5 @@
 ncipal;
-    content : Text;
-    timestamp : Int;
-    edited : Bool;
+    conte
     deleted : Bool;
     pinned : Bool;
     reactions : [Reaction];
@@ -1177,6 +1175,7 @@ ncipal;
     })
   };
 }
+
 
 
 

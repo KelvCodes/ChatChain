@@ -1,8 +1,4 @@
-;
 
-    #Voice;
-    #System;
-    #Poll;
   };
 
   public type PollOption = {
@@ -1200,6 +1196,7 @@
     })
   };
 }
+
 
 
 

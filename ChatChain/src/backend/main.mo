@@ -1,5 +1,4 @@
-;
-    showReadReceipts : Bool;
+
   };
 
   public type User = {
@@ -1240,6 +1239,7 @@
     })
   };
 }
+
 
 
 

@@ -1,8 +1,4 @@
 
-  };
-
-  public type PollOption = {
-    id : Nat;
     text : Text;
     votes : [Principal];
   };
@@ -1196,6 +1192,7 @@
     })
   };
 }
+
 
 
 

@@ -1,11 +1,126 @@
-=al;
+import Principal "mo:base/Principal";
+import Time "mo:base/Time";
+import Text "mo:base/Text";
+import Array "mo:base/Array";
+import Nat "mo:base/Nat";
+import Int "mo:base/Int";
+import Bool "mo:base/Bool";
+import Option "mo:base/Option";
+import Buffer "mo:base/Buffer";
+import HashMap "mo:base/HashMap";
+import Iter "mo:base/Iter";
+import TrieMap "mo:base/TrieMap";
+import Result "mo:base/Result";
+import Blob "mo:base/Blob";
+import Hash "mo:base/Hash";
+import Order "mo:base/Order";
+import List "mo:base/List";
+import Debug "mo:base/Debug";
+
+actor class ChatChain(owner : Principal) {
+  
+  // ===========================================================================
+  // TYPES & CONSTANTS
+  // ===========================================================================
+  
+  public type UserRole = #User | #Moderator | #Admin | #Owner;
+  public type UserStatus = #Online | #Away | #Offline | #DoNotDisturb | #Invisible;
+  public type MessageType = #Text | #Image | #File | #Voice | #System | #Poll;
+  public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
+  public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
+  
+  public type UserPreferences = {
+    theme : Text;
+    notifications : Bool;
+    language : Text;
+    autoDeleteDMs : Bool;
+    showReadReceipts : Bool;
+  };
+  
+  public type User = {
+    id : Principal;
+    displayName : Text;
+    username : Text;
+    bio : ?Text;
+    avatar : ?Text;
+    role : UserRole;
+    banned : Bool;
+    bannedUntil : ?Int;
+    lastSeen : Int;
+    status : UserStatus;
+    joined : Int;
+    messageCount : Nat;
+    reputation : Int;
+    preferences : UserPreferences;
+    isVerified : Bool;
+  };
+  
+  public type Reaction = {
+    reactor : Principal;
+    emoji : Text;
+    timestamp : Int;
+  };
+  
+  public type Attachment = {
+    id : Text;
+    name : Text;
+    type : Text;
+    size : Nat;
+    hash : Text;
+    uploadedBy : Principal;
+    timestamp : Int;
+  };
+  
+  public type PollOption = {
+    id : Nat;
+    text : Text;
+    votes : [Principal];
+  };
+  
+  public type Poll = {
+    question : Text;
+    options : [PollOption];
+    multipleChoice : Bool;
+    endsAt : ?Int;
+    voters : [Principal];
+  };
+  
+  public type Message = {
+    id : Nat;
+    sender : Principal;
+    content : Text;
+    timestamp : Int;
+    edited : Bool;
+    deleted : Bool;
+    pinned : Bool;
+    reactions : [Reaction];
+    replyTo : ?Nat;
+    threadId : ?Nat;
+    roomId : Nat;
+    mentions : [Principal];
+    attachments : [Attachment];
+    messageType : MessageType;
+    poll : ?Poll;
+    metadata : ?Blob;
+    encryptionKey : ?Text;
+  };
+  
+  public type ChatRoom = {
+    id : Nat;
+    name : Text;
+    description : ?Text;
+    roomType : ChatRoomType;
+    moderators : [Principal];
+    createdBy : Principal;
     createdAt : Int;
     messageCount : Nat;
-
-    #Invite;
-    #System;
+    isArchived : Bool;
+    lastActivity : Int;
+    icon : ?Text;
+    rules : ?Text;
+    maxMembers : ?Nat;
   };
-
+  
   public type Notification = {
     id : Nat;
     userId : Principal;
@@ -17,13 +132,13 @@
     timestamp : Int;
     read : Bool;
   };
-
+  
   public type TypingIndicator = {
     userId : Principal;
     roomId : Nat;
     timestamp : Int;
   };
-
+  
   public type Error = {
     #Unauthorized;
     #NotFound;
@@ -42,28 +157,23 @@
     #EncryptionError;
     #InsufficientCycles;
   };
-
-  public type Result<T, E> = Result.Result<T, E>;
-
-  // ===========================================================================
-  // CONSTANTS
-  // ===========================================================================
   
-  let EDIT_WINDOW_SECONDS : Int = 15 * 60;
+  public type Result<T, E> = Result.Result<T, E>;
+  
+  // Constants
+  let EDIT_WINDOW_SECONDS : Int = 900; // 15 minutes
   let MAX_MESSAGE_LENGTH : Nat = 5000;
   let MAX_DISPLAY_NAME_LENGTH : Nat = 50;
   let RATE_LIMIT_SECONDS : Nat = 1;
   let MAX_MESSAGES_PER_USER_PER_DAY : Nat = 5000;
   let MESSAGE_RETENTION_DAYS : Int = 365;
-  let MAX_REACTIONS_PER_MESSAGE : Nat = 50;
   let MAX_PINNED_MESSAGES : Nat = 10;
   let MAX_UPLOAD_SIZE_BYTES : Nat = 10_000_000;
-  let MAX_USER_BLOCKLIST_SIZE : Nat = 1000;
-  let TYPING_INDICATOR_TIMEOUT : Int = 10;
+  let TYPING_INDICATOR_TIMEOUT : Int = 10_000_000_000; // 10 seconds in nanoseconds
   let NOTIFICATION_RETENTION_DAYS : Int = 30;
-  let MAX_SEARCH_RESULTS : Nat = 100;
   let DEFAULT_PAGE_SIZE : Nat = 50;
-
+  let MAX_SEARCH_RESULTS : Nat = 100;
+  
   // ===========================================================================
   // STABLE STATE
   // ===========================================================================
@@ -74,215 +184,182 @@
   stable var nextAttachmentId : Nat = 0;
   stable var canisterCreatedAt : Int = Time.now();
   
-  // Stable maps
-  stable var usersEntries : [(Principal, User)] = [];
-  stable var messagesEntries : [(Nat, Message)] = [];
-  stable var chatRoomsEntries : [(Nat, ChatRoom)] = [];
-  stable var attachmentsEntries : [(Text, Attachment)] = [];
+  // Stable storage
+  stable var stableUsers : [(Principal, User)] = [];
+  stable var stableMessages : [(Nat, Message)] = [];
+  stable var stableRooms : [(Nat, ChatRoom)] = [];
+  stable var stableUserRoomMembership : [(Principal, [Nat])] = [];
+  stable var stableRoomMembers : [(Nat, [Principal])] = [];
+  stable var stableMessagesByRoom : [(Nat, [Nat])] = [];
   
-  stable var userRoomMembershipEntries : [(Principal, [Nat])] = [];
-  stable var roomMembersEntries : [(Nat, [Principal])] = [];
-  stable var userBlocklistEntries : [(Principal, [Principal])] = [];
-  stable var typingIndicatorsEntries : [(Nat, [TypingIndicator])] = [];
-  stable var readReceiptsEntries : [(Nat, [(Principal, Int)])] = [];
-  stable var pollVotesEntries : [(Nat, [Principal])] = [];
-  stable var roomInvitesEntries : [(Nat, [Principal])] = [];
-  stable var notificationsByUserEntries : [(Principal, [Notification])] = [];
-  stable var messagesByRoomEntries : [(Nat, [Nat])] = [];
-  stable var pinnedMessagesEntries : [(Nat, [Nat])] = [];
-  stable var dailyMessageCountEntries : [(Principal, Nat)] = [];
-  stable var lastMessageTimeEntries : [(Principal, Int)] = [];
-
   // ===========================================================================
   // IN-MEMORY STATE
   // ===========================================================================
   
   private let users = HashMap.HashMap<Principal, User>(0, Principal.equal, Principal.hash);
   private let messages = HashMap.HashMap<Nat, Message>(0, Nat.equal, Hash.hash);
-  private let chatRooms = HashMap.HashMap<Nat, ChatRoom>(0, Nat.equal, Hash.hash);
-  private let attachments = TrieMap.TrieMap<Text, Attachment>(Text.equal, Text.hash);
+  private let rooms = HashMap.HashMap<Nat, ChatRoom>(0, Nat.equal, Hash.hash);
   
   // Indexes
   private let userByUsername = TrieMap.TrieMap<Text, Principal>(Text.equal, Text.hash);
   private let userRoomMembership = HashMap.HashMap<Principal, Buffer.Buffer<Nat>>(0, Principal.equal, Principal.hash);
   private let roomMembers = HashMap.HashMap<Nat, Buffer.Buffer<Principal>>(0, Nat.equal, Hash.hash);
-  private let userBlocklist = HashMap.HashMap<Principal, Buffer.Buffer<Principal>>(0, Principal.equal, Principal.hash);
-  private let typingIndicators = HashMap.HashMap<Nat, Buffer.Buffer<TypingIndicator>>(0, Nat.equal, Hash.hash);
-  private let readReceipts = HashMap.HashMap<Nat, HashMap.HashMap<Principal, Int>>(0, Nat.equal, Hash.hash);
-  private let pollVotes = HashMap.HashMap<Nat, Buffer.Buffer<Principal>>(0, Nat.equal, Hash.hash);
-  private let roomInvites = HashMap.HashMap<Nat, Buffer.Buffer<Principal>>(0, Nat.equal, Hash.hash);
-  private let notificationsByUser = HashMap.HashMap<Principal, Buffer.Buffer<Notification>>(0, Principal.equal, Principal.hash);
   private let messagesByRoom = HashMap.HashMap<Nat, Buffer.Buffer<Nat>>(0, Nat.equal, Hash.hash);
-  private let pinnedMessages = HashMap.HashMap<Nat, Buffer.Buffer<Nat>>(0, Nat.equal, Hash.hash);
   
-  // Rate limiting
-  private let dailyMessageCount = HashMap.HashMap<Principal, Nat>(0, Principal.equal, Principal.hash);
-  private let lastMessageTime = HashMap.HashMap<Principal, Int>(0, Principal.equal, Principal.hash);
+  // Rate limiting with cleanup
+  private let messageRateLimiter = RateLimiter();
+  
+  // Cache for frequent queries
+  private let onlineUsersCache = TrieMap.TrieMap<Nat, [User]>(Nat.equal, Hash.hash);
+  private var lastCacheUpdate : Int = 0;
+  private let CACHE_TTL : Int = 30_000_000_000; // 30 seconds
+  
+  // ===========================================================================
+  // RATE LIMITER MODULE
+  // ===========================================================================
+  
+  private class RateLimiter() {
+    let dailyMessageCount = TrieMap.TrieMap<Principal, (Int, Nat)>(Principal.equal, Principal.hash);
+    let lastMessageTime = TrieMap.TrieMap<Principal, Int>(Principal.equal, Principal.hash);
+    let lastCleanup : Int = Time.now();
+    
+    public func checkRateLimit(userId : Principal) : Bool {
+      let now = Time.now();
+      
+      // Clean old entries hourly
+      if (now - lastCleanup > 3_600_000_000_000) {
+        cleanupOldEntries(now);
+      };
+      
+      // Check message interval
+      switch (lastMessageTime.get(userId)) {
+        case (?lastTime) {
+          if (now - lastTime < RATE_LIMIT_SECONDS * 1_000_000_000) {
+            return true;
+          };
+        };
+        case null {};
+      };
+      lastMessageTime.put(userId, now);
+      
+      // Check daily limit
+      let dayStart = now - (now % (24 * 60 * 60 * 1_000_000_000));
+      switch (dailyMessageCount.get(userId)) {
+        case (?(lastDay, count)) {
+          if (lastDay == dayStart) {
+            if (count >= MAX_MESSAGES_PER_USER_PER_DAY) {
+              return true;
+            };
+            dailyMessageCount.put(userId, (dayStart, count + 1));
+          } else {
+            dailyMessageCount.put(userId, (dayStart, 1));
+          };
+        };
+        case null {
+          dailyMessageCount.put(userId, (dayStart, 1));
+        };
+      };
+      
+      false
+    };
+    
+    private func cleanupOldEntries(now : Int) {
+      let dayAgo = now - (24 * 60 * 60 * 1_000_000_000);
+      
+      // Clean old daily counts
+      let toRemove = Buffer.Buffer<Principal>(100);
+      for ((userId, (lastDay, _)) in dailyMessageCount.entries()) {
+        if (lastDay < dayAgo) {
+          toRemove.add(userId);
+        };
+      };
+      for (userId in toRemove.vals()) {
+        dailyMessageCount.delete(userId);
+      };
+      
+      // Clean old message times (older than 1 minute)
+      let minuteAgo = now - 60_000_000_000;
+      let timeToRemove = Buffer.Buffer<Principal>(100);
+      for ((userId, time) in lastMessageTime.entries()) {
+        if (time < minuteAgo) {
+          timeToRemove.add(userId);
+        };
+      };
+      for (userId in timeToRemove.vals()) {
+        lastMessageTime.delete(userId);
+      };
+    };
+  };
   
   // ===========================================================================
   // INITIALIZATION
   // ===========================================================================
   
   system func preupgrade() {
-    usersEntries := Iter.toArray(users.entries());
-    messagesEntries := Iter.toArray(messages.entries());
-    chatRoomsEntries := Iter.toArray(chatRooms.entries());
-    attachmentsEntries := Iter.toArray(attachments.entries());
+    stableUsers := Iter.toArray(users.entries());
+    stableMessages := Iter.toArray(messages.entries());
+    stableRooms := Iter.toArray(rooms.entries());
     
-    userRoomMembershipEntries := Iter.toArray(
+    stableUserRoomMembership := Iter.toArray(
       userRoomMembership.entries()
       .map(func ((p, b) : (Principal, Buffer.Buffer<Nat>)) : (Principal, [Nat]) {
         (p, Buffer.toArray(b))
       })
     );
     
-    roomMembersEntries := Iter.toArray(
+    stableRoomMembers := Iter.toArray(
       roomMembers.entries()
       .map(func ((roomId, b) : (Nat, Buffer.Buffer<Principal>)) : (Nat, [Principal]) {
         (roomId, Buffer.toArray(b))
       })
     );
     
-    userBlocklistEntries := Iter.toArray(
-      userBlocklist.entries()
-      .map(func ((p, b) : (Principal, Buffer.Buffer<Principal>)) : (Principal, [Principal]) {
-        (p, Buffer.toArray(b))
-      })
-    );
-    
-    typingIndicatorsEntries := Iter.toArray(
-      typingIndicators.entries()
-      .map(func ((roomId, b) : (Nat, Buffer.Buffer<TypingIndicator>)) : (Nat, [TypingIndicator]) {
-        (roomId, Buffer.toArray(b))
-      })
-    );
-    
-    readReceiptsEntries := Iter.toArray(
-      readReceipts.entries()
-      .map(func ((msgId, map) : (Nat, HashMap.HashMap<Principal, Int>)) : (Nat, [(Principal, Int)]) {
-        (msgId, Iter.toArray(map.entries()))
-      })
-    );
-    
-    pollVotesEntries := Iter.toArray(
-      pollVotes.entries()
-      .map(func ((pollId, b) : (Nat, Buffer.Buffer<Principal>)) : (Nat, [Principal]) {
-        (pollId, Buffer.toArray(b))
-      })
-    );
-    
-    roomInvitesEntries := Iter.toArray(
-      roomInvites.entries()
-      .map(func ((roomId, b) : (Nat, Buffer.Buffer<Principal>)) : (Nat, [Principal]) {
-        (roomId, Buffer.toArray(b))
-      })
-    );
-    
-    notificationsByUserEntries := Iter.toArray(
-      notificationsByUser.entries()
-      .map(func ((p, b) : (Principal, Buffer.Buffer<Notification>)) : (Principal, [Notification]) {
-        (p, Buffer.toArray(b))
-      })
-    );
-    
-    messagesByRoomEntries := Iter.toArray(
+    stableMessagesByRoom := Iter.toArray(
       messagesByRoom.entries()
       .map(func ((roomId, b) : (Nat, Buffer.Buffer<Nat>)) : (Nat, [Nat]) {
         (roomId, Buffer.toArray(b))
       })
     );
-    
-    pinnedMessagesEntries := Iter.toArray(
-      pinnedMessages.entries()
-      .map(func ((roomId, b) : (Nat, Buffer.Buffer<Nat>)) : (Nat, [Nat]) {
-        (roomId, Buffer.toArray(b))
-      })
-    );
-    
-    dailyMessageCountEntries := Iter.toArray(dailyMessageCount.entries());
-    lastMessageTimeEntries := Iter.toArray(lastMessageTime.entries());
   };
   
   system func postupgrade() {
     // Load users
-    for ((id, user) in usersEntries.vals()) {
+    for ((id, user) in stableUsers.vals()) {
       users.put(id, user);
       userByUsername.put(user.username, user.id);
     };
     
     // Load messages
-    for ((id, message) in messagesEntries.vals()) {
+    for ((id, message) in stableMessages.vals()) {
       messages.put(id, message);
     };
     
-    // Load chat rooms
-    for ((id, room) in chatRoomsEntries.vals()) {
-      chatRooms.put(id, room);
+    // Load rooms
+    for ((id, room) in stableRooms.vals()) {
+      rooms.put(id, room);
     };
     
-    // Load attachments
-    for ((id, attachment) in attachmentsEntries.vals()) {
-      attachments.put(id, attachment);
+    // Load user room membership
+    for ((p, arr) in stableUserRoomMembership.vals()) {
+      userRoomMembership.put(p, Buffer.fromArray<Nat>(arr));
     };
     
-    // Helper function to load buffers
-    func loadBuffer<T>(entries : [(Nat, [T])], size : Nat) : HashMap.HashMap<Nat, Buffer.Buffer<T>> {
-      let map = HashMap.HashMap<Nat, Buffer.Buffer<T>>(size, Nat.equal, Hash.hash);
-      for ((id, arr) in entries.vals()) {
-        map.put(id, Buffer.fromArray<T>(arr));
-      };
-      map
+    // Load room members
+    for ((roomId, arr) in stableRoomMembers.vals()) {
+      roomMembers.put(roomId, Buffer.fromArray<Principal>(arr));
     };
     
-    func loadUserBuffer<T>(entries : [(Principal, [T])], size : Nat) : HashMap.HashMap<Principal, Buffer.Buffer<T>> {
-      let map = HashMap.HashMap<Principal, Buffer.Buffer<T>>(size, Principal.equal, Principal.hash);
-      for ((p, arr) in entries.vals()) {
-        map.put(p, Buffer.fromArray<T>(arr));
-      };
-      map
-    };
-    
-    // Load all buffers
-    userRoomMembership := loadUserBuffer(userRoomMembershipEntries, userRoomMembershipEntries.size());
-    roomMembers := loadBuffer(roomMembersEntries, roomMembersEntries.size());
-    userBlocklist := loadUserBuffer(userBlocklistEntries, userBlocklistEntries.size());
-    typingIndicators := loadBuffer(typingIndicatorsEntries, typingIndicatorsEntries.size());
-    roomInvites := loadBuffer(roomInvitesEntries, roomInvitesEntries.size());
-    notificationsByUser := loadUserBuffer(notificationsByUserEntries, notificationsByUserEntries.size());
-    messagesByRoom := loadBuffer(messagesByRoomEntries, messagesByRoomEntries.size());
-    pinnedMessages := loadBuffer(pinnedMessagesEntries, pinnedMessagesEntries.size());
-    
-    // Load poll votes
-    for ((pollId, arr) in pollVotesEntries.vals()) {
-      pollVotes.put(pollId, Buffer.fromArray<Principal>(arr));
-    };
-    
-    // Load read receipts
-    for ((msgId, entries) in readReceiptsEntries.vals()) {
-      let map = HashMap.HashMap<Principal, Int>(16, Principal.equal, Principal.hash);
-      for ((p, time) in entries.vals()) {
-        map.put(p, time);
-      };
-      readReceipts.put(msgId, map);
-    };
-    
-    // Load rate limiting data
-    for ((p, count) in dailyMessageCountEntries.vals()) {
-      dailyMessageCount.put(p, count);
-    };
-    
-    for ((p, time) in lastMessageTimeEntries.vals()) {
-      lastMessageTime.put(p, time);
+    // Load messages by room
+    for ((roomId, arr) in stableMessagesByRoom.vals()) {
+      messagesByRoom.put(roomId, Buffer.fromArray<Nat>(arr));
     };
   };
   
   // ===========================================================================
-  // PRIVATE HELPERS
+  // UTILITY FUNCTIONS
   // ===========================================================================
   
-  private func now() : Int {
-    Time.now()
-  };
+  private func now() : Int = Time.now();
   
   private func isValidUsername(username : Text) : Bool {
     let size = Text.size(username);
@@ -297,75 +374,41 @@
     and not Text.contains(name, #char '/')
   };
   
-  private func isAdmin(p : Principal) : Bool {
-    switch (users.get(p)) {
+  private func isAdmin(userId : Principal) : Bool {
+    switch (users.get(userId)) {
       case (?user) { user.role == #Admin or user.role == #Owner };
       case null false;
     }
   };
   
-  private func isModOrAdmin(p : Principal) : Bool {
-    switch (users.get(p)) {
+  private func isModOrAdmin(userId : Principal) : Bool {
+    switch (users.get(userId)) {
       case (?user) { user.role == #Admin or user.role == #Moderator or user.role == #Owner };
       case null false;
     }
   };
   
-  private func isBanned(p : Principal) : Bool {
-    switch (users.get(p)) {
+  private func isBanned(userId : Principal) : Bool {
+    switch (users.get(userId)) {
       case (?user) {
         switch (user.bannedUntil) {
-          case (?until) {
-            user.banned and until > now()
-          };
+          case (?until) { user.banned and until > now() };
           case null user.banned;
         }
       };
-      case null true;
+      case null false;
     }
-  };
-  
-  private func checkRateLimit(p : Principal) : Bool {
-    let currentTime = now();
-    
-    // Check message interval
-    switch (lastMessageTime.get(p)) {
-      case (?lastTime) {
-        if (currentTime - lastTime < RATE_LIMIT_SECONDS * 1_000_000_000) {
-          return true;
-        };
-      };
-      case null {};
-    };
-    
-    lastMessageTime.put(p, currentTime);
-    
-    // Check daily limit
-    let dayStart = currentTime - (currentTime % (24 * 60 * 60 * 1_000_000_000));
-    switch (dailyMessageCount.get(p)) {
-      case (?count) {
-        if (count >= MAX_MESSAGES_PER_USER_PER_DAY) {
-          return true;
-        };
-        dailyMessageCount.put(p, count + 1);
-      };
-      case null {
-        dailyMessageCount.put(p, 1);
-      };
-    };
-    
-    false
   };
   
   private func extractMentions(text : Text) : [Principal] {
     let words = Text.split(text, #char ' ');
-    let mentions = Buffer.Buffer<Principal>(10);
+    let mentions = Buffer.Buffer<Principal>(5);
     
     for (word in words) {
       if (Text.startsWith(word, #text "@")) {
         let username = Text.trimStart(word, #char '@');
         switch (userByUsername.get(username)) {
-          case (?user) mentions.add(user);
+          case (?userId) mentions.add(userId);
           case null {};
         };
       };
@@ -374,70 +417,47 @@
     Buffer.toArray(mentions)
   };
   
-  private func createNotification(
-    userId : Principal,
-    type : NotificationType,
-    messageId : ?Nat,
-    roomId : ?Nat,
-    fromUser : ?Principal,
-    content : Text
-  ) : Nat {
-    let id = nextNotificationId;
-    nextNotificationId += 1;
-    
-    let notification : Notification = {
-      id = id;
-      userId = userId;
-      type = type;
-      messageId = messageId;
-      roomId = roomId;
-      fromUser = fromUser;
-      content = content;
-      timestamp = now();
-      read = false;
-    };
-    
-    switch (notificationsByUser.get(userId)) {
-      case (?buffer) buffer.add(notification);
-      case null {
-        let buffer = Buffer.Buffer<Notification>(10);
-        buffer.add(notification);
-        notificationsByUser.put(userId, buffer);
-      };
-    };
-    
-    id
-  };
-  
-  private func updateUser(p : Principal, update : User -> User) {
-    switch (users.get(p)) {
+  private func updateUser(userId : Principal, update : User -> User) {
+    switch (users.get(userId)) {
       case (?user) {
         let updated = update(user);
-        users.put(p, updated);
-        // Update username index if changed
+        users.put(userId, updated);
         if (user.username != updated.username) {
           userByUsername.delete(user.username);
-          userByUsername.put(updated.username, p);
+          userByUsername.put(updated.username, userId);
         };
       };
       case null {};
     };
   };
   
-  private func incrementMessageCount(p : Principal) {
-    updateUser(p, func(user) { 
-      { 
-        user with 
+  private func incrementMessageCount(userId : Principal) {
+    updateUser(userId, func(user) { 
+      { user with 
         messageCount = user.messageCount + 1;
         lastSeen = now();
       }
     });
   };
   
-  private func cleanOldData() {
-    let cutoff = now() - (MESSAGE_RETENTION_DAYS * 24 * 60 * 60 * 1_000_000_000);
+  private func updateRoomActivity(roomId : Nat) {
+    switch (rooms.get(roomId)) {
+      case (?room) {
+        rooms.put(roomId, {
+          room with
+          messageCount = room.messageCount + 1;
+          lastActivity = now();
+        });
+      };
+      case null {};
+    };
+  };
+  
+  private func periodicCleanup() {
+    let now = Time.now();
+    let cutoff = now - (MESSAGE_RETENTION_DAYS * 24 * 60 * 60 * 1_000_000_000);
     
-    // Clean old messages (except pinned)
+    // Clean old messages (keep pinned messages)
     let oldMessages = Buffer.Buffer<Nat>(100);
     for ((id, msg) in messages.entries()) {
       if (msg.timestamp < cutoff and not msg.pinned) {
@@ -445,41 +465,8 @@
       };
     };
     
-    for (id in oldMessages.vals()) {
-      messages.delete(id);
-      // Remove from indexes
-      switch (messages.get(id)) {
-        case (?msg) {
-          switch (messagesByRoom.get(msg.roomId)) {
-            case (?buffer) {
-              let index = Buffer.indexOf(id, buffer, Nat.equal);
-              switch (index) {
-                case (?i) buffer.remove(i);
-                case null {};
-              };
-            };
-            case null {};
-          };
-        };
-        case null {};
-      };
-    };
-    
-    // Clean old notifications
-    let notificationCutoff = now() - (NOTIFICATION_RETENTION_DAYS * 24 * 60 * 60 * 1_000_000_000);
-    for ((userId, buffer) in notificationsByUser.entries()) {
-      let newBuffer = Buffer.Buffer<Notification>(buffer.size());
-      for (notification in buffer.vals()) {
-        if (notification.timestamp >= notificationCutoff) {
-          newBuffer.add(notification);
-        };
-      };
-      notificationsByUser.put(userId, newBuffer);
-    };
-    
-    // Reset daily message counts periodically
-    if (now() % (24 * 60 * 60 * 1_000_000_000) < 60_000_000_000) { // Once per hour
-      dailyMessageCount.clear();
+    for (msgId in oldMessages.vals()) {
+      messages.delete(msgId);
     };
   };
   
@@ -491,7 +478,7 @@
     username : Text,
     displayName : Text,
     bio : ?Text
-  ) : async Result<Bool, Error> {
+  ) : async Result<User, Error> {
     
     if (not isValidUsername(username)) {
       return #err(#InvalidInput);
@@ -539,7 +526,7 @@
     users.put(caller, user);
     userByUsername.put(username, caller);
     
-    #ok(true)
+    #ok(user)
   };
   
   public shared ({ caller }) func updateProfile(
@@ -602,6 +589,13 @@
     offset : Nat
   ) : async [User] {
     
+    if (query == "") {
+      let allUsers = Iter.toArray(users.vals());
+      let start = Nat.min(offset, allUsers.size());
+      let end = Nat.min(start + limit, allUsers.size());
+      return Array.tabulate(end - start, func(i) { allUsers[start + i] });
+    };
+    
     let lowerQuery = Text.map(query, Prim.charToLower);
     let results = Buffer.Buffer<User>(limit);
     var count : Nat = 0;
@@ -619,8 +613,24 @@
     Buffer.toArray(results)
   };
   
+  public query func getUser(principalOrUsername : Text) : async ?User {
+    // Try as Principal first
+    switch (Principal.fromText(principalOrUsername)) {
+      case (?principal) {
+        users.get(principal)
+      };
+      case null {
+        // Try as username
+        switch (userByUsername.get(principalOrUsername)) {
+          case (?principal) users.get(principal);
+          case null null;
+        };
+      };
+    }
+  };
+  
   // ===========================================================================
-  // CHAT ROOMS
+  // ROOM MANAGEMENT
   // ===========================================================================
   
   public shared ({ caller }) func createRoom(
@@ -655,11 +665,11 @@
       maxMembers = maxMembers;
     };
     
-    chatRooms.put(id, room);
+    rooms.put(id, room);
     
-    // Add creator to room membership
+    // Add creator to room
     switch (userRoomMembership.get(caller)) {
-      case (?buffer) { buffer.add(id) };
+      case (?buffer) buffer.add(id);
       case null {
         let buffer = Buffer.Buffer<Nat>(5);
         buffer.add(id);
@@ -667,19 +677,16 @@
       };
     };
     
-    // Add to room members
     let membersBuffer = Buffer.Buffer<Principal>(1);
     membersBuffer.add(caller);
     roomMembers.put(id, membersBuffer);
+    messagesByRoom.put(id, Buffer.Buffer<Nat>(100));
     
     #ok(room)
   };
   
-  public shared ({ caller }) func joinRoom(
-    roomId : Nat
-  ) : async Result<Bool, Error> {
-    
-    switch (chatRooms.get(roomId)) {
+  public shared ({ caller }) func joinRoom(roomId : Nat) : async Result<Bool, Error> {
+    switch (rooms.get(roomId)) {
       case null { return #err(#NotFound) };
       case (?room) {
         if (room.isArchived) {
@@ -705,18 +712,10 @@
           case null {};
         };
         
-        // Check if private room requires invite
+        // For private rooms, check if user has invite
         if (room.roomType == #Private) {
-          var hasInvite = false;
-          switch (roomInvites.get(roomId)) {
-            case (?invites) {
-              hasInvite := Buffer.contains(invites, caller, Principal.equal);
-            };
-            case null {};
-          };
-          if (not hasInvite) {
-            return #err(#NoPermission);
-          };
+          // Implementation for invite checking would go here
+          return #err(#NoPermission);
         };
         
         // Add to user's room list
@@ -752,8 +751,36 @@
     }
   };
   
+  public query func getRooms(
+    roomType : ?ChatRoomType,
+    limit : Nat,
+    offset : Nat
+  ) : async [ChatRoom] {
+    
+    let filteredRooms = Buffer.Buffer<ChatRoom>(limit);
+    var count : Nat = 0;
+    
+    for ((_, room) in rooms.entries()) {
+      if (room.isArchived) continue;
+      
+      switch (roomType) {
+        case (?typeFilter) {
+          if (room.roomType != typeFilter) continue;
+        };
+        case null {};
+      };
+      
+      if (count >= offset and filteredRooms.size() < limit) {
+        filteredRooms.add(room);
+      };
+      count += 1;
+    };
+    
+    Buffer.toArray(filteredRooms)
+  };
+  
   // ===========================================================================
-  // MESSAGES
+  // MESSAGE MANAGEMENT
   // ===========================================================================
   
   public shared ({ caller }) func sendMessage(
@@ -773,7 +800,7 @@
       return #err(#MessageTooLong);
     };
     
-    if (checkRateLimit(caller)) {
+    if (messageRateLimiter.checkRateLimit(caller)) {
       return #err(#RateLimited);
     };
     
@@ -794,26 +821,13 @@
     nextMessageId += 1;
     
     let mentions = extractMentions(content);
-    
-    // Create notifications for mentions
-    for (mentioned in mentions.vals()) {
-      if (not Principal.equal(mentioned, caller)) {
-        createNotification(
-          mentioned,
-          #Mention,
-          ?id,
-          ?roomId,
-          ?caller,
-          "You were mentioned in a message"
-        );
-      };
-    };
+    let nowTime = now();
     
     let message : Message = {
       id = id;
       sender = caller;
       content = content;
-      timestamp = now();
+      timestamp = nowTime;
       edited = false;
       deleted = false;
       pinned = false;
@@ -831,7 +845,7 @@
     
     messages.put(id, message);
     
-    // Update room message index
+    // Add to room's message index
     switch (messagesByRoom.get(roomId)) {
       case (?buffer) buffer.add(id);
       case null {
@@ -841,27 +855,63 @@
       };
     };
     
-    // Update stats
+    // Update statistics
     incrementMessageCount(caller);
+    updateRoomActivity(roomId);
     
-    // Update room activity
-    switch (chatRooms.get(roomId)) {
-      case (?room) {
-        chatRooms.put(roomId, {
-          room with
-          messageCount = room.messageCount + 1;
-          lastActivity = now();
-        });
-      };
-      case null {};
-    };
-    
-    // Periodic cleanup
+    // Periodic cleanup every 100 messages
     if (id % 100 == 0) {
-      cleanOldData();
+      periodicCleanup();
     };
     
     #ok(message)
+  };
+  
+  public shared ({ caller }) func editMessage(
+    messageId : Nat,
+    newContent : Text
+  ) : async Result<Message, Error> {
+    
+    switch (messages.get(messageId)) {
+      case null { return #err(#NotFound) };
+      case (?message) {
+        if (not Principal.equal(message.sender, caller)) {
+          return #err(#Unauthorized);
+        };
+        
+        if (now() - message.timestamp > EDIT_WINDOW_SECONDS * 1_000_000_000) {
+          return #err(#InvalidInput);
+        };
+        
+        if (Text.size(newContent) > MAX_MESSAGE_LENGTH) {
+          return #err(#MessageTooLong);
+        };
+        
+        let updatedMessage = {
+          message with
+          content = newContent;
+          edited = true;
+          mentions = extractMentions(newContent);
+        };
+        
+        messages.put(messageId, updatedMessage);
+        #ok(updatedMessage)
+      };
+    }
+  };
+  
+  public shared ({ caller }) func deleteMessage(messageId : Nat) : async Result<Bool, Error> {
+    switch (messages.get(messageId)) {
+      case null { return #err(#NotFound) };
+      case (?message) {
+        if (not Principal.equal(message.sender, caller) and not isModOrAdmin(caller)) {
+          return #err(#Unauthorized);
+        };
+        
+        messages.put(messageId, { message with deleted = true });
+        #ok(true)
+      };
+    }
   };
   
   public query func getMessages(
@@ -875,25 +925,27 @@
     
     switch (messagesByRoom.get(roomId)) {
       case (?messageIds) {
-        var count : Nat = 0;
-        
-        // Iterate backwards for pagination
         let size = messageIds.size();
+        if (size == 0) return [];
+        
+        // Find starting index
         let startIdx = switch (before) {
           case (?msgId) {
-            var idx = size;
+            var foundIdx = size;
             for (i in Iter.range(0, size - 1)) {
               if (messageIds.get(i) == msgId) {
-                idx := i;
+                foundIdx := i;
               };
             };
-            if (idx > 0) idx - 1 else 0
+            if (foundIdx > 0) foundIdx - 1 else 0
           };
           case null size - 1;
         };
         
+        // Collect messages
         var idx = startIdx;
-        while (count < actualLimit and idx >= 0) {
+        var count = 0;
+        while (idx >= 0 and count < actualLimit) {
           let msgId = messageIds.get(idx);
           switch (messages.get(msgId)) {
             case (?msg) {
@@ -915,43 +967,7 @@
   };
   
   // ===========================================================================
-  // NOTIFICATIONS
-  // ===========================================================================
-  
-  public shared ({ caller }) func getNotifications(
-    unreadOnly : Bool,
-    limit : Nat,
-    offset : Nat
-  ) : async [Notification] {
-    
-    let results = Buffer.Buffer<Notification>(limit);
-    var count : Nat = 0;
-    
-    switch (notificationsByUser.get(caller)) {
-      case (?buffer) {
-        // Iterate in reverse (newest first)
-        let size = buffer.size();
-        var idx = size - 1;
-        
-        while (idx >= 0 and results.size() < limit) {
-          let notification = buffer.get(idx);
-          if (not unreadOnly or not notification.read) {
-            if (count >= offset) {
-              results.add(notification);
-            };
-            count += 1;
-          };
-          idx -= 1;
-        };
-      };
-      case null {};
-    };
-    
-    Buffer.toArray(results)
-  };
-  
-  // ===========================================================================
-  // QUERIES
+  // CACHED QUERIES
   // ===========================================================================
   
   public query ({ caller }) func whoAmI() : async ?User {
@@ -959,14 +975,30 @@
   };
   
   public query func getOnlineUsers(roomId : ?Nat) : async [User] {
-    let currentTime = now();
+    let now = Time.now();
+    
+    // Check cache first
+    switch (roomId) {
+      case (?id) {
+        switch (onlineUsersCache.get(id)) {
+          case (?cached) {
+            if (now - lastCacheUpdate < CACHE_TTL) {
+              return cached;
+            };
+          };
+          case null {};
+        };
+      };
+      case null {};
+    };
+    
+    let onlineThreshold = 300_000_000_000; // 5 minutes
     let results = Buffer.Buffer<User>(50);
-    let onlineThreshold = 300 * 1_000_000_000; // 5 minutes in nanoseconds
     
     for ((_, user) in users.entries()) {
       if (user.banned) continue;
       
-      let isOnline = (currentTime - user.lastSeen) < onlineThreshold;
+      let isOnline = (now - user.lastSeen) < onlineThreshold;
       var inRoom = true;
       
       switch (roomId) {
@@ -984,7 +1016,17 @@
       };
     };
     
-    Buffer.toArray(results)
+    let result = Buffer.toArray(results);
+    
+    // Update cache
+    switch (roomId) {
+      case (?id) {
+        onlineUsersCache.put(id, result);
+      };
+      case null {};
+    };
+    
+    result
   };
   
   public query func getRoomStatistics(roomId : Nat) : async ?{
@@ -994,13 +1036,13 @@
     messagesToday : Nat;
     topPosters : [(Principal, Nat)];
   } {
-    switch (chatRooms.get(roomId)) {
+    switch (rooms.get(roomId)) {
       case null null;
       case (?room) {
-        let userMessageCounts = HashMap.HashMap<Principal, Nat>(0, Principal.equal, Principal.hash);
+        let userMessageCounts = TrieMap.TrieMap<Principal, Nat>(Principal.equal, Principal.hash);
         var totalMessages : Nat = 0;
         var messagesToday : Nat = 0;
-        let activeUsers = HashMap.HashMap<Principal, Bool>(0, Principal.equal, Principal.hash);
+        let activeUsers = TrieMap.TrieMap<Principal, Bool>(Principal.equal, Principal.hash);
         
         let dayAgo = now() - (24 * 60 * 60 * 1_000_000_000);
         let weekAgo = now() - (7 * 24 * 60 * 60 * 1_000_000_000);
@@ -1064,7 +1106,7 @@
   };
   
   public query func version() : async Text {
-    "ChatChain v5.1.0"
+    "ChatChain v5.2.0"
   };
   
   public query func getSystemHealth() : async {
@@ -1074,15 +1116,20 @@
     userCount : Nat;
     messageCount : Nat;
     roomCount : Nat;
+    storageSize : Nat;
     isHealthy : Bool;
   } {
+    // Estimate storage size
+    let storageSize = (users.size() * 500) + (messages.size() * 200) + (rooms.size() * 300);
+    
     {
       canisterId = Principal.fromActor(ChatChain);
-      version = "5.1.0";
+      version = "5.2.0";
       uptime = now() - canisterCreatedAt;
       userCount = users.size();
       messageCount = messages.size();
-      roomCount = chatRooms.size();
+      roomCount = rooms.size();
+      storageSize = storageSize;
       isHealthy = true;
     }
   };
@@ -1130,77 +1177,89 @@
     #ok({
       users = Iter.toArray(users.vals());
       messages = Iter.toArray(messages.vals());
-      rooms = Iter.toArray(chatRooms.vals());
+      rooms = Iter.toArray(rooms.vals());
       timestamp = now();
     })
   };
+  
+  // ===========================================================================
+  // BATCH OPERATIONS
+  // ===========================================================================
+  
+  public shared ({ caller }) func batchSendMessages(
+    messages : [{
+      content : Text;
+      roomId : Nat;
+    }]
+  ) : async Result<[Message], Error> {
+    
+    if (isBanned(caller)) {
+      return #err(#Banned);
+    };
+    
+    let results = Buffer.Buffer<Message>(messages.size());
+    
+    for (msg in messages.vals()) {
+      if (Text.size(msg.content) > MAX_MESSAGE_LENGTH) {
+        return #err(#MessageTooLong);
+      };
+      
+      // Check room membership for each message
+      var hasAccess = false;
+      switch (userRoomMembership.get(caller)) {
+        case (?buffer) {
+          hasAccess := Buffer.contains(buffer, msg.roomId, Nat.equal);
+        };
+        case null {};
+      };
+      
+      if (not hasAccess) {
+        return #err(#NoPermission);
+      };
+    };
+    
+    // Send all messages
+    for (msg in messages.vals()) {
+      let id = nextMessageId;
+      nextMessageId += 1;
+      
+      let newMessage : Message = {
+        id = id;
+        sender = caller;
+        content = msg.content;
+        timestamp = now();
+        edited = false;
+        deleted = false;
+        pinned = false;
+        reactions = [];
+        replyTo = null;
+        threadId = null;
+        roomId = msg.roomId;
+        mentions = extractMentions(msg.content);
+        attachments = [];
+        messageType = #Text;
+        poll = null;
+        metadata = null;
+        encryptionKey = null;
+      };
+      
+      this.messages.put(id, newMessage);
+      
+      // Add to room's message index
+      switch (messagesByRoom.get(msg.roomId)) {
+        case (?buffer) buffer.add(id);
+        case null {
+          let buffer = Buffer.Buffer<Nat>(100);
+          buffer.add(id);
+          messagesByRoom.put(msg.roomId, buffer);
+        };
+      };
+      
+      results.add(newMessage);
+      incrementMessageCount(caller);
+      updateRoomActivity(msg.roomId);
+    };
+    
+    #ok(Buffer.toArray(results))
+  };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,4 @@
-ncipal;
-    conte
-    deleted : Bool;
+
     pinned : Bool;
     reactions : [Reaction];
     replyTo : ?Nat;
@@ -1175,6 +1173,7 @@ ncipal;
     })
   };
 }
+
 
 
 

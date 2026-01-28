@@ -1,7 +1,4 @@
 
-    #Invisible;
-  };
-
   public type UserPreferences = {
     theme : Text;
     notifications : Bool;
@@ -1248,6 +1245,7 @@
     })
   };
 }
+
 
 
 

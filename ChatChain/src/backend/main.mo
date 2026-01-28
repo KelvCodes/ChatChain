@@ -1,6 +1,4 @@
-
-    language : Text;
-    autoDeleteDMs : Bool;
+;
     showReadReceipts : Bool;
   };
 
@@ -1242,6 +1240,7 @@
     })
   };
 }
+
 
 
 

@@ -1,7 +1,4 @@
 
-  };
-
-    displayName : Text;
     username : Text;
     bio : ?Text;
     avatar : ?Text;
@@ -1237,6 +1234,7 @@
     })
   };
 }
+
 
 
 

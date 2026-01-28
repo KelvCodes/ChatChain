@@ -1,6 +1,5 @@
 
 
-    lastSeen : Int;
     status : UserStatus;
     joined : Int;
     messageCount : Nat;
@@ -1229,6 +1228,7 @@
     })
   };
 }
+
 
 
 

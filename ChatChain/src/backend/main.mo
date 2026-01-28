@@ -1,5 +1,4 @@
 
-    emoji : Text;
     timestamp : Int;
   };
 
@@ -1217,6 +1216,7 @@
     })
   };
 }
+
 
 
 

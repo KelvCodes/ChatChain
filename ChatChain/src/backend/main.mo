@@ -1,10 +1,4 @@
 
-    replyTo : ?Nat;
-    threadId : ?Nat;
-    roomId : Nat;
-    mentions : [Principal];
-    attachments : [Attachment];
-    messageType : MessageType;
     poll : ?Poll;
     metadata : ?Blob;
     encryptionKey : ?Text;
@@ -1171,6 +1165,7 @@
     })
   };
 }
+
 
 
 

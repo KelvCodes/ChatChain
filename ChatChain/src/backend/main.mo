@@ -1,5 +1,4 @@
 
-  public type Reaction = {
     reactor : Principal;
     emoji : Text;
     timestamp : Int;
@@ -1219,6 +1218,7 @@
     })
   };
 }
+
 
 
 

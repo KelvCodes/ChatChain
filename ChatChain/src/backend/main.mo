@@ -1,7 +1,4 @@
 
-    isVerified : Bool;
-  };
-
   public type Reaction = {
     reactor : Principal;
     emoji : Text;
@@ -1222,6 +1219,7 @@
     })
   };
 }
+
 
 
 

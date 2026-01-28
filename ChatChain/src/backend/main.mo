@@ -1,8 +1,5 @@
 
-    #Owner 
-  };
-  
-  public type UserStatus = {
+tus = {
     #Online;
     #Away;
     #Offline;
@@ -1256,6 +1253,7 @@
     })
   };
 }
+
 
 
 

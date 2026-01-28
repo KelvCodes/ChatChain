@@ -1,17 +1,7 @@
 =al;
     createdAt : Int;
     messageCount : Nat;
-    isArchived : Bool;
-    lastActivity : Int;
-    icon : ?Text;
-    rules : ?Text;
-    maxMembers : ?Nat;
-  };
 
-  public type NotificationType = {
-    #Mention;
-    #Reply;
-    #Reaction;
     #Invite;
     #System;
   };
@@ -1145,6 +1135,7 @@
     })
   };
 }
+
 
 
 

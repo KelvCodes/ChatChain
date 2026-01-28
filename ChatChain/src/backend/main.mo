@@ -1,11 +1,4 @@
 
-    poll : ?Poll;
-    metadata : ?Blob;
-    encryptionKey : ?Text;
-  };
-
-  public type ChatRoomType = {
-    #Public;
     #Private;
     #DirectMessage;
     #Group;
@@ -1165,6 +1158,7 @@
     })
   };
 }
+
 
 
 

@@ -1,8 +1,6 @@
 
   };
 
-  public type User = {
-    id : Principal;
     displayName : Text;
     username : Text;
     bio : ?Text;
@@ -1239,6 +1237,7 @@
     })
   };
 }
+
 
 
 

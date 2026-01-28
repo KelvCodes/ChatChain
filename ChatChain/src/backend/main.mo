@@ -1,6 +1,4 @@
 
-    pinned : Bool;
-    reactions : [Reaction];
     replyTo : ?Nat;
     threadId : ?Nat;
     roomId : Nat;
@@ -1173,6 +1171,7 @@
     })
   };
 }
+
 
 
 

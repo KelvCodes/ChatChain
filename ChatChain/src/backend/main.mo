@@ -1,6 +1,5 @@
 Nat;
-    reputation : Int;
-    preferences : UserPreferences;
+    reputation : Ierences;
     isVerified : Bool;
   };
 
@@ -1224,6 +1223,7 @@ Nat;
     })
   };
 }
+
 
 
 

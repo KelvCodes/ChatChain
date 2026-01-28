@@ -1,7 +1,4 @@
-al];
-  };
 
-  public type Poll = {
     question : Text;
     options : [PollOption];
     multipleChoice : Bool;
@@ -1190,6 +1187,7 @@ al];
     })
   };
 }
+
 
 
 

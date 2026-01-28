@@ -1,7 +1,4 @@
 
-    endsAt : ?Int;
-    voters : [Principal];
-  };
 
   public type Message = {
     id : Nat;
@@ -1184,6 +1181,7 @@
     })
   };
 }
+
 
 
 

@@ -1,8 +1,4 @@
-
-
-  public type Message = {
-    id : Nat;
-    sender : Principal;
+ncipal;
     content : Text;
     timestamp : Int;
     edited : Bool;
@@ -1181,6 +1177,7 @@
     })
   };
 }
+
 
 
 

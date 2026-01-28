@@ -1,17 +1,4 @@
-
-    #Private;
-    #DirectMessage;
-    #Group;
-    #Channel;
-  };
-
-  public type ChatRoom = {
-    id : Nat;
-    name : Text;
-    description : ?Text;
-    roomType : ChatRoomType;
-    moderators : [Principal];
-    createdBy : Principal;
+=al;
     createdAt : Int;
     messageCount : Nat;
     isArchived : Bool;
@@ -1158,6 +1145,7 @@
     })
   };
 }
+
 
 
 

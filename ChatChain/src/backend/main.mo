@@ -1,5 +1,4 @@
-";
-import Blob "mo:base/Blob";
+
 import Hash "mo:base/Hash";
 import Order "mo:base/Order";
 import List "mo:base/List";
@@ -1271,6 +1270,7 @@ actor class ChatChain(owner : Principal) {
     })
   };
 }
+
 
 
 

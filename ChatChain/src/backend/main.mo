@@ -1,5 +1,4 @@
-Nat;
-    reputation : Ierences;
+
     isVerified : Bool;
   };
 
@@ -1223,6 +1222,7 @@ Nat;
     })
   };
 }
+
 
 
 

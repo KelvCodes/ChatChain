@@ -1,6 +1,4 @@
-
-    text : Text;
-    votes : [Principal];
+al];
   };
 
   public type Poll = {
@@ -1192,6 +1190,7 @@
     })
   };
 }
+
 
 
 

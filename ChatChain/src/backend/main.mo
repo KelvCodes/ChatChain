@@ -1,6 +1,4 @@
 
-
-    status : UserStatus;
     joined : Int;
     messageCount : Nat;
     reputation : Int;
@@ -1228,6 +1226,7 @@
     })
   };
 }
+
 
 
 

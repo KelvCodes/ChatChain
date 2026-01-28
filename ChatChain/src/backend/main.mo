@@ -1,8 +1,5 @@
 ;
-    uploadedBy : Principal;
 
-    #Image;
-    #File;
     #Voice;
     #System;
     #Poll;
@@ -1203,6 +1200,7 @@
     })
   };
 }
+
 
 
 

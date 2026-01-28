@@ -1,5 +1,4 @@
 
-// ChatChain v5 — Optimized Enterprise Chat Canister
 // Author: Kelvin Agyare Yeboah
 // ============================================================================
 
@@ -1288,5 +1287,6 @@ actor class ChatChain(owner : Principal) {
     })
   };
 }
+
 
 

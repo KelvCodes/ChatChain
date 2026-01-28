@@ -1,6 +1,4 @@
-
-    joined : Int;
-    messageCount : Nat;
+Nat;
     reputation : Int;
     preferences : UserPreferences;
     isVerified : Bool;
@@ -1226,6 +1224,7 @@
     })
   };
 }
+
 
 
 

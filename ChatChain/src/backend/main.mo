@@ -1,6 +1,4 @@
 
-    question : Text;
-    options : [PollOption];
     multipleChoice : Bool;
     endsAt : ?Int;
     voters : [Principal];
@@ -1187,6 +1185,7 @@
     })
   };
 }
+
 
 
 

@@ -1,7 +1,4 @@
 
-tus = {
-    #Online;
-    #Away;
     #Offline;
     #DoNotDisturb;
     #Invisible;
@@ -1253,6 +1250,7 @@ tus = {
     })
   };
 }
+
 
 
 

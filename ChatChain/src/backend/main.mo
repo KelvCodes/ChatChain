@@ -1,8 +1,5 @@
 
-    edited : Bool;
-    deleted : Bool;
-    pinned : Bool;
-    reactions : [Reaction];
+ [Reaction];
     replyTo : ?Nat;
     threadId : ?Nat;
     roomId : Nat;
@@ -1172,6 +1169,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

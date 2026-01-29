@@ -1,4 +1,4 @@
-t | #Image | #File | #Voice | #System | #Poll;
+
   public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
   public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
   
@@ -1236,6 +1236,7 @@ t | #Image | #File | #Voice | #System | #Poll;
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

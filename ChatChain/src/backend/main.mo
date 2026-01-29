@@ -1,7 +1,4 @@
 
-    voters : [Principal];
-  };
-  
   public type Message = {
     id : Nat;
     sender : Principal;
@@ -1180,6 +1177,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

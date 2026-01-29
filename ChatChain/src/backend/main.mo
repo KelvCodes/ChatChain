@@ -1,6 +1,4 @@
-ic | #Private | #DirectMessage | #Group | #Cha
-  public type UserPreferences = {
-    theme : Text;
+
     notifications : Bool;
     language : Text;
     autoDeleteDMs : Bool;
@@ -1233,6 +1231,7 @@ ic | #Private | #DirectMessage | #Group | #Cha
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

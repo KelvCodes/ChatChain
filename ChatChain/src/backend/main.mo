@@ -1,6 +1,4 @@
 
-    notifications : Bool;
-    language : Text;
     autoDeleteDMs : Bool;
     showReadReceipts : Bool;
   };
@@ -1231,6 +1229,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

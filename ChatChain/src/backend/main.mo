@@ -1,19 +1,4 @@
 
-    userId : Principal;
-    type : NotificationType;
-    messageId : ?Nat;
-    roomId : ?Nat;
-    fromUser : ?Principal;
-    content : Text;
-    timestamp : Int;
-    read : Bool;
-  };
-  
-  public type TypingIndicator = {
-    userId : Principal;
-    roomId : Nat;
-    timestamp : Int;
-  };
   
   public type Error = {
     #Unauthorized;
@@ -1139,6 +1124,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

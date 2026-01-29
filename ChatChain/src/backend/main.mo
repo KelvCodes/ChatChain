@@ -1,5 +1,4 @@
-t;
-    username : Text;
+
     bio : ?Text;
     avatar : ?Text;
     role : UserRole;
@@ -1222,6 +1221,7 @@ t;
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

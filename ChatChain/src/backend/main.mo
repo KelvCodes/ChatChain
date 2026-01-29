@@ -1,7 +1,4 @@
 
-  public type Messa
-    content : Text;
-    timestamp : Int;
     edited : Bool;
     deleted : Bool;
     pinned : Bool;
@@ -1175,6 +1172,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,9 +1,5 @@
 
   
-    emoji : Text;
-    timestamp : Int;
-  };
-  
   public type Attachment = {
     id : Text;
     name : Text;
@@ -1206,6 +1202,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

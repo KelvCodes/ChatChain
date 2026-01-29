@@ -1,6 +1,4 @@
-n];
-    multipleChoice : Bool;
-    endsAt : ?Int;
+
     voters : [Principal];
   };
   
@@ -1182,6 +1180,7 @@ n];
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

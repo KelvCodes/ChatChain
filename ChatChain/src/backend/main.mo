@@ -1,5 +1,4 @@
-?Nat;
-    roomId : Nat;
+
     mentions : [Principal];
     attachments : [Attachment];
     messageType : MessageType;
@@ -1166,6 +1165,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

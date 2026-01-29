@@ -1,8 +1,4 @@
-
-    encryptionKey : ?Text;
-  };
-  
-  public type ChatRoom = {
+type ChatRoom = {
     id : Nat;
     name : Text;
     description : ?Text;
@@ -1160,6 +1156,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

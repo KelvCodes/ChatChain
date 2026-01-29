@@ -1,6 +1,5 @@
 ==
-  
-  public type UserRole = #User | #Moderator | #Admin | #Owner;
+  Role = #User | #Moderator | #Admin | #Owner;
   public type UserStatus = #Online | #Away | #Offline | #DoNotDisturb | #Invisible;
   public type MessageType = #Text | #Image | #File | #Voice | #System | #Poll;
   public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
@@ -1240,6 +1239,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,7 +1,5 @@
 
-  public type Message = {
-    id : Nat;
-    sender : Principal;
+  public type Messa
     content : Text;
     timestamp : Int;
     edited : Bool;
@@ -1177,6 +1175,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

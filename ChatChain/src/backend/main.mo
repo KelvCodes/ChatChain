@@ -1,5 +1,4 @@
-
-    mentions : [Principal];
+;
     attachments : [Attachment];
     messageType : MessageType;
     poll : ?Poll;
@@ -1165,6 +1164,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,6 +1,4 @@
-
-    id : Principal;
-    displayName : Text;
+t;
     username : Text;
     bio : ?Text;
     avatar : ?Text;
@@ -1224,6 +1222,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

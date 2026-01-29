@@ -1,6 +1,4 @@
 
-    joined : Int;
-    messageCount : Nat;
     reputation : Int;
     preferences : UserPreferences;
     isVerified : Bool;
@@ -1214,6 +1212,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

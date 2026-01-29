@@ -1,6 +1,4 @@
-
-    replyTo : ?Nat;
-    threadId : ?Nat;
+?Nat;
     roomId : Nat;
     mentions : [Principal];
     attachments : [Attachment];
@@ -1168,6 +1166,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

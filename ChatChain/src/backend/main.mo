@@ -1,7 +1,6 @@
 
   
-  public type Poll = {
-    question : Text;
+  public type Poll 
     options : [PollOption];
     multipleChoice : Bool;
     endsAt : ?Int;
@@ -1186,6 +1185,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

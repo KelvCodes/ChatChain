@@ -1,6 +1,4 @@
 
-
-actor class ChatChain(owner : Principal) {
   
   // ===========================================================================
   // TYPES & CONSTANTS
@@ -1246,6 +1244,7 @@ actor class ChatChain(owner : Principal) {
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

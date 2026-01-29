@@ -1,5 +1,4 @@
 ;
-    attachments : [Attachment];
     messageType : MessageType;
     poll : ?Poll;
     metadata : ?Blob;
@@ -1164,6 +1163,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

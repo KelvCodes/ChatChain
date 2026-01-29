@@ -1,5 +1,4 @@
 
-import Int "mo:base/Int";
 import Bool "mo:base/Bool";
 import Option "mo:base/Option";
 import Buffer "mo:base/Buffer";
@@ -1259,6 +1258,7 @@ actor class ChatChain(owner : Principal) {
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

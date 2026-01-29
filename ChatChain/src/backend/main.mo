@@ -1,5 +1,4 @@
 
-    roomType : ChatRoomType;
     moderators : [Principal];
     createdBy : Principal;
     createdAt : Int;
@@ -1153,6 +1152,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

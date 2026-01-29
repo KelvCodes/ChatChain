@@ -1,6 +1,4 @@
 
-    uploadedBy : Principal;
-    timestamp : Int;
   };
   
   public type PollOption = {
@@ -1195,6 +1193,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,5 +1,4 @@
-;
-    lastSeen : Int;
+
     status : UserStatus;
     joined : Int;
     messageCount : Nat;
@@ -1216,6 +1215,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,7 +1,4 @@
 
-    bio : ?Text;
-    avatar : ?Text;
-    role : UserRole;
     banned : Bool;
     bannedUntil : ?Int;
     lastSeen : Int;
@@ -1221,6 +1218,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

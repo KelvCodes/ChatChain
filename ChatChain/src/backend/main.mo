@@ -1,5 +1,4 @@
 
-    status : UserStatus;
     joined : Int;
     messageCount : Nat;
     reputation : Int;
@@ -1215,6 +1214,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

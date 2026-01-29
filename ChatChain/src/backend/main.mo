@@ -1,7 +1,4 @@
 
-  
-  public type PollOption = {
-    id : Nat;
     text : Text;
     votes : [Principal];
   };
@@ -1192,6 +1189,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

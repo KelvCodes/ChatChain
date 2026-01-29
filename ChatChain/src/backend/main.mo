@@ -1,6 +1,4 @@
 
-    autoDeleteDMs : Bool;
-    showReadReceipts : Bool;
   };
   
   public type User = {
@@ -1229,6 +1227,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

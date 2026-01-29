@@ -1,5 +1,4 @@
 
-import Result "mo:base/Result";
 import Blob "mo:base/Blob";
 import Hash "mo:base/Hash";
 import Order "mo:base/Order";
@@ -1252,6 +1251,7 @@ actor class ChatChain(owner : Principal) {
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

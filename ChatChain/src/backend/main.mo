@@ -1,5 +1,4 @@
 
-    moderators : [Principal];
     createdBy : Principal;
     createdAt : Int;
     messageCount : Nat;
@@ -1152,6 +1151,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

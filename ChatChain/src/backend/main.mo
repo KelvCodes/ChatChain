@@ -1,4 +1,4 @@
-ine | #Away | #Offline | #DoNotDisturb | #Invisible;
+line | #DoNotDisturb | #Invisible;
   public type MessageType = #Text | #Image | #File | #Voice | #System | #Poll;
   public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
   public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
@@ -1237,6 +1237,7 @@ ine | #Away | #Offline | #DoNotDisturb | #Invisible;
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

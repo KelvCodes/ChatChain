@@ -1,7 +1,4 @@
-;
-    messageType : MessageType;
-    poll : ?Poll;
-    metadata : ?Blob;
+
     encryptionKey : ?Text;
   };
   
@@ -1163,6 +1160,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

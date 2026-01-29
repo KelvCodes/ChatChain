@@ -1,6 +1,4 @@
-
-    banned : Bool;
-    bannedUntil : ?Int;
+;
     lastSeen : Int;
     status : UserStatus;
     joined : Int;
@@ -1218,6 +1216,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,7 +1,5 @@
 
     id : Text;
-    name : Text;
-    type : Text;
     size : Nat;
     hash : Text;
     uploadedBy : Principal;
@@ -1200,6 +1198,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

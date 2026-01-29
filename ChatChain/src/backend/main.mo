@@ -1,7 +1,4 @@
 
-    text : Text;
-    votes : [Principal];
-  };
   
   public type Poll = {
     question : Text;
@@ -1189,6 +1186,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

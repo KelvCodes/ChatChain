@@ -1,7 +1,4 @@
 
-    preferences : UserPreferences;
-    isVerified : Bool;
-  };
   
   public type Reaction = {
     reactor : Principal;
@@ -1211,6 +1208,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

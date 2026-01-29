@@ -1,7 +1,4 @@
 
-  };
-  
-  public type User = {
     id : Principal;
     displayName : Text;
     username : Text;
@@ -1227,6 +1224,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

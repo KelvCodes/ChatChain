@@ -1,6 +1,4 @@
-ic | #Private | #DirectMessage | #Group | #Channel;
-  public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
-  
+ic | #Private | #DirectMessage | #Group | #Cha
   public type UserPreferences = {
     theme : Text;
     notifications : Bool;
@@ -1235,6 +1233,7 @@ ic | #Private | #DirectMessage | #Group | #Channel;
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

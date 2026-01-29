@@ -1,5 +1,4 @@
-type ChatRoom = {
- ion : ?Text;
+
     roomType : ChatRoomType;
     moderators : [Principal];
     createdBy : Principal;
@@ -1154,6 +1153,7 @@ type ChatRoom = {
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

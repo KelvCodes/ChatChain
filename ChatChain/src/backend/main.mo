@@ -1,7 +1,4 @@
-
-  
-  public type Poll 
-    options : [PollOption];
+n];
     multipleChoice : Bool;
     endsAt : ?Int;
     voters : [Principal];
@@ -1185,6 +1182,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

@@ -1,12 +1,4 @@
 
-    lastActivity : Int;
-    icon : ?Text;
-    rules : ?Text;
-    maxMembers : ?Nat;
-  };
-  
-  public type Notification = {
-    id : Nat;
     userId : Principal;
     type : NotificationType;
     messageId : ?Nat;
@@ -1147,6 +1139,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

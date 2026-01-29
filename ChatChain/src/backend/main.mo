@@ -1,8 +1,4 @@
 
-    createdBy : Principal;
-    createdAt : Int;
-    messageCount : Nat;
-    isArchived : Bool;
     lastActivity : Int;
     icon : ?Text;
     rules : ?Text;
@@ -1151,6 +1147,7 @@
     #ok(Buffer.toArray(results))
   };
 }
+
 
 
 

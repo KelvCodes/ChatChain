@@ -1,5 +1,4 @@
 
-    role : UserRole;
     banned : Bool;
     bannedUntil : ?Int;
     lastSeen : Int;
@@ -1215,6 +1214,7 @@
     message
   };
 }
+
 
 
 

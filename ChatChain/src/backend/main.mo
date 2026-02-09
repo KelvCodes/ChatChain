@@ -1,6 +1,4 @@
 
-    showReadReceipts : Bool;
-  };
   
   public type User = {
     id : Principal;
@@ -1224,6 +1222,7 @@
     message
   };
 }
+
 
 
 

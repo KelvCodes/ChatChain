@@ -1,6 +1,4 @@
 
-  
-  public type User = {
     id : Principal;
     displayName : Text;
     username : Text;
@@ -1222,6 +1220,7 @@
     message
   };
 }
+
 
 
 

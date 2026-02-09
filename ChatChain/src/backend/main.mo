@@ -1,5 +1,4 @@
 
-    avatar : ?Text;
     role : UserRole;
     banned : Bool;
     bannedUntil : ?Int;
@@ -1216,6 +1215,7 @@
     message
   };
 }
+
 
 
 

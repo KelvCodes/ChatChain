@@ -1,5 +1,4 @@
 
-import Iter "mo:base/Iter";
 import TrieMap "mo:base/TrieMap";
 import Result "mo:base/Result";
 import Blob "mo:base/Blob";
@@ -1250,6 +1249,7 @@ actor class ChatChain(owner : Principal) {
     message
   };
 }
+
 
 
 

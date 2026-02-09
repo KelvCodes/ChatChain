@@ -1,6 +1,5 @@
 
 
-  ollOption];
     multipleChoice : Bool;
     endsAt : ?Int;
     voters : [Principal];
@@ -1180,6 +1179,7 @@
     message
   };
 }
+
 
 
 

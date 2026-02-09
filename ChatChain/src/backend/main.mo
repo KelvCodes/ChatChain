@@ -1,6 +1,4 @@
 
-    username : Text;
-    bio : ?Text;
     avatar : ?Text;
     role : UserRole;
     banned : Bool;
@@ -1218,6 +1216,7 @@
     message
   };
 }
+
 
 
 

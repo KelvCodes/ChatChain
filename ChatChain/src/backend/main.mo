@@ -1,6 +1,4 @@
 
- 
-    timestamp : Int;
   };
   
   public type Attachment = {
@@ -1201,6 +1199,7 @@
     message
   };
 }
+
 
 
 

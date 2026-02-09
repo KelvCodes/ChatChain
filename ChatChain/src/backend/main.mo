@@ -1,7 +1,4 @@
 
-    uploadedBy : Principal;
-    timestamp : Int;
-  };
   
   public type PollOption = {
     id : Nat;
@@ -1191,6 +1188,7 @@
     message
   };
 }
+
 
 
 

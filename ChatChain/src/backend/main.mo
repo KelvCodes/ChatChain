@@ -1,6 +1,5 @@
 
     size : Nat;
-    hash : Text;
     uploadedBy : Principal;
     timestamp : Int;
   };
@@ -1193,6 +1192,7 @@
     message
   };
 }
+
 
 
 

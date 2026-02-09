@@ -1,5 +1,4 @@
 
-    type : Text;
     size : Nat;
     hash : Text;
     uploadedBy : Principal;
@@ -1194,6 +1193,7 @@
     message
   };
 }
+
 
 
 

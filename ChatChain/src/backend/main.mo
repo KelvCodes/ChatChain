@@ -1,5 +1,4 @@
 
-    size : Nat;
     uploadedBy : Principal;
     timestamp : Int;
   };
@@ -1192,6 +1191,7 @@
     message
   };
 }
+
 
 
 

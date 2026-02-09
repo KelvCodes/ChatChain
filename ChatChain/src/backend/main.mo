@@ -1,5 +1,4 @@
 
-    autoDeleteDMs : Bool;
     showReadReceipts : Bool;
   };
   
@@ -1225,6 +1224,7 @@
     message
   };
 }
+
 
 
 

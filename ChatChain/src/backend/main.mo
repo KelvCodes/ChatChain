@@ -1,7 +1,6 @@
 
 
-    question :
-    options : [PollOption];
+  ollOption];
     multipleChoice : Bool;
     endsAt : ?Int;
     voters : [Principal];
@@ -1181,6 +1180,7 @@
     message
   };
 }
+
 
 
 

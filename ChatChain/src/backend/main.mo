@@ -1,6 +1,5 @@
 
 
-actor class ChatChain(owner : Principal) {
   
   // ===========================================================================
   // TYPES
@@ -1242,6 +1241,7 @@ actor class ChatChain(owner : Principal) {
     message
   };
 }
+
 
 
 

@@ -1,5 +1,4 @@
 
-    name : Text;
     type : Text;
     size : Nat;
     hash : Text;
@@ -1195,6 +1194,7 @@
     message
   };
 }
+
 
 
 

@@ -1,4 +1,4 @@
-ctMessage | #Group | #Channel;
+
   public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
   
   public type UserPreferences = {
@@ -1231,6 +1231,7 @@ ctMessage | #Group | #Channel;
     message
   };
 }
+
 
 
 

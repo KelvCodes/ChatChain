@@ -1,5 +1,5 @@
 
-    banned : Bool;
+
     bannedUntil : ?Int;
     lastSeen : Int;
     status : UserStatus;
@@ -1214,6 +1214,7 @@
     message
   };
 }
+
 
 
 

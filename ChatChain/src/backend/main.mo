@@ -1,6 +1,4 @@
 
-
-    bannedUntil : ?Int;
     lastSeen : Int;
     status : UserStatus;
     joined : Int;
@@ -1214,6 +1212,7 @@
     message
   };
 }
+
 
 
 

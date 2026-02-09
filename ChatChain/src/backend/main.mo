@@ -1,6 +1,5 @@
 
-    reputation : Int;
-    prefeferences;
+    reputation : Int
     isVerified : Bool;
   };
   
@@ -1208,6 +1207,7 @@
     message
   };
 }
+
 
 
 

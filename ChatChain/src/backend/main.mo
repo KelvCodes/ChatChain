@@ -1,5 +1,4 @@
-
-  public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
+ctMessage | #Group | #Channel;
   public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
   
   public type UserPreferences = {
@@ -1232,6 +1231,7 @@
     message
   };
 }
+
 
 
 

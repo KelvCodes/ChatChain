@@ -1,5 +1,4 @@
 
-    messageCount : Nat;
     reputation : Int;
     preferences : UserPreferences;
     isVerified : Bool;
@@ -1209,6 +1208,7 @@
     message
   };
 }
+
 
 
 

@@ -1,6 +1,4 @@
 
-    status : UserStatus;
-    joined : Int;
     messageCount : Nat;
     reputation : Int;
     preferences : UserPreferences;
@@ -1211,6 +1209,7 @@
     message
   };
 }
+
 
 
 

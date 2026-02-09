@@ -1,7 +1,6 @@
 
   
-  public type PollOption = {
-    id : Nat;
+  public type Poll
     text : Text;
     votes : [Principal];
   };
@@ -1188,6 +1187,7 @@
     message
   };
 }
+
 
 
 

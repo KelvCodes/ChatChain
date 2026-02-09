@@ -1,6 +1,4 @@
 
-  public type UserPreferences = {
-    theme : Text;
     notifications : Bool;
     language : Text;
     autoDeleteDMs : Bool;
@@ -1229,6 +1227,7 @@
     message
   };
 }
+
 
 
 

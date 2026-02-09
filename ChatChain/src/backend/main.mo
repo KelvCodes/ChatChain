@@ -1,5 +1,4 @@
 
-  public type Message
   public type ChatRoomType = #Public | #Private | #DirectMessage | #Group | #Channel;
   public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
   
@@ -1233,6 +1232,7 @@
     message
   };
 }
+
 
 
 

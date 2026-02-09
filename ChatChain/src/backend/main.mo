@@ -1,5 +1,4 @@
-
-  public type NotificationType = #Mention | #Reply | #Reaction | #Invite | #System;
+eaction | #Invite | #System;
   
   public type UserPreferences = {
     theme : Text;
@@ -1231,6 +1230,7 @@
     message
   };
 }
+
 
 
 

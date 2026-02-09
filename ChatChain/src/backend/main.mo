@@ -1,7 +1,4 @@
 
-
-  public type Attachment = {
-    id : Text;
     name : Text;
     type : Text;
     size : Nat;
@@ -1198,6 +1195,7 @@
     message
   };
 }
+
 
 
 

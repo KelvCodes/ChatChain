@@ -1,5 +1,4 @@
-eaction | #Invite | #System;
-  
+
   public type UserPreferences = {
     theme : Text;
     notifications : Bool;
@@ -1230,6 +1229,7 @@ eaction | #Invite | #System;
     message
   };
 }
+
 
 
 

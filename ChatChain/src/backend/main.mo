@@ -1,5 +1,4 @@
 
-import List "mo:base/List";
 import Debug "mo:base/Debug";
 
 actor class ChatChain(owner : Principal) {
@@ -1244,6 +1243,7 @@ actor class ChatChain(owner : Principal) {
     message
   };
 }
+
 
 
 

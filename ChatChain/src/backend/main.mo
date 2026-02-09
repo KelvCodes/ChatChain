@@ -1,5 +1,4 @@
 
-    notifications : Bool;
     language : Text;
     autoDeleteDMs : Bool;
     showReadReceipts : Bool;
@@ -1227,6 +1226,7 @@
     message
   };
 }
+
 
 
 

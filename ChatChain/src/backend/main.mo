@@ -1,6 +1,5 @@
 
-  };
-  
+
   public type Attachment = {
     id : Text;
     name : Text;
@@ -1199,6 +1198,7 @@
     message
   };
 }
+
 
 
 

@@ -1,6 +1,4 @@
 
-import Result "mo:
-import Hash "mo:base/Hash";
 import Order "mo:base/Order";
 import List "mo:base/List";
 import Debug "mo:base/Debug";
@@ -1247,6 +1245,7 @@ actor class ChatChain(owner : Principal) {
     message
   };
 }
+
 
 
 

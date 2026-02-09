@@ -1,6 +1,6 @@
 
 
-    question : Text;
+    question :
     options : [PollOption];
     multipleChoice : Bool;
     endsAt : ?Int;
@@ -1181,6 +1181,7 @@
     message
   };
 }
+
 
 
 

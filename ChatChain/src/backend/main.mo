@@ -1,7 +1,5 @@
 
 
-    votes : [Principal];
-  };
   
   public type Poll = {
     question : Text;
@@ -1185,6 +1183,7 @@
     message
   };
 }
+
 
 
 

@@ -1,5 +1,5 @@
 
-    text : Text;
+
     votes : [Principal];
   };
   
@@ -1185,6 +1185,7 @@
     message
   };
 }
+
 
 
 

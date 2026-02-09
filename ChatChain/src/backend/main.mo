@@ -1,6 +1,4 @@
 
-  
-  public type Poll
     text : Text;
     votes : [Principal];
   };
@@ -1187,6 +1185,7 @@
     message
   };
 }
+
 
 
 

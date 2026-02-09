@@ -1,6 +1,4 @@
 
-    reputation : Int
-    isVerified : Bool;
   };
   
   public type Reaction = {
@@ -1207,6 +1205,7 @@
     message
   };
 }
+
 
 
 
